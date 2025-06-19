@@ -1,43 +1,50 @@
-# /.github/workflows/daily_scrape.yml
+# .github/workflows/daily_scrape.yml
 
-name: Daily PlayStation Store Scraper
+name: Daily PlayStation Price Check
 
 on:
   schedule:
-    - cron: '0 5 * * *'
+    - cron: '0 5 * * *' # Her gün sabah 05:00 UTC'de çalışır
   workflow_dispatch:
 
-# YENİ EKLENEN BÖLÜM
-# Bu, iş akışına repository içeriğini değiştirme izni verir.
 permissions:
   contents: write
 
 jobs:
-  scrape_and_commit:
+  scrape_and_report:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Repository'deki kodları ve mevcut veritabanını indir
       - name: Check out repository code
         uses: actions/checkout@v4
 
+      # 2. Python ortamını kur
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.10'
+          python-version: '3.11'
 
+      # 3. Gerekli kütüphaneleri yükle
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      - name: Run the scraper script
+      # 4. Kazıma betiğini çalıştırarak yeni tabloyu ekle
+      - name: Run Scraper to get latest prices
         run: python scripts/scrape_and_update_db.py
 
-      # Bu kısım olduğu gibi kalacak, artık çalışması gerekiyor.
-      - name: Commit and push if database changed
+      # 5. İndirim raporunu oluştur
+      - name: Generate discount report
+        run: python scripts/generate_discount_report.py
+
+      # 6. Değişen dosyaları (veritabanı ve rapor) commit'le
+      - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'github-actions-bot@github.com'
-          git add playstation_games.db
-          git diff --staged --quiet || git commit -m "Update PlayStation games database"
+          git add playstation_games.db DISCOUNTS.md
+          # Değişiklik varsa commit at
+          git diff --staged --quiet || git commit -m "Update: Daily prices and discount report for $(date -u +'%d-%m-%Y')"
           git push
