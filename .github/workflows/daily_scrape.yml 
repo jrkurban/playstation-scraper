@@ -1,0 +1,47 @@
+# /.github/workflows/daily_scrape.yml
+
+name: Daily PlayStation Store Scraper
+
+# Bu action'ı ne zaman çalıştıracağımızı belirler
+on:
+  # Her gün sabah 05:00 UTC'de (Türkiye saatiyle 08:00) çalıştırır
+  schedule:
+    - cron: '0 5 * * *'
+
+  # GitHub arayüzünden manuel olarak çalıştırma imkanı sunar (test için kullanışlı)
+  workflow_dispatch:
+
+jobs:
+  scrape_and_commit:
+    runs-on: ubuntu-latest # Action'ın çalışacağı sanal makine
+
+    steps:
+      # 1. Repository'deki kodları sanal makineye indir (checkout)
+      - name: Check out repository code
+        uses: actions/checkout@v4
+
+      # 2. Python ortamını kur
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10' # Kullanmak istediğiniz Python sürümü
+
+      # 3. Gerekli Python kütüphanelerini yükle
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      # 4. Kazıma betiğini çalıştır
+      - name: Run the scraper script
+        run: python scripts/scrape_and_update_db.py
+
+      # 5. Değişen veritabanı dosyasını repository'ye commit'le ve push'la
+      - name: Commit and push if database changed
+        run: |
+          git config --global user.name 'GitHub Actions Bot'
+          git config --global user.email 'github-actions-bot@github.com'
+          git add playstation_games.db
+          # Sadece bir değişiklik varsa commit at
+          git diff --staged --quiet || git commit -m "Update PlayStation games database"
+          git push
