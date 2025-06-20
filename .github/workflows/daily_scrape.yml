@@ -4,82 +4,79 @@ name: Daily PlayStation Price Check
 
 on:
   schedule:
-    - cron: '0 5 * * *' # Her gün sabah 05:00 UTC'de çalışır
+    # Her gün sabah 08:00 (Türkiye saati, UTC+3)
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
+# Issue oluşturma ve repository'ye yazma izinleri
 permissions:
   contents: write
+  issues: write
 
 jobs:
   scrape_and_report:
     runs-on: ubuntu-latest
 
     steps:
+      # 1. Repository kodlarını indir
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
+      # 2. Python ortamını kur
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
+      # 3. Gerekli kütüphaneleri yükle
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      # 4. Kazıma betiğini çalıştır
       - name: Run Scraper to get latest prices
         run: python scripts/scrape_and_update_db.py
 
+      # 5. İndirim raporunu oluştur
       - name: Generate discount report
         run: python scripts/generate_discount_report.py
 
-      # --- YENİ HATA AYIKLAMA ADIMLARI ---
-      - name: 'DEBUG: Show file changes'
-        run: |
-          echo "--- Checking for changes with 'git status' ---"
-          git status
-
-      - name: 'DEBUG: Display report content'
-        run: |
-          echo "--- Content of DISCOUNTS.md ---"
-          cat DISCOUNTS.md || echo "DISCOUNTS.md not found or is empty."
-          echo "-------------------------------"
-
-      # -------------------------------------
-
+      # 6. Değişiklik olup olmadığını kontrol et
       - name: Check for file changes
         id: check_changes
         run: |
           if [ -z "$(git status --porcelain)" ]; then
             echo "changed=false" >> $GITHUB_OUTPUT
-            echo "No changes detected in the repository."
+            echo "No changes detected."
           else
             echo "changed=true" >> $GITHUB_OUTPUT
-            echo "Changes detected. Proceeding with notification and commit."
+            echo "Changes detected."
           fi
-
+          
+      # 7. Rapor dosyasının içeriğini bir değişkene oku
       - name: Read discount report file
         id: read_report
         if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        run: |
-          REPORT_CONTENT=$(cat DISCOUNTS.md | head -c 4000)
-          echo "report_content<<EOF" >> $GITHUB_OUTPUT
-          echo "$REPORT_CONTENT" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-      
-      - name: Send Telegram Notification
-        # Sadece değişiklik varsa veya manuel çalıştırıldıysa bildirim gönder
-        if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        uses: appleboy/telegram-action@master
-        with:
-          to: ${{ secrets.TELEGRAM_CHAT_ID }}
-          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: ${{ steps.read_report.outputs.report_content }}
-          format: markdown
+        run: echo "report_body<<EOF" >> $GITHUB_OUTPUT; cat DISCOUNTS.md >> $GITHUB_OUTPUT; echo "EOF" >> $GITHUB_OUTPUT
 
+      # 8. Değişiklik varsa yeni bir GitHub Issue oluştur
+      - name: Create GitHub Issue with Discounts
+        if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: JasonEtco/create-an-issue@v2
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Issue Başlığı: O günün tarihini içerir
+          TITLE: "PlayStation Store İndirimleri - $(date +'%d.%m.%Y')"
+          # Issue İçeriği: DISCOUNTS.md dosyasının içeriği
+          BODY: ${{ steps.read_report.outputs.report_body }}
+        with:
+          # Label (etiket) eklemek isterseniz
+          labels: "indirim, otomasyon"
+
+      # 9. Değişiklikleri Commit'le ve Push'la
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
