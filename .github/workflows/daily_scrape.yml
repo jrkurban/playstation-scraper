@@ -8,7 +8,6 @@ on:
     - cron: '0 5 * * *'
   workflow_dispatch:
 
-# Issue oluşturma ve repository'ye yazma izinleri
 permissions:
   contents: write
   issues: write
@@ -18,33 +17,27 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Repository kodlarını indir
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      # 2. Python ortamını kur
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # 3. Gerekli kütüphaneleri yükle
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. Kazıma betiğini çalıştır
       - name: Run Scraper to get latest prices
         run: python scripts/scrape_and_update_db.py
 
-      # 5. İndirim raporunu oluştur
       - name: Generate discount report
         run: python scripts/generate_discount_report.py
 
-      # 6. Değişiklik olup olmadığını kontrol et
       - name: Check for file changes
         id: check_changes
         run: |
@@ -55,28 +48,28 @@ jobs:
             echo "changed=true" >> $GITHUB_OUTPUT
             echo "Changes detected."
           fi
-          
-      # 7. Rapor dosyasının içeriğini bir değişkene oku
+
       - name: Read discount report file
         id: read_report
         if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: echo "report_body<<EOF" >> $GITHUB_OUTPUT; cat DISCOUNTS.md >> $GITHUB_OUTPUT; echo "EOF" >> $GITHUB_OUTPUT
 
-      # 8. Değişiklik varsa yeni bir GitHub Issue oluştur
+      # --- DÜZELTİLMİŞ ADIM ---
       - name: Create GitHub Issue with Discounts
         if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: JasonEtco/create-an-issue@v2
         env:
+          # GITHUB_TOKEN burada kalmalı, bu doğru.
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          # Issue Başlığı: O günün tarihini içerir
-          TITLE: "PlayStation Store İndirimleri - $(date +'%d.%m.%Y')"
-          # Issue İçeriği: DISCOUNTS.md dosyasının içeriği
-          BODY: ${{ steps.read_report.outputs.report_body }}
         with:
-          # Label (etiket) eklemek isterseniz
-          labels: "indirim, otomasyon"
-
-      # 9. Değişiklikleri Commit'le ve Push'la
+          # TITLE ve BODY, 'env' yerine 'with' bloğuna taşındı.
+          title: "PlayStation Store İndirimleri - $(date +'%d.%m.%Y')"
+          body: ${{ steps.read_report.outputs.report_body }}
+          # 'assignees' ile issue'yu kendinize atayabilirsiniz (isteğe bağlı)
+          # assignees: jrkurban
+          # Bu action'da 'labels' desteklenmiyor, bu yüzden yorum satırı yapıldı.
+          # Farklı bir action ile label ekleyebiliriz ama şimdilik bu en basit yol.
+          
       - name: Commit and push changes
         if: steps.check_changes.outputs.changed == 'true'
         run: |
