@@ -1,6 +1,6 @@
 # PlayStation İndirim Raporu
 
-Rapor Tarihi: 19.06.2025 21:43
-Karşılaştırılan Tablolar: `games_19_06_2025_21_29` ve `games_19_06_2025_21_41`
+Rapor Tarihi: 20.06.2025 00:27
+Karşılaştırılan Tablolar: `games_19_06_2025_21_41` ve `games_20_06_2025_00_25`
 
 ### Fiyatı Düşen Yeni Bir Oyun Bulunamadı.
