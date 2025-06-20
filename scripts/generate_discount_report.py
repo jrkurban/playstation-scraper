@@ -85,6 +85,55 @@ def generate_report():
                     'old_price': old_game.get('fiyat_1'),
                     'new_price': new_game.get('fiyat_1'),
                 })
+    for concept_id, new_game in new_data.items():
+        if concept_id in old_data:
+            old_game = old_data[concept_id]
+            old_price_val = parse_price(old_game.get('fiyat_2'))
+            new_price_val = parse_price(new_game.get('fiyat_2'))
+
+            if old_price_val is not None and new_price_val is not None and new_price_val < old_price_val:
+                price_drops.append({
+                    'name': new_game.get('name'),
+                    'old_price': old_game.get('fiyat_2'),
+                    'new_price': new_game.get('fiyat_2'),
+                })
+    for concept_id, new_game in new_data.items():
+        if concept_id in old_data:
+            old_game = old_data[concept_id]
+            old_price_val = parse_price(old_game.get('fiyat_3'))
+            new_price_val = parse_price(new_game.get('fiyat_3'))
+
+            if old_price_val is not None and new_price_val is not None and new_price_val < old_price_val:
+                price_drops.append({
+                    'name': new_game.get('name'),
+                    'old_price': old_game.get('fiyat_3'),
+                    'new_price': new_game.get('fiyat_3'),
+                })
+    for concept_id, new_game in new_data.items():
+        if concept_id in old_data:
+            old_game = old_data[concept_id]
+            old_price_val = parse_price(old_game.get('fiyat_4'))
+            new_price_val = parse_price(new_game.get('fiyat_4'))
+
+            if old_price_val is not None and new_price_val is not None and new_price_val < old_price_val:
+                price_drops.append({
+                    'name': new_game.get('name'),
+                    'old_price': old_game.get('fiyat_4'),
+                    'new_price': new_game.get('fiyat_4'),
+                })
+    for concept_id, new_game in new_data.items():
+        if concept_id in old_data:
+            old_game = old_data[concept_id]
+            old_price_val = parse_price(old_game.get('fiyat_5'))
+            new_price_val = parse_price(new_game.get('fiyat_5'))
+
+            if old_price_val is not None and new_price_val is not None and new_price_val < old_price_val:
+                price_drops.append({
+                    'name': new_game.get('name'),
+                    'old_price': old_game.get('fiyat_5'),
+                    'new_price': new_game.get('fiyat_5'),
+                })
+
 
     # --- Sonuçları Markdown dosyasına yazdır ---
     with open(OUTPUT_MD_FILE, 'w', encoding='utf-8') as f:
