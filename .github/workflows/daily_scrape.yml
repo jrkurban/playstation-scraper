@@ -4,8 +4,7 @@ name: Daily PlayStation Price Check
 
 on:
   schedule:
-    # Her gün sabah 08:00 (Türkiye saati, UTC+3)
-    - cron: '0 5 * * *'
+    - cron: '0 5 * * *' # Her gün sabah 05:00 UTC'de çalışır
   workflow_dispatch:
 
 permissions:
@@ -16,59 +15,63 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Repository'deki kodları indir
       - name: Check out repository code
         uses: actions/checkout@v4
         with:
-          # Veritabanı dosyasının geçmişini çekmek için önemlidir
           fetch-depth: 0
 
-      # 2. Python ortamını kur
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # 3. Gerekli kütüphaneleri yükle
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. Kazıma betiğini çalıştır
       - name: Run Scraper to get latest prices
         run: python scripts/scrape_and_update_db.py
 
-      # 5. İndirim raporunu oluştur
       - name: Generate discount report
         run: python scripts/generate_discount_report.py
 
-      # 6. Değişiklik olup olmadığını kontrol et
+      # --- YENİ HATA AYIKLAMA ADIMLARI ---
+      - name: 'DEBUG: Show file changes'
+        run: |
+          echo "--- Checking for changes with 'git status' ---"
+          git status
+
+      - name: 'DEBUG: Display report content'
+        run: |
+          echo "--- Content of DISCOUNTS.md ---"
+          cat DISCOUNTS.md || echo "DISCOUNTS.md not found or is empty."
+          echo "-------------------------------"
+
+      # -------------------------------------
+
       - name: Check for file changes
         id: check_changes
         run: |
-          # `git status --porcelain` komutu, değişiklik varsa çıktı üretir, yoksa boş döner.
-          # Bu çıktıyı bir değişkene atıyoruz.
-          CHANGES=$(git status --porcelain)
-          if [ -z "$CHANGES" ]; then
+          if [ -z "$(git status --porcelain)" ]; then
             echo "changed=false" >> $GITHUB_OUTPUT
+            echo "No changes detected in the repository."
           else
             echo "changed=true" >> $GITHUB_OUTPUT
+            echo "Changes detected. Proceeding with notification and commit."
           fi
-          
-      # 7. Rapor dosyasının içeriğini oku (SADECE DEĞİŞİKLİK VARSA)
-      - name: Read discount report file for Telegram
+
+      - name: Read discount report file
         id: read_report
         if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         run: |
-          # Dosyanın tamamını oku, Telegram'ın limitine göre kırp ve bir output değişkenine ata
-          CONTENT=$(cat DISCOUNTS.md | head -c 4000)
+          REPORT_CONTENT=$(cat DISCOUNTS.md | head -c 4000)
           echo "report_content<<EOF" >> $GITHUB_OUTPUT
-          echo "$CONTENT" >> $GITHUB_OUTPUT
+          echo "$REPORT_CONTENT" >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
-
-      # 8. Telegram'a bildirim gönder (SADECE DEĞİŞİKLİK VARSA)
+      
       - name: Send Telegram Notification
+        # Sadece değişiklik varsa veya manuel çalıştırıldıysa bildirim gönder
         if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: appleboy/telegram-action@master
         with:
@@ -77,9 +80,7 @@ jobs:
           message: ${{ steps.read_report.outputs.report_content }}
           format: markdown
 
-      # 9. Değişiklikleri Commit'le ve Push'la
       - name: Commit and push changes
-        # Sadece değişiklik varsa bu adımı çalıştır
         if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --global user.name 'GitHub Actions Bot'
