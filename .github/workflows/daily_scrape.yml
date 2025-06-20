@@ -4,7 +4,8 @@ name: Daily PlayStation Price Check
 
 on:
   schedule:
-    - cron: '0 5 * * *' # Her gün sabah 05:00 UTC'de çalışır
+    # Her gün sabah 08:00 (Türkiye saati, UTC+3)
+    - cron: '0 5 * * *'
   workflow_dispatch:
 
 permissions:
@@ -15,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Repository'deki kodları ve mevcut veritabanını indir
+      # 1. Repository'deki kodları indir
       - name: Check out repository code
         uses: actions/checkout@v4
 
@@ -31,19 +32,50 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. Kazıma betiğini çalıştırarak yeni tabloyu ekle
+      # 4. Kazıma betiğini çalıştır
       - name: Run Scraper to get latest prices
         run: python scripts/scrape_and_update_db.py
 
       # 5. İndirim raporunu oluştur
       - name: Generate discount report
         run: python scripts/generate_discount_report.py
-
-      # 6. Değişen dosyaları (veritabanı ve rapor) commit'le
+      
+      # 6. Değişiklik olup olmadığını kontrol et
+      - name: Check for file changes
+        id: git-check
+        run: echo "changed=$(if git diff --quiet --exit-code; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
+      
+      # 7. Telegram'a bildirim gönder (sadece değişiklik varsa)
+      - name: Send Telegram Notification if discounts are found
+        if: steps.git-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        uses: appleboy/telegram-action@master
+        with:
+          to: ${{ secrets.TELEGRAM_CHAT_ID }}
+          token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          message: |
+            *PlayStation Store İndirim Raporu - $(date +'%d.%m.%Y')*
+            
+            ${{ steps.read_report_file.outputs.content }}
+            
+            Daha fazla detay için: https://github.com/${{ github.repository }}/blob/main/DISCOUNTS.md
+          format: markdown
+      
+      # 8. Rapor dosyasının içeriğini oku (bildirim için)
+      - name: Read discount report file
+        id: read_report_file
+        if: steps.git-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          # Dosyanın tamamını oku ve Telegram'ın limitine göre kırp
+          CONTENT=$(cat DISCOUNTS.md | head -c 4000)
+          echo "content<<EOF" >> $GITHUB_OUTPUT
+          echo "$CONTENT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      # 9. Değişiklikleri Commit'le ve Push'la
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'github-actions-bot@github.com'
+          git config --global user.email 'actions@github.com'
           git add playstation_games.db DISCOUNTS.md
           # Değişiklik varsa commit at
           git diff --staged --quiet || git commit -m "Update: Daily prices and discount report for $(date -u +'%d-%m-%Y')"
