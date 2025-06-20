@@ -19,6 +19,9 @@ jobs:
       # 1. Repository'deki kodları indir
       - name: Check out repository code
         uses: actions/checkout@v4
+        with:
+          # Veritabanı dosyasının geçmişini çekmek için önemlidir
+          fetch-depth: 0
 
       # 2. Python ortamını kur
       - name: Set up Python
@@ -39,44 +42,48 @@ jobs:
       # 5. İndirim raporunu oluştur
       - name: Generate discount report
         run: python scripts/generate_discount_report.py
-      
+
       # 6. Değişiklik olup olmadığını kontrol et
       - name: Check for file changes
-        id: git-check
-        run: echo "changed=$(if git diff --quiet --exit-code; then echo "false"; else echo "true"; fi)" >> $GITHUB_OUTPUT
-      
-      # 7. Telegram'a bildirim gönder (sadece değişiklik varsa)
-      - name: Send Telegram Notification if discounts are found
-        if: steps.git-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        id: check_changes
+        run: |
+          # `git status --porcelain` komutu, değişiklik varsa çıktı üretir, yoksa boş döner.
+          # Bu çıktıyı bir değişkene atıyoruz.
+          CHANGES=$(git status --porcelain)
+          if [ -z "$CHANGES" ]; then
+            echo "changed=false" >> $GITHUB_OUTPUT
+          else
+            echo "changed=true" >> $GITHUB_OUTPUT
+          fi
+          
+      # 7. Rapor dosyasının içeriğini oku (SADECE DEĞİŞİKLİK VARSA)
+      - name: Read discount report file for Telegram
+        id: read_report
+        if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
+        run: |
+          # Dosyanın tamamını oku, Telegram'ın limitine göre kırp ve bir output değişkenine ata
+          CONTENT=$(cat DISCOUNTS.md | head -c 4000)
+          echo "report_content<<EOF" >> $GITHUB_OUTPUT
+          echo "$CONTENT" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      # 8. Telegram'a bildirim gönder (SADECE DEĞİŞİKLİK VARSA)
+      - name: Send Telegram Notification
+        if: steps.check_changes.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
         uses: appleboy/telegram-action@master
         with:
           to: ${{ secrets.TELEGRAM_CHAT_ID }}
           token: ${{ secrets.TELEGRAM_BOT_TOKEN }}
-          message: |
-            *PlayStation Store İndirim Raporu - $(date +'%d.%m.%Y')*
-            
-            ${{ steps.read_report_file.outputs.content }}
-            
-            Daha fazla detay için: https://github.com/${{ github.repository }}/blob/main/DISCOUNTS.md
+          message: ${{ steps.read_report.outputs.report_content }}
           format: markdown
-      
-      # 8. Rapor dosyasının içeriğini oku (bildirim için)
-      - name: Read discount report file
-        id: read_report_file
-        if: steps.git-check.outputs.changed == 'true' || github.event_name == 'workflow_dispatch'
-        run: |
-          # Dosyanın tamamını oku ve Telegram'ın limitine göre kırp
-          CONTENT=$(cat DISCOUNTS.md | head -c 4000)
-          echo "content<<EOF" >> $GITHUB_OUTPUT
-          echo "$CONTENT" >> $GITHUB_OUTPUT
-          echo "EOF" >> $GITHUB_OUTPUT
-      
+
       # 9. Değişiklikleri Commit'le ve Push'la
       - name: Commit and push changes
+        # Sadece değişiklik varsa bu adımı çalıştır
+        if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'actions@github.com'
           git add playstation_games.db DISCOUNTS.md
-          # Değişiklik varsa commit at
-          git diff --staged --quiet || git commit -m "Update: Daily prices and discount report for $(date -u +'%d-%m-%Y')"
+          git commit -m "Update: Daily prices and discount report for $(date -u +'%d-%m-%Y')"
           git push
