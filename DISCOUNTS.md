@@ -1,6 +1,10 @@
 # PlayStation İndirim Raporu
 
-Rapor Tarihi: 21.06.2025 05:36
-Karşılaştırılan Tablolar: `games_20_06_2025_19_03` ve `games_21_06_2025_05_14`
+**Rapor Tarihi:** 22.06.2025 13:29 +03
+**Karşılaştırılan Veriler:** `games_21_06_2025_05_14` ve `games_22_06_2025_10_11`
 
-### Fiyatı Düşen Yeni Bir Oyun Bulunamadı.
+### Fiyatı Düşen Toplam 1 Ürün Bulundu!
+
+| Oyun Adı | Sürüm | Eski Fiyat | Yeni Fiyat |
+|---|---|---|---|
+| The Callisto Protocol | Digital Deluxe Edition | ~2.249,00~ | **1.999,00** |
