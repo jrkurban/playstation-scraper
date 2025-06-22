@@ -41,12 +41,10 @@ jobs:
 
       # 6. Değişen dosyaları (veritabanı ve rapor) commit'le
       - name: Commit and push changes
-        if: steps.check_changes.outputs.changed == 'true'
         run: |
           git config --global user.name 'GitHub Actions Bot'
-          git config --global user.email 'actions@github.com'
+          git config --global user.email 'github-actions-bot@github.com'
           git add playstation_games.db DISCOUNTS.md
-          # Commit mesajındaki tarihi İstanbul saatine göre ayarla
-          COMMIT_MESSAGE="Update: Daily prices and report for $(TZ='Europe/Istanbul' date +'%d-%m-%Y %H:%M')"
-          git commit -m "$COMMIT_MESSAGE"
+          # Değişiklik varsa commit at
+          git diff --staged --quiet || git commit -m "Update: Daily prices and discount report for $(date -u +'%d-%m-%Y')"
           git push
