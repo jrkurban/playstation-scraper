@@ -1,10 +1,6 @@
 # PlayStation İndirim Raporu
 
-**Rapor Tarihi:** 24.06.2025 16:40 +03
-**Karşılaştırılan Veriler:** `games_24_06_2025_05_17` ve `games_24_06_2025_13_19`
+**Rapor Tarihi:** 25.06.2025 00:34 +03
+**Karşılaştırılan Veriler:** `games_24_06_2025_13_19` ve `games_24_06_2025_21_12`
 
-### Fiyatı Düşen Toplam 1 Ürün Bulundu!
-
-| Oyun Adı | Sürüm | Eski Fiyat | Yeni Fiyat |
-|---|---|---|---|
-| War Thunder | War Thunder - Hell on Wheels Bundle | ~2.799,00~ | **1.229,00** |
+### Fiyatı Düşen Yeni Bir Ürün Bulunamadı.
