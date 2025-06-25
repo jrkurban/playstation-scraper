@@ -1,140 +1,131 @@
-import requests
-from bs4 import BeautifulSoup
-import csv
-import time
+import sqlite3
 import os
-import re
+from datetime import datetime
 
 # --- AYARLAR ---
-INPUT_CSV = 'playstation_games_with_concept_id.csv'
-OUTPUT_CSV = 'playstation_games_with_prices_and_editions.csv'
-BASE_URL = "https://store.playstation.com/tr-tr/concept/{}"
-HEADERS = {
-    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
-}
-# Maksimum kaç sürüm için sütun oluşturulacağı
-MAX_EDITIONS = 5
+# Betiğin bulunduğu dizine göre veritabanı dosyasının yolunu belirler.
+# Bu, betiği nerede çalıştırırsanız çalıştırın doğru dosyayı bulmasını sağlar.
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
+DATABASE_FILE = os.path.join(PROJECT_ROOT,'playstation_games.db')  # Bir üst dizindeki db dosyası
+MAX_EDITIONS = 5  # Kontrol edilecek maksimum sürüm sayısı
 
 
-def clean_price(price_text):
-    """Fiyat metnini temizler (örn: '2.099,00 TL' -> '2.099,00')."""
-    if not price_text:
-        return 'N/A'
-    #   karakterini (\xa0) ve 'TL' metnini kaldırır.
-    return price_text.replace('\xa0TL', '').strip()
+def get_tables(conn):
+    """Veritabanındaki oyun tablolarını tarihe göre sıralı döndürür."""
+    cursor = conn.cursor()
+    cursor.execute("SELECT name FROM sqlite_master WHERE type='table' AND name LIKE 'games_%';")
+    tables = []
+    for table in cursor.fetchall():
+        try:
+            # Tablo adından tarih bilgisini çıkararak sıralama yap
+            dt_obj = datetime.strptime(table[0], "games_%d_%m_%Y_%H_%M")
+            tables.append((dt_obj, table[0]))
+        except ValueError:
+            continue
+    tables.sort(key=lambda x: x[0])
+    return [table[1] for table in tables]
 
 
-def scrape_game_editions_and_prices():
-    """
-    CSV'den oyun listesini okur, her oyunun sürüm adlarını ve fiyatlarını kazır
-    ve yeni bir CSV'ye yazar.
-    """
-    # 1. Girdi CSV dosyasını oku
-    if not os.path.exists(INPUT_CSV):
-        print(f"HATA: Girdi dosyası bulunamadı: '{INPUT_CSV}'")
-        print(
-            "Lütfen bu betiği bir önceki adımda oluşturulan CSV dosyasıyla aynı klasörde çalıştırdığınızdan emin olun.")
+def parse_price(price_str):
+    """Fiyat metnini sayısal (float) bir değere dönüştürür."""
+    if price_str is None: return None
+    price_str = price_str.strip().lower()
+    if 'ücretsiz' in price_str: return 0.0
+    try:
+        cleaned_str = price_str.replace('.', '').replace(',', '.')
+        return float(cleaned_str)
+    except (ValueError, TypeError):
+        return None
+
+
+def fetch_data_as_dict(cursor, table_name):
+    """Bir tablodaki veriyi concept_id anahtarlı bir sözlüğe çeker."""
+    query = f"SELECT * FROM '{table_name}'"
+    cursor.execute(query)
+    columns = [description[0] for description in cursor.description]
+    return {row[0]: dict(zip(columns, row)) for row in cursor.fetchall()}
+
+
+def compare_prices():
+    """İki tabloyu karşılaştırır ve tüm sürümlerdeki fiyat düşüşlerini bulur."""
+    if not os.path.exists(DATABASE_FILE):
+        print(f"HATA: Veritabanı dosyası bulunamadı: '{DATABASE_FILE}'")
         return
 
-    with open(INPUT_CSV, 'r', encoding='utf-8') as f:
-        reader = csv.DictReader(f)
-        games_to_scrape = list(reader)
+    conn = sqlite3.connect(DATABASE_FILE)
+    cursor = conn.cursor()
 
-    print(f"Toplam {len(games_to_scrape)} oyun bulundu. Sürüm ve fiyat bilgileri çekiliyor...")
+    tables = get_tables(conn)
+    if len(tables) < 2:
+        print("HATA: Karşılaştırma yapmak için veritabanında en az iki tablo olmalıdır.")
+        conn.close()
+        return
 
-    final_data = []
-
-    # 2. Her oyun için döngü başlat
-    for i, game in enumerate(games_to_scrape):
-        concept_id = game.get('concept_id')
-        game_name = game.get('name')
-
-        if not concept_id:
-            continue
-
-        url = BASE_URL.format(concept_id)
-        print(f"[{i + 1}/{len(games_to_scrape)}] İşleniyor: {game_name} (ID: {concept_id})")
-
-        game_data = {'concept_id': concept_id, 'name': game_name}
-
-        try:
-            # 3. Oyunun sayfasını indir
-            response = requests.get(url, headers=HEADERS, timeout=20)
-            response.raise_for_status()
-            soup = BeautifulSoup(response.text, 'html.parser')
-
-            # 4. Sürümleri ve fiyatları bul
-            editions_found = []
-
-            # "Sürümler" (Editions) bölümünü bul
-            upsell_section = soup.find('div', attrs={'data-qa': 'mfeUpsell'})
-
-            if upsell_section:
-                # Bölümdeki her bir sürüm (article) için döngü
-                edition_articles = upsell_section.find_all('article', attrs={
-                    'data-qa': lambda x: x and x.startswith('mfeUpsell#productEdition')})
-                for article in edition_articles:
-                    edition_name_tag = article.find('h3', attrs={'data-qa': lambda x: x and x.endswith('#editionName')})
-                    price_tag = article.find('span', attrs={'data-qa': lambda x: x and x.endswith('#finalPrice')})
-
-                    if edition_name_tag and price_tag:
-                        edition_name = edition_name_tag.get_text(strip=True)
-                        price = clean_price(price_tag.get_text())
-                        editions_found.append({'name': edition_name, 'price': price})
-            else:
-                # "Sürümler" bölümü yoksa, ana fiyatı ve başlığı almayı dene
-                main_title_tag = soup.find('h1', attrs={'data-qa': 'mfe-game-title#name'})
-                main_price_tag = soup.find('span', attrs={'data-qa': 'mfeCtaMain#offer0#finalPrice'})
-
-                edition_name = main_title_tag.get_text(strip=True) if main_title_tag else game_name
-
-                if main_price_tag:
-                    price = clean_price(main_price_tag.get_text())
-                    editions_found.append({'name': edition_name, 'price': price})
-                else:
-                    # Fiyat yoksa ücretsiz olup olmadığını kontrol et
-                    free_tag = soup.find('span', {'data-qa': 'mfeCtaMain#offer0#discountDescriptor'})
-                    if free_tag and free_tag.get_text(strip=True).lower() in ['ücretsiz', 'free', 'indir', 'download']:
-                        editions_found.append({'name': edition_name, 'price': 'Ücretsiz'})
-                    else:
-                        editions_found.append({'name': edition_name, 'price': 'N/A'})
-
-            # Toplanan verileri ana listeye ekle
-            for idx, edition in enumerate(editions_found):
-                if idx < MAX_EDITIONS:
-                    game_data[f'surum_adi_{idx + 1}'] = edition['name']
-                    game_data[f'fiyat_{idx + 1}'] = edition['price']
-
-            final_data.append(game_data)
-
-        except requests.exceptions.RequestException as e:
-            print(f"  -> HATA: {game_name} sayfası alınamadı. Hata: {e}")
-            game_data['surum_adi_1'] = 'Hata'
-            game_data['fiyat_1'] = 'Hata'
-            final_data.append(game_data)
-
-        # Sunucuyu yormamak için her istek arasında 1 saniye bekle
-        time.sleep(1)
-
-    # 5. Sonuçları yeni bir CSV dosyasına yaz
-    print(f"\nTarama tamamlandı. Veriler '{OUTPUT_CSV}' dosyasına yazılıyor...")
-
-    # CSV başlıklarını oluştur
-    fieldnames = ['concept_id', 'name']
-    for i in range(1, MAX_EDITIONS + 1):
-        fieldnames.append(f'surum_adi_{i}')
-        fieldnames.append(f'fiyat_{i}')
+    print("Veritabanında bulunan tablolar:")
+    for i, table_name in enumerate(tables):
+        print(f"  {i + 1}: {table_name}")
 
     try:
-        with open(OUTPUT_CSV, 'w', newline='', encoding='utf-8') as csvfile:
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames, extrasaction='ignore')
-            writer.writeheader()
-            writer.writerows(final_data)
+        old_table_idx = int(input("Lütfen 'ESKİ' veriyi içeren tablonun numarasını girin: ")) - 1
+        new_table_idx = int(input("Lütfen 'YENİ' veriyi içeren tablonun numarasını girin: ")) - 1
 
-        print(f"İşlem başarıyla tamamlandı! '{OUTPUT_CSV}' dosyası oluşturuldu.")
-    except IOError as e:
-        print(f"Dosyaya yazma hatası: {e}")
+        if not (0 <= old_table_idx < len(tables) and 0 <= new_table_idx < len(tables)):
+            raise ValueError("Geçersiz tablo numarası.")
+
+        old_table = tables[old_table_idx]
+        new_table = tables[new_table_idx]
+    except (ValueError, IndexError):
+        print("Hatalı giriş. Lütfen listedeki numaralardan birini girin.")
+        conn.close()
+        return
+
+    print(f"\nKarşılaştırılıyor: '{old_table}' (Eski) vs '{new_table}' (Yeni)\n")
+
+    old_data = fetch_data_as_dict(cursor, old_table)
+    new_data = fetch_data_as_dict(cursor, new_table)
+    price_drops = []
+
+    # --- TEK DÖNGÜ İLE TÜM SÜRÜMLERİ KONTROL ETME ---
+    for concept_id, new_game in new_data.items():
+        if concept_id in old_data:
+            old_game = old_data[concept_id]
+
+            # 1'den 5'e kadar tüm fiyat ve sürüm sütunlarını kontrol et
+            for i in range(1, MAX_EDITIONS + 1):
+                fiyat_col = f'fiyat_{i}'
+                surum_col = f'surum_adi_{i}'
+
+                old_price_str = old_game.get(fiyat_col)
+                new_price_str = new_game.get(fiyat_col)
+
+                # Eğer herhangi bir sürümde veri yoksa bu adımı atla
+                if old_price_str is None or new_price_str is None:
+                    continue
+
+                old_price_val = parse_price(old_price_str)
+                new_price_val = parse_price(new_price_str)
+
+                # Sadece her iki fiyat da geçerliyse ve yeni fiyat daha düşükse listeye ekle
+                if old_price_val is not None and new_price_val is not None and new_price_val < old_price_val:
+                    price_drops.append({
+                        'name': new_game.get('name'),
+                        'edition': new_game.get(surum_col, f'Sürüm {i}'),  # Sürüm adı yoksa varsayılan ata
+                        'old_price': old_price_str,
+                        'new_price': new_price_str,
+                    })
+
+    # --- Geliştirilmiş Sonuçları Yazdırma ---
+    if price_drops:
+        print(f"--- Fiyatı Düşen {len(price_drops)} Ürün/Sürüm Bulundu! ---")
+        print(f"{'Oyun Adı':<45} | {'Sürüm':<35} | {'Eski Fiyat':>15} | {'Yeni Fiyat':>15}")
+        print("-" * 120)
+        for game in price_drops:
+            print(f"{game['name']:<45} | {game['edition']:<35} | {game['old_price']:>15} | {game['new_price']:>15}")
+    else:
+        print("--- Seçilen tablolar arasında fiyatı düşen bir oyun veya sürüm bulunamadı. ---")
+
+    conn.close()
 
 
-# Betiği başlat
-scrape_game_editions_and_prices()
+if __name__ == "__main__":
+    compare_prices()
