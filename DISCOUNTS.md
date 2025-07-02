@@ -1,11 +1,11 @@
-# PlayStation İndirim Raporu
+# PlayStation Discount Report
 
-**Rapor Tarihi:** 02.07.2025 08:47 +03
-**Karşılaştırılan Veriler:** `games_01_07_2025_05_19` ve `games_02_07_2025_05_18`
+**Report Date:** 02.07.2025 08:47 +03
+**Compared Data:** `games_01_07_2025_05_19` and `games_02_07_2025_05_18`
 
-### Fiyatı Düşen Toplam 185 Ürün Bulundu!
+#### Total 185 Products Found with Price Drop!
 
-| Oyun Adı | Sürüm | Eski Fiyat | Yeni Fiyat |
+| Game Name | Version | Old Price | New Price |
 |---|---|---|---|
 | Achilles: Legends Untold | Achilles: Legends Untold | ~769,00~ | **384,50** |
 | Alien: Rogue Incursion VR | Lüks | ~1.749,00~ | **874,50** |
