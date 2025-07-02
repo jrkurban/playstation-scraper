@@ -4,7 +4,7 @@ name: Daily PlayStation Price Check
 
 on:
   schedule:
-    - cron: '0 5 * * *' # Her gün sabah 05:00 UTC'de çalışır
+    - cron: '0 5 * * *' 
   workflow_dispatch:
 
 permissions:
@@ -15,31 +15,26 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Repository'deki kodları ve mevcut veritabanını indir
       - name: Check out repository code
         uses: actions/checkout@v4
-
-      # 2. Python ortamını kur
+        
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
-      # 3. Gerekli kütüphaneleri yükle
+
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
-      # 4. Kazıma betiğini çalıştırarak yeni tabloyu ekle
       - name: Run Scraper to get latest prices
         run: python scripts/scrape_and_update_db.py
 
-      # 5. İndirim raporunu oluştur
       - name: Generate discount report
         run: python scripts/generate_discount_report.py
 
-      # 6. Değişen dosyaları (veritabanı ve rapor) commit'le
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Actions Bot'
