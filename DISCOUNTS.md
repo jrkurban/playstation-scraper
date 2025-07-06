@@ -1,10 +1,6 @@
 # PlayStation İndirim Raporu
 
-**Rapor Tarihi:** 05.07.2025 08:40 +03
-**Karşılaştırılan Veriler:** `games_04_07_2025_05_17` ve `games_05_07_2025_05_14`
+**Rapor Tarihi:** 06.07.2025 08:38 +03
+**Karşılaştırılan Veriler:** `games_05_07_2025_05_14` ve `games_06_07_2025_05_15`
 
-### Fiyatı Düşen Toplam 1 Ürün Bulundu!
-
-| Oyun Adı | Sürüm | Eski Fiyat | Yeni Fiyat |
-|---|---|---|---|
-| Dying Light | Essentials Edition | ~1.049,00~ | **875,00** |
+### Fiyatı Düşen Yeni Bir Ürün Bulunamadı.
