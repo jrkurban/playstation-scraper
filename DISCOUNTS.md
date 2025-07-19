@@ -1,10 +1,6 @@
 # PlayStation İndirim Raporu
 
-**Rapor Tarihi:** 18.07.2025 08:46 +03
-**Karşılaştırılan Veriler:** `games_17_07_2025_05_20` ve `games_18_07_2025_05_22`
+**Rapor Tarihi:** 19.07.2025 08:44 +03
+**Karşılaştırılan Veriler:** `games_18_07_2025_05_22` ve `games_19_07_2025_05_18`
 
-### Fiyatı Düşen Toplam 1 Ürün Bulundu!
-
-| Oyun Adı | Sürüm | Eski Fiyat | Yeni Fiyat |
-|---|---|---|---|
-| POLICE SIMULATOR: PATROL OFFICERS | Gold Edition | ~1.499,00~ | **979,30** |
+### Fiyatı Düşen Yeni Bir Ürün Bulunamadı.
