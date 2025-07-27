@@ -6,9 +6,9 @@ import os
 import sqlite3
 from datetime import datetime
 from typing import List, Dict, Optional, Tuple, Any
+from concurrent.futures import ThreadPoolExecutor, as_completed  # GÜNCELLEME: Paralel işlem için eklendi
 
 # --- PROJE DİZİNİNİ OTOMATİK BULMA ---
-# Bu script'in 'scripts' klasöründe olduğunu varsayarak ana dizini bulur.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # --- AYARLAR ---
@@ -18,17 +18,17 @@ BASE_URL = "https://store.playstation.com/tr-tr/concept/{}"
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
 }
-# Veritabanına yazılacak maksimum sürüm sayısı
 MAX_EDITIONS = 5
+# GÜNCELLEME: Aynı anda çalışacak maksimum işçi (thread) sayısı
+MAX_WORKERS = 5
 
 
 # --- VERİ İŞLEME VE VERİTABANI YARDIMCI FONKSİYONLARI ---
 
 def clean_price(price_text: Optional[str]) -> str:
-    """Fiyat metnini temizler ve para birimi sembollerini kaldırır."""
+    """Fiyat metnini temizler."""
     if not price_text:
         return 'N/A'
-    # \xa0 (non-breaking space) dahil tüm boşlukları ve TL simgesini temizle
     return price_text.replace('\xa0', ' ').replace('TL', '').strip()
 
 
@@ -57,7 +57,7 @@ def insert_or_update_game(cursor: sqlite3.Cursor, game_data: Dict[str, Any], tab
     cursor.execute(query, values)
 
 
-# --- WEB SCRAPING FONKSİYONLARI (GÜNCELLENMİŞ BÖLÜM) ---
+# --- WEB SCRAPING FONKSİYONLARI ---
 
 def get_page_soup(url: str) -> Optional[BeautifulSoup]:
     """Verilen URL'den sayfa içeriğini alır ve BeautifulSoup nesnesi döndürür."""
@@ -66,92 +66,80 @@ def get_page_soup(url: str) -> Optional[BeautifulSoup]:
         response.raise_for_status()
         return BeautifulSoup(response.text, 'html.parser')
     except requests.exceptions.RequestException as e:
-        print(f"  -> HATA: Sayfa alınamadı. URL: {url}, Hata: {e}")
+        # Paralel çalışmada hatanın hangi URL'den geldiğini bilmek önemlidir.
+        # print(f"  -> HATA: Sayfa alınamadı. URL: {url}, Hata: {e}") # Bu çok fazla çıktı üretebilir.
         return None
 
 
 def scrape_game_editions(soup: BeautifulSoup, default_name: str) -> List[Dict[str, str]]:
-    """
-    Bir oyun sayfasından tüm sürümleri ve fiyatlarını kazır.
-    İstediğiniz 'while' döngüsü mantığı ile güncellenmiştir.
-    """
     editions_found = []
-
-    # --- YÖNTEM 1: "Upsell" bölümündeki tüm sürümleri while döngüsü ile ara ---
-    # Bu bölüm genellikle Deluxe, Gold gibi birden çok sürüm içeren oyunlarda bulunur.
     i = 0
     while True:
-        # Her bir sürümün ana kapsayıcısını (article) bulalım. Bu daha sağlam bir yoldur.
         edition_article = soup.find('article', attrs={'data-qa': f'mfeUpsell#productEdition{i}'})
-
         if not edition_article:
-            # Aranan sürüm kapsayıcısı bulunamadıysa, daha fazla sürüm yoktur, döngüyü kır.
             break
-
-        # Kapsayıcı bulunduğuna göre, içindeki isim ve fiyatı arayalım.
         edition_name_tag = edition_article.find('h3', attrs={'data-qa': lambda v: v and v.endswith('#editionName')})
         price_tag = edition_article.find('span', attrs={'data-qa': lambda v: v and v.endswith('#finalPrice')})
-
         edition_name = edition_name_tag.get_text(strip=True) if edition_name_tag else f"Bilinmeyen Sürüm {i + 1}"
         price = clean_price(price_tag.get_text()) if price_tag else 'N/A'
-
         editions_found.append({'name': edition_name, 'price': price})
-        i += 1  # Bir sonraki sürümü aramak için sayacı artır
+        i += 1
 
-    # Eğer while döngüsü en az bir sürüm bulduysa, bu listeyi döndür.
     if editions_found:
-        print(f"  -> {len(editions_found)} adet sürüm 'upsell' bölümünde bulundu.")
         return editions_found
-
-    # --- YÖNTEM 2: Upsell bölümü yoksa, ana ürün bilgisini ara (Fallback) ---
-    # Yukarıdaki döngü hiç çalışmadıysa (i=0'da kırıldıysa), sayfa muhtemelen tek sürümlüdür.
-    print("  -> 'Upsell' bölümü bulunamadı, ana ürün bilgisi aranıyor...")
 
     main_price_tag = soup.find('span', attrs={'data-qa': 'mfeCtaMain#offer0#finalPrice'})
     main_title_tag = soup.find('h1', attrs={'data-qa': 'mfe-game-title#name'})
-
-    # Sürüm adını öncelikli olarak sayfadaki H1'den al, bulamazsan CSV'deki ismi kullan.
     edition_name = main_title_tag.get_text(strip=True) if main_title_tag else default_name
 
     if main_price_tag:
         editions_found.append({'name': edition_name, 'price': clean_price(main_price_tag.get_text())})
     else:
-        # Fiyat yoksa, ücretsiz veya PS Plus'a dahil olabilir. Buton metnini kontrol et.
         free_tag = soup.find(
             lambda tag: tag.name == 'span' and tag.get_text(strip=True).lower() in ['ücretsiz', 'free', 'indir',
                                                                                     'download', 'oyna', 'play'])
-        if free_tag:
-            editions_found.append({'name': edition_name, 'price': 'Ücretsiz/Dahil'})
-        else:
-            # Hiçbir fiyat bilgisi bulunamadıysa.
-            print(f"  -> UYARI: {default_name} için fiyat bilgisi bulunamadı.")
-            editions_found.append({'name': edition_name, 'price': 'N/A'})
+        editions_found.append({'name': edition_name, 'price': 'Ücretsiz/Dahil' if free_tag else 'N/A'})
 
     return editions_found
 
 
 def prepare_data_for_db(concept_id: str, game_name: str, editions: List[Dict[str, str]]) -> Dict[str, Any]:
-    """Kazınan veriyi veritabanı şemasına uygun bir sözlüğe dönüştürür."""
     db_row = {'concept_id': concept_id, 'name': game_name}
-    # En fazla MAX_EDITIONS kadar sürümü işle
     for i in range(MAX_EDITIONS):
-        surum_key = f'surum_adi_{i + 1}'
-        fiyat_key = f'fiyat_{i + 1}'
+        surum_key, fiyat_key = f'surum_adi_{i + 1}', f'fiyat_{i + 1}'
         if i < len(editions):
-            edition = editions[i]
-            db_row[surum_key] = edition['name']
-            db_row[fiyat_key] = edition['price']
+            db_row[surum_key] = editions[i]['name']
+            db_row[fiyat_key] = editions[i]['price']
         else:
-            # Kalan sütunları boş (NULL) olarak doldur
-            db_row[surum_key] = None
-            db_row[fiyat_key] = None
+            db_row[surum_key], db_row[fiyat_key] = None, None
     return db_row
 
 
-# --- ANA İŞLEM FONKSİYONU ---
+# GÜNCELLEME: Tek bir oyunu işleyen fonksiyon (paralel çalıştırılacak)
+def process_game(game: Dict[str, str]) -> Optional[Dict[str, Any]]:
+    """Tek bir oyun için tüm scraping ve veri hazırlama adımlarını yürütür."""
+    concept_id = game.get('concept_id')
+    game_name = game.get('name', 'İsim Yok')
+
+    if not concept_id:
+        return None
+
+    url = BASE_URL.format(concept_id)
+    soup = get_page_soup(url)
+
+    if soup:
+        editions_list = scrape_game_editions(soup, game_name)
+        game_db_data = prepare_data_for_db(concept_id, game_name, editions_list)
+        return game_db_data
+    else:
+        print(f"  -> UYARI: {game_name} (ID: {concept_id}) için sayfa içeriği alınamadı. Atlanıyor.")
+        return None
+
+
+# --- ANA İŞLEM FONKSİYONU (GÜNCELLENMİŞ) ---
 
 def run_scraper_task():
-    """GitHub Actions tarafından çağrılacak ana fonksiyon."""
+    """Ana fonksiyon, görevleri paralel olarak yürütür."""
     if not os.path.exists(INPUT_CSV):
         print(f"HATA: Girdi dosyası bulunamadı: '{INPUT_CSV}'")
         return
@@ -159,49 +147,37 @@ def run_scraper_task():
     now = datetime.now()
     table_name = now.strftime("games_%d_%m_%Y_%H_%M")
 
-    try:
-        with open(INPUT_CSV, 'r', encoding='utf-8') as f:
-            games_to_scrape = list(csv.DictReader(f))
-    except FileNotFoundError:
-        print(f"HATA: {INPUT_CSV} dosyası bulunamadı.")
-        return
-    except Exception as e:
-        print(f"CSV dosyası okunurken bir hata oluştu: {e}")
-        return
+    with open(INPUT_CSV, 'r', encoding='utf-8') as f:
+        games_to_scrape = list(csv.DictReader(f))
 
     total_games = len(games_to_scrape)
-    print(f"Toplam {total_games} oyun bulundu. Veriler '{table_name}' tablosuna işlenecek...")
+    print(f"Toplam {total_games} oyun bulundu. {MAX_WORKERS} işçi ile paralel olarak işlenecek...")
 
     conn, cursor = setup_database_and_table(table_name)
+    processed_count = 0
 
     try:
-        for i, game in enumerate(games_to_scrape):
-            concept_id = game.get('concept_id')
-            game_name = game.get('name', 'İsim Yok')
+        # GÜNCELLEME: ThreadPoolExecutor kullanarak görevleri paralel çalıştır
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            # Her bir oyun için process_game fonksiyonunu çalıştır ve bir 'future' nesnesi al
+            future_to_game = {executor.submit(process_game, game): game for game in games_to_scrape}
 
-            if not concept_id:
-                print(f"[{i + 1}/{total_games}] UYARI: Satırda concept_id bulunamadı. Atlanıyor.")
-                continue
+            # Görevler tamamlandıkça sonuçları işle
+            for future in as_completed(future_to_game):
+                game_name = future_to_game[future].get('name', 'Bilinmeyen Oyun')
+                try:
+                    game_db_data = future.result()
+                    if game_db_data:
+                        insert_or_update_game(cursor, game_db_data, table_name)
 
-            print(f"[{i + 1}/{total_games}] İşleniyor: {game_name} (ID: {concept_id})")
-
-            url = BASE_URL.format(concept_id)
-            soup = get_page_soup(url)
-
-            if soup:
-                # 1. Veriyi kazı (Güncellenmiş fonksiyon ile)
-                editions_list = scrape_game_editions(soup, game_name)
-
-                # 2. Veriyi veritabanı için hazırla
-                game_db_data = prepare_data_for_db(concept_id, game_name, editions_list)
-
-                # 3. Veritabanına ekle
-                insert_or_update_game(cursor, game_db_data, table_name)
-
-            time.sleep(0.5)  # Sunucuyu yormamak için bekleme
-
+                except Exception as exc:
+                    print(f"  -> HATA: '{game_name}' işlenirken bir istisna oluştu: {exc}")
+                finally:
+                    processed_count += 1
+                    # Her 10 oyunda bir ilerleme durumu yazdır
+                    if processed_count % 10 == 0 or processed_count == total_games:
+                        print(f"[{processed_count}/{total_games}] oyun işlendi...")
     finally:
-        # Hata olsa bile veritabanı bağlantısını güvenli bir şekilde kapat
         conn.commit()
         conn.close()
         print(f"\nİşlem tamamlandı! Veriler '{DATABASE_FILE}' dosyasındaki '{table_name}' tablosuna kaydedildi.")
