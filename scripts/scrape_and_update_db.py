@@ -1,5 +1,3 @@
-# /scripts/scrape_and_update_db.py
-
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -10,6 +8,7 @@ from datetime import datetime
 from typing import List, Dict, Optional, Tuple, Any
 
 # --- PROJE DİZİNİNİ OTOMATİK BULMA ---
+# Bu script'in 'scripts' klasöründe olduğunu varsayarak ana dizini bulur.
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # --- AYARLAR ---
@@ -22,13 +21,16 @@ HEADERS = {
 # Veritabanına yazılacak maksimum sürüm sayısı
 MAX_EDITIONS = 5
 
+
 # --- VERİ İŞLEME VE VERİTABANI YARDIMCI FONKSİYONLARI ---
 
 def clean_price(price_text: Optional[str]) -> str:
-    """Fiyat metnini temizler."""
+    """Fiyat metnini temizler ve para birimi sembollerini kaldırır."""
     if not price_text:
         return 'N/A'
+    # \xa0 (non-breaking space) dahil tüm boşlukları ve TL simgesini temizle
     return price_text.replace('\xa0', ' ').replace('TL', '').strip()
+
 
 def setup_database_and_table(table_name: str) -> Tuple[sqlite3.Connection, sqlite3.Cursor]:
     """Veritabanı bağlantısını kurar ve tarih damgalı tabloyu oluşturur."""
@@ -38,12 +40,13 @@ def setup_database_and_table(table_name: str) -> Tuple[sqlite3.Connection, sqlit
     for i in range(1, MAX_EDITIONS + 1):
         columns.append(f"surum_adi_{i} TEXT")
         columns.append(f"fiyat_{i} TEXT")
-    
+
     create_table_query = f"CREATE TABLE IF NOT EXISTS '{table_name}' ({', '.join(columns)})"
     cursor.execute(create_table_query)
     conn.commit()
     print(f"Veritabanı '{DATABASE_FILE}' içinde '{table_name}' tablosu hazırlandı.")
     return conn, cursor
+
 
 def insert_or_update_game(cursor: sqlite3.Cursor, game_data: Dict[str, Any], table_name: str):
     """Veritabanına tek bir oyun verisini ekler veya günceller."""
@@ -53,7 +56,8 @@ def insert_or_update_game(cursor: sqlite3.Cursor, game_data: Dict[str, Any], tab
     values = tuple(game_data.values())
     cursor.execute(query, values)
 
-# --- WEB SCRAPING FONKSİYONLARI ---
+
+# --- WEB SCRAPING FONKSİYONLARI (GÜNCELLENMİŞ BÖLÜM) ---
 
 def get_page_soup(url: str) -> Optional[BeautifulSoup]:
     """Verilen URL'den sayfa içeriğini alır ve BeautifulSoup nesnesi döndürür."""
@@ -65,53 +69,84 @@ def get_page_soup(url: str) -> Optional[BeautifulSoup]:
         print(f"  -> HATA: Sayfa alınamadı. URL: {url}, Hata: {e}")
         return None
 
+
 def scrape_game_editions(soup: BeautifulSoup, default_name: str) -> List[Dict[str, str]]:
     """
     Bir oyun sayfasından tüm sürümleri ve fiyatlarını kazır.
-    Sorumluluğu sadece veri kazımaktır.
+    İstediğiniz 'while' döngüsü mantığı ile güncellenmiştir.
     """
     editions_found = []
 
-    # Öncelikli olarak birden çok sürüm içeren bölümü ara
-    upsell_section = soup.find('div', attrs={'data-qa': 'mfeUpsell'})
-    if upsell_section:
-        edition_articles = upsell_section.find_all('article', attrs={'data-qa': lambda v: v and v.startswith('mfeUpsell#productEdition')})
-        for article in edition_articles:
-            edition_name_tag = article.find('h3', attrs={'data-qa': lambda v: v and v.endswith('#editionName')})
-            price_tag = article.find('span', attrs={'data-qa': lambda v: v and v.endswith('#finalPrice')})
-            editions_found.append({
-                'name': edition_name_tag.get_text(strip=True) if edition_name_tag else 'Bilinmeyen Sürüm',
-                'price': clean_price(price_tag.get_text()) if price_tag else 'N/A'
-            })
-    
-    # Eğer çoklu sürüm bölümü yoksa, ana ürün bilgilerini ara
-    if not editions_found:
-        main_price_tag = soup.find('span', attrs={'data-qa': 'mfeCtaMain#offer0#finalPrice'})
-        main_title_tag = soup.find('h1', attrs={'data-qa': 'mfe-game-title#name'})
-        edition_name = main_title_tag.get_text(strip=True) if main_title_tag else default_name
+    # --- YÖNTEM 1: "Upsell" bölümündeki tüm sürümleri while döngüsü ile ara ---
+    # Bu bölüm genellikle Deluxe, Gold gibi birden çok sürüm içeren oyunlarda bulunur.
+    i = 0
+    while True:
+        # Her bir sürümün ana kapsayıcısını (article) bulalım. Bu daha sağlam bir yoldur.
+        edition_article = soup.find('article', attrs={'data-qa': f'mfeUpsell#productEdition{i}'})
 
-        if main_price_tag:
-            editions_found.append({'name': edition_name, 'price': clean_price(main_price_tag.get_text())})
+        if not edition_article:
+            # Aranan sürüm kapsayıcısı bulunamadıysa, daha fazla sürüm yoktur, döngüyü kır.
+            break
+
+        # Kapsayıcı bulunduğuna göre, içindeki isim ve fiyatı arayalım.
+        edition_name_tag = edition_article.find('h3', attrs={'data-qa': lambda v: v and v.endswith('#editionName')})
+        price_tag = edition_article.find('span', attrs={'data-qa': lambda v: v and v.endswith('#finalPrice')})
+
+        edition_name = edition_name_tag.get_text(strip=True) if edition_name_tag else f"Bilinmeyen Sürüm {i + 1}"
+        price = clean_price(price_tag.get_text()) if price_tag else 'N/A'
+
+        editions_found.append({'name': edition_name, 'price': price})
+        i += 1  # Bir sonraki sürümü aramak için sayacı artır
+
+    # Eğer while döngüsü en az bir sürüm bulduysa, bu listeyi döndür.
+    if editions_found:
+        print(f"  -> {len(editions_found)} adet sürüm 'upsell' bölümünde bulundu.")
+        return editions_found
+
+    # --- YÖNTEM 2: Upsell bölümü yoksa, ana ürün bilgisini ara (Fallback) ---
+    # Yukarıdaki döngü hiç çalışmadıysa (i=0'da kırıldıysa), sayfa muhtemelen tek sürümlüdür.
+    print("  -> 'Upsell' bölümü bulunamadı, ana ürün bilgisi aranıyor...")
+
+    main_price_tag = soup.find('span', attrs={'data-qa': 'mfeCtaMain#offer0#finalPrice'})
+    main_title_tag = soup.find('h1', attrs={'data-qa': 'mfe-game-title#name'})
+
+    # Sürüm adını öncelikli olarak sayfadaki H1'den al, bulamazsan CSV'deki ismi kullan.
+    edition_name = main_title_tag.get_text(strip=True) if main_title_tag else default_name
+
+    if main_price_tag:
+        editions_found.append({'name': edition_name, 'price': clean_price(main_price_tag.get_text())})
+    else:
+        # Fiyat yoksa, ücretsiz veya PS Plus'a dahil olabilir. Buton metnini kontrol et.
+        free_tag = soup.find(
+            lambda tag: tag.name == 'span' and tag.get_text(strip=True).lower() in ['ücretsiz', 'free', 'indir',
+                                                                                    'download', 'oyna', 'play'])
+        if free_tag:
+            editions_found.append({'name': edition_name, 'price': 'Ücretsiz/Dahil'})
         else:
-            # Fiyat yoksa, ücretsiz veya indirilebilir mi diye kontrol et
-            free_tag = soup.find(lambda tag: tag.name == 'span' and tag.get_text(strip=True).lower() in ['ücretsiz', 'free', 'indir', 'download'])
-            editions_found.append({'name': edition_name, 'price': 'Ücretsiz' if free_tag else 'N/A'})
-            
+            # Hiçbir fiyat bilgisi bulunamadıysa.
+            print(f"  -> UYARI: {default_name} için fiyat bilgisi bulunamadı.")
+            editions_found.append({'name': edition_name, 'price': 'N/A'})
+
     return editions_found
 
-def prepare_data_for_db(concept_id: str, game_name: str, editions: List[Dict[str, str]]) -> Dict[str, str]:
+
+def prepare_data_for_db(concept_id: str, game_name: str, editions: List[Dict[str, str]]) -> Dict[str, Any]:
     """Kazınan veriyi veritabanı şemasına uygun bir sözlüğe dönüştürür."""
     db_row = {'concept_id': concept_id, 'name': game_name}
-    for i in range(1, MAX_EDITIONS + 1):
-        if i <= len(editions):
-            edition = editions[i-1]
-            db_row[f'surum_adi_{i}'] = edition['name']
-            db_row[f'fiyat_{i}'] = edition['price']
+    # En fazla MAX_EDITIONS kadar sürümü işle
+    for i in range(MAX_EDITIONS):
+        surum_key = f'surum_adi_{i + 1}'
+        fiyat_key = f'fiyat_{i + 1}'
+        if i < len(editions):
+            edition = editions[i]
+            db_row[surum_key] = edition['name']
+            db_row[fiyat_key] = edition['price']
         else:
-            # Kalan sütunları boş olarak doldur
-            db_row[f'surum_adi_{i}'] = None
-            db_row[f'fiyat_{i}'] = None
+            # Kalan sütunları boş (NULL) olarak doldur
+            db_row[surum_key] = None
+            db_row[fiyat_key] = None
     return db_row
+
 
 # --- ANA İŞLEM FONKSİYONU ---
 
@@ -123,12 +158,15 @@ def run_scraper_task():
 
     now = datetime.now()
     table_name = now.strftime("games_%d_%m_%Y_%H_%M")
-    
+
     try:
         with open(INPUT_CSV, 'r', encoding='utf-8') as f:
             games_to_scrape = list(csv.DictReader(f))
     except FileNotFoundError:
         print(f"HATA: {INPUT_CSV} dosyası bulunamadı.")
+        return
+    except Exception as e:
+        print(f"CSV dosyası okunurken bir hata oluştu: {e}")
         return
 
     total_games = len(games_to_scrape)
@@ -142,6 +180,7 @@ def run_scraper_task():
             game_name = game.get('name', 'İsim Yok')
 
             if not concept_id:
+                print(f"[{i + 1}/{total_games}] UYARI: Satırda concept_id bulunamadı. Atlanıyor.")
                 continue
 
             print(f"[{i + 1}/{total_games}] İşleniyor: {game_name} (ID: {concept_id})")
@@ -150,16 +189,16 @@ def run_scraper_task():
             soup = get_page_soup(url)
 
             if soup:
-                # 1. Veriyi kazı (Sadece bu işi yapan fonksiyona devret)
+                # 1. Veriyi kazı (Güncellenmiş fonksiyon ile)
                 editions_list = scrape_game_editions(soup, game_name)
-                
-                # 2. Veriyi veritabanı için hazırla (Sadece bu işi yapan fonksiyona devret)
+
+                # 2. Veriyi veritabanı için hazırla
                 game_db_data = prepare_data_for_db(concept_id, game_name, editions_list)
-                
+
                 # 3. Veritabanına ekle
                 insert_or_update_game(cursor, game_db_data, table_name)
-            
-            time.sleep(0.5) # Sunucuyu yormamak için bekleme
+
+            time.sleep(0.5)  # Sunucuyu yormamak için bekleme
 
     finally:
         # Hata olsa bile veritabanı bağlantısını güvenli bir şekilde kapat
