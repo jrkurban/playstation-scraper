@@ -1,3 +1,5 @@
+from pymongo import MongoClient # YENİ: En üste ekleyin
+from pymongo.database import Database # YENİ: En üste ekleyin
 import requests
 from bs4 import BeautifulSoup
 import csv
@@ -12,8 +14,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed  # GÜNCELLEME: 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # --- AYARLAR ---
+# DEĞİŞTİ: SQLite yerine MongoDB ayarları
+# BU BİLGİLERİ GITHUB ACTIONS SECRETS'TEN ALACAĞIZ!
+MONGO_URI = os.getenv('MONGO_URI')
+MONGO_DB_NAME = "GamesDB" # Veritabanı adımız
+
 INPUT_CSV = os.path.join(PROJECT_ROOT, 'playstation_games_with_concept_id.csv')
-DATABASE_FILE = os.path.join(PROJECT_ROOT, 'playstation_games.db')
 BASE_URL = "https://store.playstation.com/tr-tr/concept/{}"
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
@@ -25,27 +31,23 @@ MAX_WORKERS = 5
 
 # --- VERİ İŞLEME VE VERİTABANI YARDIMCI FONKSİYONLARI ---
 
+def setup_mongodb_connection() -> Tuple[MongoClient, Database]:
+    """MongoDB Atlas'a bağlantı kurar ve veritabanı nesnesini döndürür."""
+    if not MONGO_URI:
+        raise Exception("HATA: MONGO_URI ortam değişkeni ayarlanmamış!")
+
+    print("MongoDB Atlas'a bağlanılıyor...")
+    client = MongoClient(MONGO_URI)
+    db = client[MONGO_DB_NAME]
+    print(f"'{MONGO_DB_NAME}' veritabanına başarıyla bağlanıldı.")
+    return client, db
+
 def clean_price(price_text: Optional[str]) -> str:
     """Fiyat metnini temizler."""
     if not price_text:
         return 'N/A'
     return price_text.replace('\xa0', ' ').replace('TL', '').strip()
 
-
-def setup_database_and_table(table_name: str) -> Tuple[sqlite3.Connection, sqlite3.Cursor]:
-    """Veritabanı bağlantısını kurar ve tarih damgalı tabloyu oluşturur."""
-    conn = sqlite3.connect(DATABASE_FILE)
-    cursor = conn.cursor()
-    columns = ["concept_id TEXT PRIMARY KEY", "name TEXT"]
-    for i in range(1, MAX_EDITIONS + 1):
-        columns.append(f"surum_adi_{i} TEXT")
-        columns.append(f"fiyat_{i} TEXT")
-
-    create_table_query = f"CREATE TABLE IF NOT EXISTS '{table_name}' ({', '.join(columns)})"
-    cursor.execute(create_table_query)
-    conn.commit()
-    print(f"Veritabanı '{DATABASE_FILE}' içinde '{table_name}' tablosu hazırlandı.")
-    return conn, cursor
 
 
 def insert_or_update_game(cursor: sqlite3.Cursor, game_data: Dict[str, Any], table_name: str):
@@ -103,17 +105,75 @@ def scrape_game_editions(soup: BeautifulSoup, default_name: str) -> List[Dict[st
     return editions_found
 
 
-def prepare_data_for_db(concept_id: str, game_name: str, editions: List[Dict[str, str]]) -> Dict[str, Any]:
-    db_row = {'concept_id': concept_id, 'name': game_name}
-    for i in range(MAX_EDITIONS):
-        surum_key, fiyat_key = f'surum_adi_{i + 1}', f'fiyat_{i + 1}'
-        if i < len(editions):
-            db_row[surum_key] = editions[i]['name']
-            db_row[fiyat_key] = editions[i]['price']
-        else:
-            db_row[surum_key], db_row[fiyat_key] = None, None
-    return db_row
+def prepare_document_for_mongodb(concept_id: str, game_name: str, editions: List[Dict[str, str]]) -> Dict[str, Any]:
+    """
+    Scrape edilen veriyi, 'price_history' koleksiyonuna eklenecek
+    BSON dokümanı formatına dönüştürür.
+    """
+    now_iso = datetime.now().isoformat() + "Z"
 
+    # Sürümleri (editions) istediğimiz {name, price} formatında bir listeye dönüştür.
+    # scrape_game_editions zaten bu formatta döndürdüğü için ek işlem gerekmiyor.
+
+    price_document = {
+        "gameId": concept_id,  # 'games' koleksiyonundaki _id'ye referans
+        "snapshotDate": now_iso,  # Verinin çekildiği anın zaman damgası (ISO formatında)
+        "editions": editions  # Sürümlerin olduğu dizi [{name: "...", price: "..."}, ...]
+    }
+    return price_document
+
+
+def run_scraper_task():
+    """Ana fonksiyon, görevleri paralel olarak yürütür ve sonuçları MongoDB'ye yazar."""
+    if not os.path.exists(INPUT_CSV):
+        print(f"HATA: Girdi dosyası bulunamadı: '{INPUT_CSV}'")
+        return
+
+    client, db = None, None  # Bağlantıyı en başta None olarak tanımla
+    try:
+        # YENİ: MongoDB bağlantısını kur.
+        client, db = setup_mongodb_connection()
+        price_collection = db['price_history']  # 'price_history' koleksiyonunu seç
+    except Exception as e:
+        print(f"Veritabanı bağlantı hatası: {e}")
+        return  # Bağlantı kurulamazsa işlemi durdur
+
+    with open(INPUT_CSV, 'r', encoding='utf-8') as f:
+        games_to_scrape = list(csv.DictReader(f))
+
+    total_games = len(games_to_scrape)
+    print(f"Toplam {total_games} oyun bulundu. {MAX_WORKERS} işçi ile paralel olarak işlenecek...")
+
+    processed_count = 0
+    inserted_count = 0
+
+    # ThreadPoolExecutor kullanarak görevleri paralel çalıştır
+    with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+        future_to_game = {executor.submit(process_game, game): game for game in games_to_scrape}
+
+        for future in as_completed(future_to_game):
+            game_name = future_to_game[future].get('name', 'Bilinmeyen Oyun')
+            try:
+                # DEĞİŞTİ: process_game artık doğrudan MongoDB dokümanını döndürecek
+                price_document = future.result()
+                if price_document:
+                    # YENİ: Veriyi MongoDB'ye ekle
+                    price_collection.insert_one(price_document)
+                    inserted_count += 1
+
+            except Exception as exc:
+                print(f"  -> HATA: '{game_name}' işlenirken bir istisna oluştu: {exc}")
+            finally:
+                processed_count += 1
+                if processed_count % 10 == 0 or processed_count == total_games:
+                    print(f"[{processed_count}/{total_games}] oyun işlendi...")
+
+    # YENİ: Sonuçları ve bağlantıyı kapatma
+    if client:
+        client.close()
+        print("\nMongoDB bağlantısı kapatıldı.")
+
+    print(f"\nİşlem tamamlandı! {inserted_count} adet fiyat bilgisi 'price_history' koleksiyonuna kaydedildi.")
 
 # GÜNCELLEME: Tek bir oyunu işleyen fonksiyon (paralel çalıştırılacak)
 def process_game(game: Dict[str, str]) -> Optional[Dict[str, Any]]:
@@ -129,58 +189,14 @@ def process_game(game: Dict[str, str]) -> Optional[Dict[str, Any]]:
 
     if soup:
         editions_list = scrape_game_editions(soup, game_name)
-        game_db_data = prepare_data_for_db(concept_id, game_name, editions_list)
-        return game_db_data
-    else:
-        print(f"  -> UYARI: {game_name} (ID: {concept_id}) için sayfa içeriği alınamadı. Atlanıyor.")
-        return None
+        # DEĞİŞTİ: Çağrılan fonksiyonun adı değişti.
+        price_document = prepare_document_for_mongodb(concept_id, game_name, editions_list)
+        return price_document
 
 
 # --- ANA İŞLEM FONKSİYONU (GÜNCELLENMİŞ) ---
 
-def run_scraper_task():
-    """Ana fonksiyon, görevleri paralel olarak yürütür."""
-    if not os.path.exists(INPUT_CSV):
-        print(f"HATA: Girdi dosyası bulunamadı: '{INPUT_CSV}'")
-        return
 
-    now = datetime.now()
-    table_name = now.strftime("games_%d_%m_%Y_%H_%M")
-
-    with open(INPUT_CSV, 'r', encoding='utf-8') as f:
-        games_to_scrape = list(csv.DictReader(f))
-
-    total_games = len(games_to_scrape)
-    print(f"Toplam {total_games} oyun bulundu. {MAX_WORKERS} işçi ile paralel olarak işlenecek...")
-
-    conn, cursor = setup_database_and_table(table_name)
-    processed_count = 0
-
-    try:
-        # GÜNCELLEME: ThreadPoolExecutor kullanarak görevleri paralel çalıştır
-        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
-            # Her bir oyun için process_game fonksiyonunu çalıştır ve bir 'future' nesnesi al
-            future_to_game = {executor.submit(process_game, game): game for game in games_to_scrape}
-
-            # Görevler tamamlandıkça sonuçları işle
-            for future in as_completed(future_to_game):
-                game_name = future_to_game[future].get('name', 'Bilinmeyen Oyun')
-                try:
-                    game_db_data = future.result()
-                    if game_db_data:
-                        insert_or_update_game(cursor, game_db_data, table_name)
-
-                except Exception as exc:
-                    print(f"  -> HATA: '{game_name}' işlenirken bir istisna oluştu: {exc}")
-                finally:
-                    processed_count += 1
-                    # Her 10 oyunda bir ilerleme durumu yazdır
-                    if processed_count % 10 == 0 or processed_count == total_games:
-                        print(f"[{processed_count}/{total_games}] oyun işlendi...")
-    finally:
-        conn.commit()
-        conn.close()
-        print(f"\nİşlem tamamlandı! Veriler '{DATABASE_FILE}' dosyasındaki '{table_name}' tablosuna kaydedildi.")
 
 
 if __name__ == "__main__":
