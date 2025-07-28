@@ -30,6 +30,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run Scraper to get latest prices
+        env: # <-- BU BLOK ÇOK ÖNEMLİ
+          MONGO_URI: ${{ secrets.MONGO_URI }}
         run: python scripts/scrape_and_update_db.py
 
       - name: Generate discount report
