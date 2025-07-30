@@ -1,6 +1,6 @@
 # PlayStation İndirim Raporu
 
-**Rapor Tarihi:** 30.07.2025 08:19
+**Rapor Tarihi:** 30.07.2025 08:25
 **Not:** Son **7 gün** içinde fiyatı yeni düşen ürünler listelenmiştir.
 
 ### Yeni İndirime Giren Toplam 811 Ürün Bulundu!

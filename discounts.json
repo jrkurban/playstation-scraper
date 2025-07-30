@@ -1,0 +1,5679 @@
+[
+  {
+    "name": "A Plague Tale: Innocence",
+    "edition": "A Plague Tale: Innocence",
+    "old_price": "419,70",
+    "new_price": "Ücretsiz",
+    "duration_days": 0
+  },
+  {
+    "name": "A Plague Tale: Requiem",
+    "edition": "A Plague Tale Bundle",
+    "old_price": "3.149,00",
+    "new_price": "1.259,60",
+    "duration_days": 1
+  },
+  {
+    "name": "ACE COMBAT™ 7: SKIES UNKNOWN",
+    "edition": "Standard Edition",
+    "old_price": "2.499,00",
+    "new_price": "399,84",
+    "duration_days": 1
+  },
+  {
+    "name": "ACE COMBAT™ 7: SKIES UNKNOWN",
+    "edition": "Maverick Ultimate Edition",
+    "old_price": "3.899,00",
+    "new_price": "701,82",
+    "duration_days": 1
+  },
+  {
+    "name": "AI LIMIT",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "1.575,00",
+    "new_price": "1.260,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Achilles: Legends Untold",
+    "edition": "Achilles: Legends Untold",
+    "old_price": "949,00",
+    "new_price": "384,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Ad Infinitum",
+    "edition": "Ad Infinitum",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Age of Empires II: Definitive Edition",
+    "edition": "Standard",
+    "old_price": "1.699,00",
+    "new_price": "1.274,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Age of Empires II: Definitive Edition",
+    "edition": "Premium Editions Bundle",
+    "old_price": "4.198,00",
+    "new_price": "2.938,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Age of Mythology: Retold",
+    "edition": "Premium Edition",
+    "old_price": "999,00",
+    "new_price": "699,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Age of Wonders 4",
+    "edition": "Premium Edition",
+    "old_price": "3.149,00",
+    "new_price": "2.204,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Alien: Rogue Incursion VR",
+    "edition": "Standart",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Aliens: Fireteam Elite PS4 & PS5",
+    "edition": "Standard",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Ancestors: The Humankind Odyssey",
+    "edition": "Ancestors: The Humankind Odyssey",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Anno 1800™ Konsol Sürümü",
+    "edition": "Standard Edition",
+    "old_price": "1.599,00",
+    "new_price": "479,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Arkadaşım Peppa Pig: Tam Sürüm",
+    "edition": "Tam Sürüm",
+    "old_price": "1.599,00",
+    "new_price": "719,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed The Ezio Collection",
+    "edition": "Assassin’s Creed® The Ezio Collection",
+    "old_price": "1.749,00",
+    "new_price": "524,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed Valhalla",
+    "edition": "Assassin's Creed Valhalla PS4 & PS5",
+    "old_price": "470,00",
+    "new_price": "117,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed Valhalla",
+    "edition": "Complete Edition",
+    "old_price": "975,00",
+    "new_price": "243,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Mirage",
+    "edition": "Standard Edition",
+    "old_price": "1.749,00",
+    "new_price": "699,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Mirage",
+    "edition": "Master Assassin Edition",
+    "old_price": "2.999,00",
+    "new_price": "1.199,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Odyssey",
+    "edition": "Assassin's Creed® Odyssey",
+    "old_price": "599,00",
+    "new_price": "119,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Odyssey",
+    "edition": "Assassin's Creed® Odyssey - ULTIMATE EDITION",
+    "old_price": "739,00",
+    "new_price": "147,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Origins",
+    "edition": "Gold Edition",
+    "old_price": "359,00",
+    "new_price": "53,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Origins",
+    "edition": "Assassin's Creed® Origins",
+    "old_price": "3.149,00",
+    "new_price": "472,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Syndicate",
+    "edition": "Assassin's Creed Üçlü Paket: Black Flag, Unity, Syndicate",
+    "old_price": "2.799,00",
+    "new_price": "699,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Syndicate",
+    "edition": "Assassin's Creed® Syndicate Gold Edition",
+    "old_price": "1.749,00",
+    "new_price": "524,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Assetto Corsa",
+    "edition": "Assetto Corsa Ultimate Edition",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Assetto Corsa Competizione",
+    "edition": "Assetto Corsa Competizione",
+    "old_price": "624,75",
+    "new_price": "126,86",
+    "duration_days": 0
+  },
+  {
+    "name": "Asterix & Obelix Slap Them All!",
+    "edition": "Asterix & Obelix: Slap them All!",
+    "old_price": "879,00",
+    "new_price": "131,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Asterix & Obelix Slap Them All!",
+    "edition": "Asterix & Obelix Slap Them All!",
+    "old_price": "879,00",
+    "new_price": "131,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Avatar: Frontiers of Pandora™",
+    "edition": "Standard Edition",
+    "old_price": "1.879,00",
+    "new_price": "563,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Avatar: Frontiers of Pandora™",
+    "edition": "Ultimate Edition",
+    "old_price": "2.249,00",
+    "new_price": "674,70",
+    "duration_days": 1
+  },
+  {
+    "name": "BATMAN™: ARKHAM KNIGHT",
+    "edition": "Batman: Arkham Knight",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "BODYCAMERA SHOOTER",
+    "edition": "BODYCAMERA SHOOTER",
+    "old_price": "455,00",
+    "new_price": "295,75",
+    "duration_days": 0
+  },
+  {
+    "name": "Back 4 Blood",
+    "edition": "Deluxe Edition",
+    "old_price": "859,00",
+    "new_price": "85,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Battlefield 4™",
+    "edition": "Battlefield 4™ Premium Sürümü",
+    "old_price": "2.499,00",
+    "new_price": "324,87",
+    "duration_days": 1
+  },
+  {
+    "name": "Battlefield™ 1",
+    "edition": "Battlefield™ 1",
+    "old_price": "100,00",
+    "new_price": "25,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Battlefield™ V",
+    "edition": "Battlefield™ V",
+    "old_price": "279,00",
+    "new_price": "36,27",
+    "duration_days": 1
+  },
+  {
+    "name": "Beyond Good & Evil 20th Anniversary Edition",
+    "edition": "Beyond Good & Evil 20th Anniversary Edition",
+    "old_price": "699,00",
+    "new_price": "419,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Blasphemous 2",
+    "edition": "Mea Culpa Edition",
+    "old_price": "1.379,00",
+    "new_price": "827,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Borderlands 3",
+    "edition": "Next Level Edition",
+    "old_price": "507,46",
+    "new_price": "50,74",
+    "duration_days": 1
+  },
+  {
+    "name": "Borderlands 3",
+    "edition": "Ultimate Edition",
+    "old_price": "3.499,00",
+    "new_price": "874,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Borderlands: The Handsome Collection",
+    "edition": "Borderlands: The Handsome Collection",
+    "old_price": "2.099,00",
+    "new_price": "524,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Borderlands: The Handsome Collection",
+    "edition": "Borderlands Legendary Collection",
+    "old_price": "2.299,00",
+    "new_price": "459,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Brothers: A Tale of Two Sons Remake",
+    "edition": "Brothers: A Tale of Two Sons Remake",
+    "old_price": "699,00",
+    "new_price": "279,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Bully (Canis Canem Edit)",
+    "edition": "Bully (Canis Canem Edit)",
+    "old_price": "525,00",
+    "new_price": "315,00",
+    "duration_days": 1
+  },
+  {
+    "name": "CAPTAIN TSUBASA: RISE OF NEW CHAMPIONS",
+    "edition": "Captain Tsubasa: Rise of New Champions",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "CATAN® - Konsol Sürümü",
+    "edition": "CATAN® - Console Edition PS4™ & PS5®",
+    "old_price": "529,00",
+    "new_price": "158,70",
+    "duration_days": 1
+  },
+  {
+    "name": "CODE VEIN",
+    "edition": "CODE VEIN Deluxe Edition",
+    "old_price": "3.149,00",
+    "new_price": "472,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®",
+    "edition": "BO6 Kasa Sürümü",
+    "old_price": "3.999,00",
+    "new_price": "2.599,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®",
+    "edition": "MWIII Cross-Gen",
+    "old_price": "2.519,99",
+    "new_price": "1.259,99",
+    "duration_days": 0
+  },
+  {
+    "name": "Call of Duty®",
+    "edition": "MWII Cross-Gen",
+    "old_price": "2.519,99",
+    "new_price": "1.007,99",
+    "duration_days": 0
+  },
+  {
+    "name": "Call of Duty® Ghosts",
+    "edition": "Call of Duty®: Ghosts Gold Edition",
+    "old_price": "2.499,00",
+    "new_price": "824,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®: Advanced Warfare",
+    "edition": "Call of Duty®: Advanced Warfare Gold Edition",
+    "old_price": "2.499,00",
+    "new_price": "824,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®: Infinite Warfare",
+    "edition": "Call of Duty®: Infinite Warfare - Legacy Edition",
+    "old_price": "3.149,00",
+    "new_price": "1.259,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®: Infinite Warfare",
+    "edition": "Call of Duty®: Infinite Warfare",
+    "old_price": "2.499,00",
+    "new_price": "824,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®: Modern Warfare® 2 Campaign Remastered",
+    "edition": "Call of Duty®: Modern Warfare® 2 Campaign Remastered",
+    "old_price": "172,88",
+    "new_price": "86,44",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®: Vanguard",
+    "edition": "Standard Edition",
+    "old_price": "499,00",
+    "new_price": "199,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of Duty®: WWII",
+    "edition": "Call of Duty®: WWII - Altın Sürüm",
+    "old_price": "254,00",
+    "new_price": "83,82",
+    "duration_days": 1
+  },
+  {
+    "name": "Call of the Wild: The Angler™",
+    "edition": "Call of the Wild: The Angler™ - Fishing Starter Pack",
+    "old_price": "1.399,00",
+    "new_price": "769,45",
+    "duration_days": 1
+  },
+  {
+    "name": "Car Mechanic Simulator 2021",
+    "edition": "Car Mechanic Simulator 2021",
+    "old_price": "1.049,00",
+    "new_price": "262,25",
+    "duration_days": 1
+  },
+  {
+    "name": "CarX Drift Racing Online",
+    "edition": "CarX Drift Racing Online",
+    "old_price": "839,00",
+    "new_price": "293,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Chef Life: A Restaurant Simulator",
+    "edition": "Chef Life - A Restaurant Simulator",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Chivalry 2",
+    "edition": "Standard Edition",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Cities: Skylines - Remastered",
+    "edition": "Cities: Skylines - Remastered",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Cobra Kai 2: Dojos Rising",
+    "edition": "Cobra Kai Collection",
+    "old_price": "2.099,00",
+    "new_price": "419,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Commandos 3 - HD Remaster",
+    "edition": "Commandos 3 - HD Remaster",
+    "old_price": "1.049,00",
+    "new_price": "629,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Contra: Operation Galuga",
+    "edition": "Standard Edition",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Crash Bandicoot™ 4: It’s About Time",
+    "edition": "Crash Bandicoot™ 4: It’s About Time",
+    "old_price": "2.299,00",
+    "new_price": "758,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Crash Bandicoot™ 4: It’s About Time",
+    "edition": "Crash Bandicoot™ - Quadrilogy Paketi",
+    "old_price": "769,00",
+    "new_price": "307,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Crash Bandicoot™ 4: It’s About Time",
+    "edition": "Crash Bandicoot™ - Crashiversary Paketi",
+    "old_price": "999,00",
+    "new_price": "399,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Crash Team Rumble™",
+    "edition": "Standart Sürüm",
+    "old_price": "710,84",
+    "new_price": "426,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Crash™ Team Racing Nitro-Fueled",
+    "edition": "Crash™ Team Racing Nitro-Fueled - Nitros Oxide Edition",
+    "old_price": "2.799,00",
+    "new_price": "979,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Creed: Rise to Glory - Championship Edition™",
+    "edition": "Standard",
+    "old_price": "999,00",
+    "new_price": "399,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Creed: Rise to Glory - Championship Edition™",
+    "edition": "Creed: Rise to Glory™",
+    "old_price": "879,00",
+    "new_price": "131,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Crusader Kings III",
+    "edition": "Standard Edition",
+    "old_price": "1.749,00",
+    "new_price": "699,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Crysis 2 Remastered",
+    "edition": "Crysis 2 Remastered",
+    "old_price": "749,00",
+    "new_price": "262,15",
+    "duration_days": 1
+  },
+  {
+    "name": "Crysis 3 Remastered",
+    "edition": "Crysis 3 Remastered",
+    "old_price": "749,00",
+    "new_price": "262,15",
+    "duration_days": 1
+  },
+  {
+    "name": "Cult of the Lamb",
+    "edition": "Heretic Edition",
+    "old_price": "1.229,00",
+    "new_price": "614,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Cyberpunk 2077",
+    "edition": "Cyberpunk 2077: Ultimate Edition (PS5)",
+    "old_price": "1.145,00",
+    "new_price": "572,50",
+    "duration_days": 1
+  },
+  {
+    "name": "DAVE THE DIVER",
+    "edition": "DAVE THE DIVER - Dave & Ichiban Bundle",
+    "old_price": "875,00",
+    "new_price": "525,00",
+    "duration_days": 1
+  },
+  {
+    "name": "DEATHLOOP",
+    "edition": "Deluxe Edition",
+    "old_price": "639,00",
+    "new_price": "127,80",
+    "duration_days": 1
+  },
+  {
+    "name": "DIRT 5",
+    "edition": "Year One Edition",
+    "old_price": "3.149,00",
+    "new_price": "787,25",
+    "duration_days": 1
+  },
+  {
+    "name": "DIY Fashion Star",
+    "edition": "Standart Sürüm",
+    "old_price": "279,00",
+    "new_price": "83,70",
+    "duration_days": 1
+  },
+  {
+    "name": "DIY Fashion Star",
+    "edition": "Eksiksiz Baskı",
+    "old_price": "389,00",
+    "new_price": "136,15",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM Eternal",
+    "edition": "Standard Edition",
+    "old_price": "469,99",
+    "new_price": "117,49",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM Eternal",
+    "edition": "Deluxe Edition",
+    "old_price": "609,00",
+    "new_price": "152,25",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM Eternal",
+    "edition": "Year One Pass",
+    "old_price": "1.049,00",
+    "new_price": "419,60",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM Eternal",
+    "edition": "Ancient Gods Part Two",
+    "old_price": "699,00",
+    "new_price": "279,60",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM Eternal",
+    "edition": "Ancient Gods Part One",
+    "old_price": "699,00",
+    "new_price": "279,60",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM: The Dark Ages",
+    "edition": "Standard Edition",
+    "old_price": "2.299,00",
+    "new_price": "1.724,25",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM: The Dark Ages",
+    "edition": "Premium Edition",
+    "old_price": "3.280,00",
+    "new_price": "2.460,00",
+    "duration_days": 1
+  },
+  {
+    "name": "DRAGON BALL XENOVERSE 2",
+    "edition": "Special Edition",
+    "old_price": "1.749,00",
+    "new_price": "699,60",
+    "duration_days": 1
+  },
+  {
+    "name": "DRAGON BALL: Sparking! ZERO",
+    "edition": "Deluxe Edition",
+    "old_price": "3.899,00",
+    "new_price": "2.729,30",
+    "duration_days": 1
+  },
+  {
+    "name": "DREDGE",
+    "edition": "Complete Edition",
+    "old_price": "1.365,00",
+    "new_price": "682,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Darksiders III",
+    "edition": "Darksiders III Digital Deluxe Edition",
+    "old_price": "1.749,00",
+    "new_price": "349,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Darksiders III",
+    "edition": "Darksiders III Blades & Whip Edition",
+    "old_price": "2.799,00",
+    "new_price": "419,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Darksiders III",
+    "edition": "Darksiders III",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Darksiders Warmastered Edition",
+    "edition": "Darksiders: Fury's Collection - War and Death",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Date Everything!",
+    "edition": "Date Everything!",
+    "old_price": "1.399,00",
+    "new_price": "1.119,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Dead Cells",
+    "edition": "Medley of Pain Bundle",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Dead Island 2",
+    "edition": "Ultimate Edition",
+    "old_price": "2.499,00",
+    "new_price": "749,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Dead Rising Deluxe Remaster",
+    "edition": "Digital Deluxe",
+    "old_price": "2.099,00",
+    "new_price": "1.385,34",
+    "duration_days": 1
+  },
+  {
+    "name": "Dead Space",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "3.300,00",
+    "new_price": "660,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Deep Rock Galactic",
+    "edition": "Deluxe Edition",
+    "old_price": "1.365,00",
+    "new_price": "450,45",
+    "duration_days": 1
+  },
+  {
+    "name": "Devil May Cry 4 Special Edition",
+    "edition": "DMC4SE Demon Hunter Bundle",
+    "old_price": "1.259,00",
+    "new_price": "377,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Devil May Cry 5 Series",
+    "edition": "Devil May Cry 5 Deluxe + Vergil",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Devil May Cry HD Collection",
+    "edition": "Devil May Cry HD Collection & 4SE Bundle",
+    "old_price": "1.599,00",
+    "new_price": "527,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Diablo III: Eternal Collection",
+    "edition": "Diablo III: Eternal Collection",
+    "old_price": "304,07",
+    "new_price": "100,34",
+    "duration_days": 1
+  },
+  {
+    "name": "Diablo® II: Resurrected™",
+    "edition": "Prime Evil Yükseltmesi",
+    "old_price": "354,91",
+    "new_price": "117,12",
+    "duration_days": 1
+  },
+  {
+    "name": "Disco Elysium - The Final Cut",
+    "edition": "Disco Elysium - The Final Cut",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Disney Epic Mickey: Rebrushed",
+    "edition": "Disney Epic Mickey: Rebrushed",
+    "old_price": "2.099,00",
+    "new_price": "1.049,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Don't Starve Together: Console Edition",
+    "edition": "Don't Starve Together: Console Edition",
+    "old_price": "525,00",
+    "new_price": "210,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Dragon Age™: Inquisition",
+    "edition": "Dragon Age™: Inquisition - Yılın Oyunu Sürümü",
+    "old_price": "1.500,00",
+    "new_price": "375,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Dragon Age™: The Veilguard",
+    "edition": "Deluxe Edition",
+    "old_price": "3.600,00",
+    "new_price": "1.800,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Dragon's Dogma 2",
+    "edition": "Standard Edition",
+    "old_price": "2.599,00",
+    "new_price": "1.039,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Drums Rock",
+    "edition": "Linkin Park Edition",
+    "old_price": "875,00",
+    "new_price": "568,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Dying Light",
+    "edition": "Definitive Edition",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Dying Light 2",
+    "edition": "True Survivors Bundle",
+    "old_price": "2.249,00",
+    "new_price": "742,17",
+    "duration_days": 1
+  },
+  {
+    "name": "Dying Light 2",
+    "edition": "Digital Extras Edition",
+    "old_price": "1.749,00",
+    "new_price": "577,17",
+    "duration_days": 1
+  },
+  {
+    "name": "EARTH DEFENSE FORCE 6",
+    "edition": "Deluxe Edition",
+    "old_price": "3.149,00",
+    "new_price": "1.574,50",
+    "duration_days": 1
+  },
+  {
+    "name": "EVERSPACE™ 2",
+    "edition": "Standard Edition",
+    "old_price": "1.749,00",
+    "new_price": "524,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Eiyuden Chronicle: Hundred Heroes",
+    "edition": "Eiyuden Chronicle: Hundred Heroes - Digital Deluxe Edition",
+    "old_price": "2.799,00",
+    "new_price": "979,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Expeditions: A MudRunner Game (PS4 & PS5)",
+    "edition": "Year 1 Edition",
+    "old_price": "2.499,00",
+    "new_price": "1.499,40",
+    "duration_days": 1
+  },
+  {
+    "name": "F1® Manager 2024",
+    "edition": "Deluxe Edition",
+    "old_price": "1.575,00",
+    "new_price": "787,50",
+    "duration_days": 1
+  },
+  {
+    "name": "FINAL FANTASY VII REBIRTH",
+    "edition": "Standard Edition",
+    "old_price": "2.799,00",
+    "new_price": "1.679,40",
+    "duration_days": 1
+  },
+  {
+    "name": "FINAL FANTASY VII REBIRTH",
+    "edition": "Digital Deluxe Twin Pack",
+    "old_price": "4.599,00",
+    "new_price": "2.759,40",
+    "duration_days": 1
+  },
+  {
+    "name": "FINAL FANTASY VII REMAKE",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "2.499,00",
+    "new_price": "1.274,49",
+    "duration_days": 1
+  },
+  {
+    "name": "FINAL FANTASY VII REMAKE",
+    "edition": "FINAL FANTASY VII REMAKE Digital Deluxe Edition",
+    "old_price": "2.099,00",
+    "new_price": "1.049,50",
+    "duration_days": 1
+  },
+  {
+    "name": "FINAL FANTASY XVI",
+    "edition": "Standard Edition",
+    "old_price": "2.099,00",
+    "new_price": "1.259,40",
+    "duration_days": 1
+  },
+  {
+    "name": "FINAL FANTASY XVI",
+    "edition": "COMPLETE EDITION",
+    "old_price": "2.799,00",
+    "new_price": "1.679,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Fallout 4",
+    "edition": "Standard Edition",
+    "old_price": "699,00",
+    "new_price": "279,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Fallout 76",
+    "edition": "Fallout 76: Gone Fission Deluxe Edition",
+    "old_price": "2.099,00",
+    "new_price": "839,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Far Cry® 5",
+    "edition": "Far Cry® 5 Altın Sürüm",
+    "old_price": "3.899,00",
+    "new_price": "584,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Far Cry® New Dawn",
+    "edition": "Far Cry® New Dawn",
+    "old_price": "273,56",
+    "new_price": "54,71",
+    "duration_days": 1
+  },
+  {
+    "name": "Far Cry® New Dawn",
+    "edition": "Far Cry® New Dawn Deluxe Edition",
+    "old_price": "313,00",
+    "new_price": "62,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Far Cry® Primal",
+    "edition": "Far Cry Primal",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Far Cry® Primal",
+    "edition": "Apex Edition",
+    "old_price": "1.199,00",
+    "new_price": "395,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Fast & Furious: Spy Racers Rise of SH1FT3R",
+    "edition": "Tam Sürüm",
+    "old_price": "1.599,00",
+    "new_price": "719,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Fishing Sim World",
+    "edition": "Fishing Sim World: Pro Tour",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Five Nights at Freddy's VR: Help Wanted",
+    "edition": "Five Nights at Freddy's: Help Wanted",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Flintlock: The Siege of Dawn",
+    "edition": "Standard Edition",
+    "old_price": "999,00",
+    "new_price": "249,75",
+    "duration_days": 1
+  },
+  {
+    "name": "For Honor",
+    "edition": "Altın Sürüm",
+    "old_price": "2.099,00",
+    "new_price": "419,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Forspoken",
+    "edition": "Standard Edition",
+    "old_price": "2.499,00",
+    "new_price": "749,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Forspoken",
+    "edition": "Digital Deluxe Upgrade",
+    "old_price": "220,00",
+    "new_price": "66,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Forza Horizon 5",
+    "edition": "Deluxe Edition",
+    "old_price": "2.055,00",
+    "new_price": "1.541,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Funko Fusion",
+    "edition": "Universal Monsters Bundle",
+    "old_price": "1.749,00",
+    "new_price": "1.499,00",
+    "duration_days": 2
+  },
+  {
+    "name": "Funko Fusion",
+    "edition": "Funko Fusion - The Office Cameo Pack Bundle",
+    "old_price": "1.229,00",
+    "new_price": "368,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Funko Fusion",
+    "edition": "Funko Fusion - Mega Man Pack Bundle",
+    "old_price": "1.399,00",
+    "new_price": "1.229,00",
+    "duration_days": 2
+  },
+  {
+    "name": "Funko Fusion",
+    "edition": "Funko Fusion",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Funko Fusion",
+    "edition": "Funko Fusion & Wicked Bundle",
+    "old_price": "1.949,00",
+    "new_price": "1.590,00",
+    "duration_days": 2
+  },
+  {
+    "name": "Garten of Banban",
+    "edition": "Garten of Banban Bundle: 1 + 2 + 3 + 4 + 6 + 7",
+    "old_price": "1.329,00",
+    "new_price": "1.063,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Garten of Banban",
+    "edition": "Garten of Banban Bundle",
+    "old_price": "699,00",
+    "new_price": "559,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Gas Station Simulator",
+    "edition": "Gas Station Simulator",
+    "old_price": "699,00",
+    "new_price": "384,45",
+    "duration_days": 1
+  },
+  {
+    "name": "Gear.Club Unlimited 2 Ultimate Edition",
+    "edition": "Gotta Go Fast 3-in-1",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Ghost of Tsushima",
+    "edition": "Ghost of Tsushima: Legends",
+    "old_price": "949,00",
+    "new_price": "384,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Goat Simulator 3",
+    "edition": "Deluxe Edition",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Gotham Knights",
+    "edition": "Deluxe Edition",
+    "old_price": "4.199,00",
+    "new_price": "629,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Gran Turismo™ 7",
+    "edition": "Standart Sürüm",
+    "old_price": "1.049,58",
+    "new_price": "999,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Grand Theft Auto V (PlayStation®5)",
+    "edition": "Grand Theft Auto V (PS4™ ve PS5™)",
+    "old_price": "2.099,00",
+    "new_price": "692,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Grand Theft Auto V (PlayStation®5)",
+    "edition": "Grand Theft Auto Online (PlayStation®5)",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Grand Theft Auto V (PlayStation®5)",
+    "edition": "Grand Theft Auto V: Premium Edition ve Büyük Beyaz Köpekbalığı Kartı Paketi",
+    "old_price": "1.599,00",
+    "new_price": "719,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Green Hell",
+    "edition": "Green Hell PS4 + PS5 Free Upgrade",
+    "old_price": "875,00",
+    "new_price": "350,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Grounded PS4® & PS5®",
+    "edition": "Grounded PS4® & PS5®",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "HITMAN 3",
+    "edition": "World of Assassination",
+    "old_price": "2.499,00",
+    "new_price": "999,60",
+    "duration_days": 1
+  },
+  {
+    "name": "HUNT: SHOWDOWN 1896",
+    "edition": "Hunt: Showdown 1896",
+    "old_price": "1.049,00",
+    "new_price": "524,50",
+    "duration_days": 1
+  },
+  {
+    "name": "HUNT: SHOWDOWN 1896",
+    "edition": "Deluxe Edition",
+    "old_price": "2.099,00",
+    "new_price": "944,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Hell Let Loose",
+    "edition": "Deluxe Edition",
+    "old_price": "2.499,00",
+    "new_price": "1.124,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Hogwarts Legacy",
+    "edition": "Deluxe Edition",
+    "old_price": "3.899,00",
+    "new_price": "974,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Horizon Forbidden West",
+    "edition": "Standart Sürüm",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Hot Wheels Monster Trucks: Stunt Mayhem™",
+    "edition": "Deluxe Edition",
+    "old_price": "1.749,00",
+    "new_price": "612,15",
+    "duration_days": 1
+  },
+  {
+    "name": "Hunting Simulator 2",
+    "edition": "Bear Hunter Edition",
+    "old_price": "1.575,00",
+    "new_price": "236,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Hypercharge: Unboxed",
+    "edition": "HYPERCHARGE: Unboxed",
+    "old_price": "1.049,00",
+    "new_price": "839,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Indiana Jones and the Great Circle",
+    "edition": "Premium Edition",
+    "old_price": "3.280,00",
+    "new_price": "2.296,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Insurgency: Sandstorm [PS4 & PS5]",
+    "edition": "Deluxe Edition",
+    "old_price": "1.749,00",
+    "new_price": "699,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Insurgency: Sandstorm [PS4 & PS5]",
+    "edition": "Ultimate Edition",
+    "old_price": "2.799,00",
+    "new_price": "1.399,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Internet Cafe Simulator 2025",
+    "edition": "Internet Cafe Simulator 2025",
+    "old_price": "139,60",
+    "new_price": "104,70",
+    "duration_days": 0
+  },
+  {
+    "name": "It Takes Two PS4™ ve PS5™",
+    "edition": "Hazelight Bundle",
+    "old_price": "2.200,00",
+    "new_price": "726,00",
+    "duration_days": 1
+  },
+  {
+    "name": "JoJo's Bizarre Adventure: All-Star Battle R",
+    "edition": "Deluxe Edition",
+    "old_price": "2.499,00",
+    "new_price": "874,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Jujutsu Kaisen Cursed Clash",
+    "edition": "Standard Edition",
+    "old_price": "2.099,00",
+    "new_price": "839,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Jurassic World Evolution",
+    "edition": "Jurassic World Evolution: Jurassic Park Edition",
+    "old_price": "2.299,00",
+    "new_price": "344,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Jurassic World Evolution",
+    "edition": "Jurassic World Evolution Deluxe Edition",
+    "old_price": "1.949,00",
+    "new_price": "292,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Jurassic World Evolution",
+    "edition": "Jurassic World Evolution",
+    "old_price": "1.749,00",
+    "new_price": "262,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Just Cause 3",
+    "edition": "Just Cause 3",
+    "old_price": "699,00",
+    "new_price": "209,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Just Cause 4",
+    "edition": "Just Cause 4 Eksiksiz Sürüm",
+    "old_price": "2.499,00",
+    "new_price": "374,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Just Dance 2025 Edition",
+    "edition": "2025 Lüks Sürüm",
+    "old_price": "2.099,00",
+    "new_price": "1.364,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Kim Milyoner Olmak İster?",
+    "edition": "Kim Milyoner Olmak İster? - Yeni Versiyon PS5",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Kim Milyoner Olmak İster?",
+    "edition": "Kim Milyoner Olmak İster? PS4",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Kingdom Come: Deliverance",
+    "edition": "Kingdom Come: Deliverance",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Kingdom Come: Deliverance II",
+    "edition": "Gold Sürüm",
+    "old_price": "3.149,00",
+    "new_price": "2.361,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Kingdom Two Crowns",
+    "edition": "Heritage Bundle",
+    "old_price": "875,00",
+    "new_price": "376,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Kingdom Two Crowns",
+    "edition": "Essentials Pack",
+    "old_price": "1.049,00",
+    "new_price": "524,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Kingdoms of Amalur: Re-Reckoning",
+    "edition": "Fate Edition",
+    "old_price": "1.925,00",
+    "new_price": "577,50",
+    "duration_days": 1
+  },
+  {
+    "name": "LEGO® Batman™ 3: Beyond Gotham",
+    "edition": "LEGO® BATMAN™ 3: GOTHAM'IN ÖTESİ",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "LEGO® MARVEL Super Heroes 2",
+    "edition": "LEGO® Marvel Super Heroes 2 Lüks Sürümü",
+    "old_price": "2.599,00",
+    "new_price": "233,91",
+    "duration_days": 1
+  },
+  {
+    "name": "LEGO® MARVEL's Avengers",
+    "edition": "LEGO® Marvel’s Avengers Lüks Sürümü",
+    "old_price": "2.499,00",
+    "new_price": "199,92",
+    "duration_days": 1
+  },
+  {
+    "name": "LEGO® STAR WARS™: The Force Awakens",
+    "edition": "LEGO® Star Wars™: Güç Uyanıyor",
+    "old_price": "2.099,00",
+    "new_price": "209,90",
+    "duration_days": 1
+  },
+  {
+    "name": "LEGO® Star Wars™: The Skywalker Saga",
+    "edition": "Lüks Sürümü",
+    "old_price": "2.799,00",
+    "new_price": "559,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Life is Strange Remastered Collection",
+    "edition": "Life is Strange Remastered Collection",
+    "old_price": "284,01",
+    "new_price": "113,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Life is Strange: True Colors",
+    "edition": "Standard Edition",
+    "old_price": "429,00",
+    "new_price": "128,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Like a Dragon: Infinite Wealth PS4 ve PS5",
+    "edition": "Deluxe Edition",
+    "old_price": "2.129,00",
+    "new_price": "851,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Like a Dragon: Ishin! PS4 & PS5",
+    "edition": "Standard",
+    "old_price": "3.149,00",
+    "new_price": "629,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Like a Dragon: Pirate Yakuza in Hawaii",
+    "edition": "Standart Sürüm",
+    "old_price": "2.099,00",
+    "new_price": "1.469,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Little Kitty, Big City",
+    "edition": "Little Kitty, Big City",
+    "old_price": "875,00",
+    "new_price": "700,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Little Nightmares II",
+    "edition": "Standard Edition",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Lost Judgment",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "678,98",
+    "new_price": "135,79",
+    "duration_days": 1
+  },
+  {
+    "name": "MADiSON",
+    "edition": "MADiSON",
+    "old_price": "1.199,00",
+    "new_price": "719,40",
+    "duration_days": 1
+  },
+  {
+    "name": "MADiSON VR",
+    "edition": "MADiSON VR",
+    "old_price": "1.199,00",
+    "new_price": "839,30",
+    "duration_days": 1
+  },
+  {
+    "name": "MX vs ATV Legends",
+    "edition": "2024 Supercross",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "MX vs ATV Legends",
+    "edition": "2024 Deluxe Edition",
+    "old_price": "2.799,00",
+    "new_price": "1.679,40",
+    "duration_days": 1
+  },
+  {
+    "name": "MX vs ATV Legends",
+    "edition": "2024 Ultimate Edition",
+    "old_price": "3.499,00",
+    "new_price": "1.749,50",
+    "duration_days": 1
+  },
+  {
+    "name": "MX vs ATV Legends",
+    "edition": "2025 Ultimate Edition",
+    "old_price": "4.199,00",
+    "new_price": "2.099,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Mad Max",
+    "edition": "Mad Max",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Maneater",
+    "edition": "Maneater PS4 & PS5",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Marvel vs. Capcom: Infinite",
+    "edition": "Marvel vs. Capcom: Infinite - Standard Edition",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Marvel's Midnight Suns",
+    "edition": "Digital+ Edition",
+    "old_price": "3.149,00",
+    "new_price": "629,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Max Payne",
+    "edition": "Max Payne",
+    "old_price": "525,00",
+    "new_price": "315,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Metaphor: ReFantazio",
+    "edition": "Digital Anniversary Edition",
+    "old_price": "3.249,00",
+    "new_price": "1.949,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Metro Awakening",
+    "edition": "Lüks Sürüm",
+    "old_price": "1.749,00",
+    "new_price": "979,44",
+    "duration_days": 1
+  },
+  {
+    "name": "Metro Exodus",
+    "edition": "Standard Edition",
+    "old_price": "1.049,00",
+    "new_price": "157,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Metro Redux",
+    "edition": "Metro Redux",
+    "old_price": "1.049,00",
+    "new_price": "157,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Middle-earth™: Shadow of War™",
+    "edition": "Middle-earth™: Gölge Paketi",
+    "old_price": "2.499,00",
+    "new_price": "249,90",
+    "duration_days": 1
+  },
+  {
+    "name": "MindsEye",
+    "edition": "Deluxe Edition",
+    "old_price": "2.799,00",
+    "new_price": "1.959,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Monster Hunter Rise",
+    "edition": "Deluxe Edition",
+    "old_price": "1.249,00",
+    "new_price": "399,68",
+    "duration_days": 1
+  },
+  {
+    "name": "Monster Hunter Rise",
+    "edition": "Deluxe Bundle Edition",
+    "old_price": "1.749,00",
+    "new_price": "489,72",
+    "duration_days": 1
+  },
+  {
+    "name": "Monster Hunter: World",
+    "edition": "Master Edition DDX",
+    "old_price": "1.749,00",
+    "new_price": "699,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Mortal Kombat 1",
+    "edition": "Son Sürüm",
+    "old_price": "2.499,00",
+    "new_price": "999,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Mortal Kombat X",
+    "edition": "Mortal Kombat X",
+    "old_price": "146,44",
+    "new_price": "36,61",
+    "duration_days": 1
+  },
+  {
+    "name": "Mount & Blade II: Bannerlord",
+    "edition": "Mount & Blade II: Bannerlord",
+    "old_price": "1.749,00",
+    "new_price": "874,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Moving Out",
+    "edition": "Deluxe Edition",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Moving Out 2",
+    "edition": "Moving Out 2 - Deluxe Edition",
+    "old_price": "1.149,00",
+    "new_price": "574,50",
+    "duration_days": 1
+  },
+  {
+    "name": "MudRunner",
+    "edition": "MudRunner",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "NBA 2K25",
+    "edition": "Tournament Edition",
+    "old_price": "3.149,00",
+    "new_price": "629,80",
+    "duration_days": 1
+  },
+  {
+    "name": "NHL 25",
+    "edition": "Deluxe Edition",
+    "old_price": "4.000,00",
+    "new_price": "1.200,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Need for Speed™",
+    "edition": "Need for Speed™ Deluxe Edition",
+    "old_price": "879,00",
+    "new_price": "263,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Need for Speed™ Heat",
+    "edition": "Need for Speed™ Heat",
+    "old_price": "3.499,00",
+    "new_price": "349,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Need for Speed™ Payback",
+    "edition": "Need for Speed™ Payback",
+    "old_price": "1.599,00",
+    "new_price": "319,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Need for Speed™ Rivals",
+    "edition": "Need for Speed™ Rivals: Complete Edition",
+    "old_price": "1.949,00",
+    "new_price": "389,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Need for Speed™ Unbound",
+    "edition": "Need for Speed™ Unbound Palace Edition",
+    "old_price": "1.600,00",
+    "new_price": "240,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Neon Abyss",
+    "edition": "Deluxe Edition",
+    "old_price": "879,00",
+    "new_price": "219,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Nickelodeon Kart Racers 3: Slime Speedway",
+    "edition": "Turbo Edition",
+    "old_price": "2.099,00",
+    "new_price": "209,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Ninja Kaplumbağalar Splinter'ın Kaderi",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "1.149,00",
+    "new_price": "746,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Nioh 2",
+    "edition": "Nioh 2",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "ONE PIECE WORLD SEEKER",
+    "edition": "ONE PIECE World Seeker",
+    "old_price": "2.499,00",
+    "new_price": "349,86",
+    "duration_days": 1
+  },
+  {
+    "name": "OUTRIDERS",
+    "edition": "COMPLETE EDITION",
+    "old_price": "1.049,00",
+    "new_price": "681,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Outcast - A New Beginning",
+    "edition": "Standard",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Outer Wilds",
+    "edition": "Archaeologist Edition",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Outward Definitive Edition",
+    "edition": "Outward Definitive Edition",
+    "old_price": "1.599,00",
+    "new_price": "319,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Outward Definitive Edition",
+    "edition": "Outward: The Adventurer Bundle",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Overcooked",
+    "edition": "Overcooked: Gourmet Edition",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Overcooked",
+    "edition": "Overcooked Holiday Bundle",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Overcooked 2",
+    "edition": "Overcooked! 2",
+    "old_price": "879,00",
+    "new_price": "219,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Overcooked 2",
+    "edition": "Overcooked! + Overcooked! 2",
+    "old_price": "1.199,00",
+    "new_price": "299,75",
+    "duration_days": 1
+  },
+  {
+    "name": "PGA TOUR 2K25",
+    "edition": "Deluxe Edition",
+    "old_price": "3.600,00",
+    "new_price": "2.412,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Pacific Drive",
+    "edition": "Deluxe Edition",
+    "old_price": "1.199,00",
+    "new_price": "599,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Palworld",
+    "edition": "Palworld",
+    "old_price": "1.015,00",
+    "new_price": "761,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Pati Devriyesi Dünyası",
+    "edition": "Pati Devriyesi Dünyası",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Persona 3 Reload",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "1.999,00",
+    "new_price": "899,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Persona 4 Golden",
+    "edition": "Persona 3 Portable ve Persona 4 Golden Paketi",
+    "old_price": "897,00",
+    "new_price": "448,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Persona 5 Royal",
+    "edition": "Persona 5 Royal",
+    "old_price": "2.799,00",
+    "new_price": "979,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Planet Coaster 2",
+    "edition": "Planet Coaster 2",
+    "old_price": "1.749,00",
+    "new_price": "1.224,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Planet Coaster: Console Edition",
+    "edition": "Konsol Sürümü",
+    "old_price": "1.599,00",
+    "new_price": "399,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Planet Coaster: Console Edition",
+    "edition": "Delüks Sürüm",
+    "old_price": "1.949,00",
+    "new_price": "487,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Planet Coaster: Console Edition",
+    "edition": "Premium Edition",
+    "old_price": "2.799,00",
+    "new_price": "559,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Planet Zoo: Console Edition",
+    "edition": "Deluxe Edition",
+    "old_price": "2.099,00",
+    "new_price": "1.049,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Plants vs. Zombies: Battle for Neighborville™",
+    "edition": "Plants vs. Zombies: Battle for Neighborville™",
+    "old_price": "720,00",
+    "new_price": "288,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Predator: Hunting Grounds",
+    "edition": "Predator: Hunting Grounds",
+    "old_price": "849,00",
+    "new_price": "699,00",
+    "duration_days": 0
+  },
+  {
+    "name": "Prince of Persia The Lost Crown",
+    "edition": "Standard Edition",
+    "old_price": "999,00",
+    "new_price": "399,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Project Wingman: Frontline 59",
+    "edition": "Project Wingman: Frontline 59",
+    "old_price": "1.049,00",
+    "new_price": "629,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Pure Farming 2018",
+    "edition": "Pure Farming 2018",
+    "old_price": "1.049,00",
+    "new_price": "104,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Raft",
+    "edition": "Raft",
+    "old_price": "839,00",
+    "new_price": "562,13",
+    "duration_days": 1
+  },
+  {
+    "name": "Ravenswatch",
+    "edition": "Legendary Edition",
+    "old_price": "1.399,00",
+    "new_price": "769,45",
+    "duration_days": 1
+  },
+  {
+    "name": "Red Dead Redemption",
+    "edition": "Red Dead Redemption ve Red Dead Redemption 2 Birlikte",
+    "old_price": "3.499,00",
+    "new_price": "1.574,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Red Dead Redemption 2",
+    "edition": "Ultimate Edition",
+    "old_price": "3.499,00",
+    "new_price": "699,80",
+    "duration_days": 1
+  },
+  {
+    "name": "RiMS Racing",
+    "edition": "Ultimate Edition",
+    "old_price": "2.799,00",
+    "new_price": "279,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Riders Republic™",
+    "edition": "Riders Republic™ PS4 & PS5",
+    "old_price": "719,00",
+    "new_price": "179,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Riders Republic™",
+    "edition": "Complete Edition",
+    "old_price": "3.399,00",
+    "new_price": "849,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Risk of Rain 2",
+    "edition": "ROR2 + SOTV + SOTS",
+    "old_price": "1.749,00",
+    "new_price": "874,50",
+    "duration_days": 1
+  },
+  {
+    "name": "RoboCop: Rogue City",
+    "edition": "Alex Murphy Edition",
+    "old_price": "2.499,00",
+    "new_price": "374,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Rubber Bandits",
+    "edition": "Rubber Bandits",
+    "old_price": "349,00",
+    "new_price": "104,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Rubber Bandits",
+    "edition": "Animal Bandits Bundle",
+    "old_price": "559,00",
+    "new_price": "279,50",
+    "duration_days": 1
+  },
+  {
+    "name": "SILENT HILL 2",
+    "edition": "Deluxe Edition",
+    "old_price": "2.799,00",
+    "new_price": "1.399,50",
+    "duration_days": 1
+  },
+  {
+    "name": "SONIC X SHADOW GENERATIONS",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "1.949,00",
+    "new_price": "1.169,40",
+    "duration_days": 1
+  },
+  {
+    "name": "SOULCALIBUR™Ⅵ",
+    "edition": "SOULCALIBUR Ⅵ",
+    "old_price": "2.499,00",
+    "new_price": "374,85",
+    "duration_days": 1
+  },
+  {
+    "name": "STAR WARS Episode I: Jedi Power Battles",
+    "edition": "STAR WARS™: Episode I: Jedi Power Battles™ PS4 & PS5",
+    "old_price": "699,00",
+    "new_price": "454,35",
+    "duration_days": 1
+  },
+  {
+    "name": "STAR WARS Jedi: Fallen Order™",
+    "edition": "Deluxe Sürüm",
+    "old_price": "2.200,00",
+    "new_price": "550,00",
+    "duration_days": 1
+  },
+  {
+    "name": "STAR WARS Jedi: Survivor™",
+    "edition": "Standard Edition",
+    "old_price": "630,00",
+    "new_price": "580,00",
+    "duration_days": 0
+  },
+  {
+    "name": "STAR WARS Jedi: Survivor™",
+    "edition": "Deluxe Edition",
+    "old_price": "3.600,00",
+    "new_price": "1.080,00",
+    "duration_days": 1
+  },
+  {
+    "name": "STRANGER OF PARADISE FINAL FANTASY ORIGIN PS4 & PS5",
+    "edition": "Standard Edition",
+    "old_price": "1.749,00",
+    "new_price": "699,60",
+    "duration_days": 1
+  },
+  {
+    "name": "STRANGER OF PARADISE FINAL FANTASY ORIGIN PS4 & PS5",
+    "edition": "Digital Deluxe Upgrade",
+    "old_price": "200,00",
+    "new_price": "80,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Sea of Thieves",
+    "edition": "2025 Deluxe Edition",
+    "old_price": "1.249,00",
+    "new_price": "624,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Senin Baban Kim?!",
+    "edition": "Who's Your Daddy?!",
+    "old_price": "349,00",
+    "new_price": "174,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Serious Sam 4",
+    "edition": "Serious Sam 4",
+    "old_price": "1.399,00",
+    "new_price": "209,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Sherlock Holmes Chapter One",
+    "edition": "Yeniden Doğan Dedektif Paketi",
+    "old_price": "2.499,00",
+    "new_price": "249,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Sherlock Holmes Chapter One",
+    "edition": "Sherlock Holmes - Mutlak Çıkarım paketi",
+    "old_price": "4.199,00",
+    "new_price": "839,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Sherlock Holmes Chapter One",
+    "edition": "Deluxe",
+    "old_price": "2.099,00",
+    "new_price": "209,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Sherlock Holmes The Awakened",
+    "edition": "Standard Edition PS5 & PS4",
+    "old_price": "1.399,00",
+    "new_price": "209,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Sid Meier's Civilization VI",
+    "edition": "Civilization® VI Anthology",
+    "old_price": "2.599,00",
+    "new_price": "1.039,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Sid Meier’s Civilization® VII",
+    "edition": "Deluxe Edition",
+    "old_price": "3.499,00",
+    "new_price": "2.974,15",
+    "duration_days": 1
+  },
+  {
+    "name": "Skull and Bones™",
+    "edition": "Deluxe Edition",
+    "old_price": "2.099,00",
+    "new_price": "419,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Slime Rancher",
+    "edition": "Slime Rancher",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Slime Rancher 2",
+    "edition": "Slime Rancher Rainbow Bundle",
+    "old_price": "1.575,00",
+    "new_price": "866,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Slime Rancher 2",
+    "edition": "Slime Rancher 2",
+    "old_price": "1.049,00",
+    "new_price": "692,34",
+    "duration_days": 1
+  },
+  {
+    "name": "Sniper Elite 4",
+    "edition": "Sniper Elite 4",
+    "old_price": "2.499,00",
+    "new_price": "374,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Sniper Elite 5",
+    "edition": "Tam Sürüm",
+    "old_price": "3.899,00",
+    "new_price": "974,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Sniper Elite VR",
+    "edition": "Sniper Elite VR",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Sniper Elite: Resistance",
+    "edition": "Standard Edition",
+    "old_price": "2.099,00",
+    "new_price": "1.574,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Snow Bros. Wonderland",
+    "edition": "Snow Bros. Wonderland",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "SnowRunner",
+    "edition": "Standard Edition",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "SnowRunner",
+    "edition": "3-Year Anniversary",
+    "old_price": "3.149,00",
+    "new_price": "1.889,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Sonic Frontiers PS4 & PS5",
+    "edition": "Standard Edition",
+    "old_price": "3.149,00",
+    "new_price": "944,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Sonic Superstars",
+    "edition": "Deluxe Edition",
+    "old_price": "3.149,00",
+    "new_price": "1.102,15",
+    "duration_days": 1
+  },
+  {
+    "name": "SpongeBob SquarePants: The Cosmic Shake",
+    "edition": "Game Bundle",
+    "old_price": "2.499,00",
+    "new_price": "1.249,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Spyro™ Reignited Trilogy",
+    "edition": "Spyro™ Reignited Trilogy",
+    "old_price": "2.299,00",
+    "new_price": "804,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Spyro™ Reignited Trilogy",
+    "edition": "Spyro™ + Crash Remastered Oyun Paketi",
+    "old_price": "3.399,00",
+    "new_price": "1.189,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Star Wars Outlaws",
+    "edition": "Deluxe Edition",
+    "old_price": "3.499,00",
+    "new_price": "1.749,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Star Wars Outlaws",
+    "edition": "Gold Edition",
+    "old_price": "4.199,00",
+    "new_price": "2.099,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Stellaris: Console Edition",
+    "edition": "Stellaris: Console Edition - Deluxe Edition",
+    "old_price": "2.099,00",
+    "new_price": "524,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Street Fighter 30th Anniversary Collection",
+    "edition": "Street Fighter 30th Anniversary Collection",
+    "old_price": "1.049,00",
+    "new_price": "346,17",
+    "duration_days": 1
+  },
+  {
+    "name": "Street Fighter V",
+    "edition": "Champion Edition",
+    "old_price": "1.049,00",
+    "new_price": "524,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Street Fighter V",
+    "edition": "Season5 Premium Pass Bundle",
+    "old_price": "2.099,00",
+    "new_price": "1.049,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Suicide Squad: Kill the Justice League",
+    "edition": "Deluxe Edition",
+    "old_price": "2.199,00",
+    "new_price": "219,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Syberia - The World Before",
+    "edition": "Thrilling Stories Collection - 3 in 1",
+    "old_price": "1.749,00",
+    "new_price": "437,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Syberia - The World Before",
+    "edition": "Syberia - The World Before",
+    "old_price": "1.399,00",
+    "new_price": "489,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Synth Riders",
+    "edition": "Standard Edition",
+    "old_price": "879,00",
+    "new_price": "615,30",
+    "duration_days": 1
+  },
+  {
+    "name": "TEKKEN 8",
+    "edition": "TEKKEN 8 - Advanced Sürüm",
+    "old_price": "2.499,00",
+    "new_price": "1.249,50",
+    "duration_days": 1
+  },
+  {
+    "name": "TEKKEN 8",
+    "edition": "2. Sezon Deluxe Sürüm",
+    "old_price": "3.499,00",
+    "new_price": "2.449,30",
+    "duration_days": 1
+  },
+  {
+    "name": "TEKKEN™7",
+    "edition": "Standard Edition",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "TEKKEN™7",
+    "edition": "Definitive Edition",
+    "old_price": "4.199,00",
+    "new_price": "671,84",
+    "duration_days": 1
+  },
+  {
+    "name": "THE KING OF FIGHTERS XIV",
+    "edition": "THE KING OF FIGHTERS XIV UE",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "TIEBREAK: Official game of the ATP and WTA",
+    "edition": "Ace Edition",
+    "old_price": "2.499,00",
+    "new_price": "1.249,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Taiko no Tatsujin: Rhythm Festival",
+    "edition": "Standard Edition",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Taxi Life: A City Driving Simulator",
+    "edition": "Standard Edition",
+    "old_price": "1.399,00",
+    "new_price": "559,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Teardown",
+    "edition": "Deluxe Edition",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Teenage Mutant Ninja Kaplumbağaların Mutantları Serbest Bırakıldı",
+    "edition": "Dijital Deluxe Sürümü",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Tennis On-Court",
+    "edition": "Tennis On-Court",
+    "old_price": "1.199,00",
+    "new_price": "395,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Test Drive Unlimited Solar Crown",
+    "edition": "Standard Edition",
+    "old_price": "2.099,00",
+    "new_price": "1.154,45",
+    "duration_days": 1
+  },
+  {
+    "name": "Test Drive Unlimited Solar Crown",
+    "edition": "Silver Sharps Edition",
+    "old_price": "2.799,00",
+    "new_price": "1.539,45",
+    "duration_days": 1
+  },
+  {
+    "name": "The Callisto Protocol",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "2.249,00",
+    "new_price": "1.999,00",
+    "duration_days": 5
+  },
+  {
+    "name": "The Dark Pictures Anthology: The Devil in Me",
+    "edition": "Birinci Sezon Paketi",
+    "old_price": "3.499,00",
+    "new_price": "1.399,60",
+    "duration_days": 1
+  },
+  {
+    "name": "The Elder Scrolls IV: Oblivion Remastered",
+    "edition": "Deluxe Edition",
+    "old_price": "2.275,00",
+    "new_price": "1.820,00",
+    "duration_days": 1
+  },
+  {
+    "name": "The Elder Scrolls Online",
+    "edition": "2025 Premium Edition",
+    "old_price": "2.399,00",
+    "new_price": "1.919,20",
+    "duration_days": 1
+  },
+  {
+    "name": "The Elder Scrolls V: Skyrim Special Edition",
+    "edition": "Anniversary Edition",
+    "old_price": "1.949,00",
+    "new_price": "643,17",
+    "duration_days": 1
+  },
+  {
+    "name": "The Escapists 2",
+    "edition": "The Escapists  + The Escapists 2",
+    "old_price": "1.199,00",
+    "new_price": "239,80",
+    "duration_days": 1
+  },
+  {
+    "name": "The First Berserker: Khazan",
+    "edition": "STANDARD EDITION",
+    "old_price": "1.399,00",
+    "new_price": "1.119,20",
+    "duration_days": 1
+  },
+  {
+    "name": "The First Berserker: Khazan",
+    "edition": "DELUXE EDITION",
+    "old_price": "1.599,00",
+    "new_price": "1.279,20",
+    "duration_days": 1
+  },
+  {
+    "name": "The Last Faith",
+    "edition": "The Last Faith",
+    "old_price": "509,00",
+    "new_price": "279,95",
+    "duration_days": 1
+  },
+  {
+    "name": "The Last of Us™ Part II",
+    "edition": "The Last of Us Part II Dijital Deluxe Sürüm",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "The Midnight Walk",
+    "edition": "The Midnight Walk",
+    "old_price": "1.399,00",
+    "new_price": "1.049,25",
+    "duration_days": 1
+  },
+  {
+    "name": "The Outer Worlds",
+    "edition": "Kurul Onaylı Paket",
+    "old_price": "1.749,00",
+    "new_price": "524,70",
+    "duration_days": 1
+  },
+  {
+    "name": "The Outer Worlds",
+    "edition": "The Outer Worlds",
+    "old_price": "1.049,00",
+    "new_price": "262,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Bilinmeyen Oyun",
+    "edition": "The Outer Worlds 2",
+    "old_price": "3.199,00",
+    "new_price": "2.999,00",
+    "duration_days": 6
+  },
+  {
+    "name": "The Outlast Trials",
+    "edition": "Lüks",
+    "old_price": "799,00",
+    "new_price": "319,60",
+    "duration_days": 1
+  },
+  {
+    "name": "The Precinct",
+    "edition": "The Precinct",
+    "old_price": "1.049,00",
+    "new_price": "786,75",
+    "duration_days": 1
+  },
+  {
+    "name": "The Quarry",
+    "edition": "PS4™ & PS5™ için Deluxe Ed.",
+    "old_price": "3.149,00",
+    "new_price": "472,35",
+    "duration_days": 1
+  },
+  {
+    "name": "The Riftbreaker",
+    "edition": "Complete Edition",
+    "old_price": "1.749,00",
+    "new_price": "961,95",
+    "duration_days": 1
+  },
+  {
+    "name": "The Sinking City",
+    "edition": "Standard Edition",
+    "old_price": "1.749,00",
+    "new_price": "262,35",
+    "duration_days": 1
+  },
+  {
+    "name": "The Sinking City PS5",
+    "edition": "The Sinking City Remastered",
+    "old_price": "1.749,00",
+    "new_price": "699,60",
+    "duration_days": 1
+  },
+  {
+    "name": "The Sinking City PS5",
+    "edition": "Lovecraftian Paketi",
+    "old_price": "2.799,00",
+    "new_price": "699,75",
+    "duration_days": 1
+  },
+  {
+    "name": "The Talos Principle: Reawakened",
+    "edition": "The Talos Principle: Reawakened",
+    "old_price": "1.399,00",
+    "new_price": "1.049,25",
+    "duration_days": 1
+  },
+  {
+    "name": "The Texas Chain Saw Massacre",
+    "edition": "The Texas Chain Saw Massacre",
+    "old_price": "699,00",
+    "new_price": "384,45",
+    "duration_days": 1
+  },
+  {
+    "name": "The Thaumaturge",
+    "edition": "The Thaumaturge",
+    "old_price": "1.199,00",
+    "new_price": "659,45",
+    "duration_days": 1
+  },
+  {
+    "name": "The Walking Dead: Destinies",
+    "edition": "The Walking Dead: Destinies",
+    "old_price": "1.749,00",
+    "new_price": "349,80",
+    "duration_days": 1
+  },
+  {
+    "name": "The Witcher 3: Wild Hunt",
+    "edition": "The Witcher 3: Wild Hunt – Complete Edition",
+    "old_price": "999,00",
+    "new_price": "199,80",
+    "duration_days": 1
+  },
+  {
+    "name": "This War of Mine: Final Cut",
+    "edition": "Complete Edition",
+    "old_price": "945,00",
+    "new_price": "151,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Tiny Tina's Wonderlands",
+    "edition": "Next-Level Edition",
+    "old_price": "2.799,00",
+    "new_price": "559,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Tom Clancy's The Division® 2",
+    "edition": "Tom Clancy's The Division 2 - Altın Sürüm",
+    "old_price": "1.499,00",
+    "new_price": "599,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Tomb Raider: Definitive Survivor Trilogy",
+    "edition": "Tomb Raider: Definitive Survivor Trilogy",
+    "old_price": "109,75",
+    "new_price": "N/A",
+    "duration_days": 5
+  },
+  {
+    "name": "Tony Hawk's™ Pro Skater™ 1 + 2",
+    "edition": "Tony Hawk's™ Pro Skater™ 1 + 2",
+    "old_price": "283,73",
+    "new_price": "113,49",
+    "duration_days": 1
+  },
+  {
+    "name": "Tony Hawk's™ Pro Skater™ 1 + 2",
+    "edition": "Tony Hawk's™ Pro Skater™ 1 + 2 - Cross-Gen Deluxe Paketi",
+    "old_price": "1.599,00",
+    "new_price": "639,60",
+    "duration_days": 1
+  },
+  {
+    "name": "TopSpin 2K25 Coming Soon",
+    "edition": "Deluxe Edition",
+    "old_price": "1.049,00",
+    "new_price": "786,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Trailmakers",
+    "edition": "Trailmakers",
+    "old_price": "1.049,00",
+    "new_price": "419,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Trailmakers",
+    "edition": "Booster Edition",
+    "old_price": "1.229,00",
+    "new_price": "823,43",
+    "duration_days": 1
+  },
+  {
+    "name": "Trailmakers",
+    "edition": "Deluxe Edition",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Train Sim World® 5",
+    "edition": "Thomas & Friends™ Edition",
+    "old_price": "1.199,00",
+    "new_price": "899,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Train Sim World® 5",
+    "edition": "Standard Edition",
+    "old_price": "1.599,00",
+    "new_price": "319,80",
+    "duration_days": 1
+  },
+  {
+    "name": "TramSim: Console Edition",
+    "edition": "Standard Edition",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Transformers Beyond Reality",
+    "edition": "Transformers Beyond Reality",
+    "old_price": "875,00",
+    "new_price": "481,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Two Point Museum",
+    "edition": "Kâşif Sürümü",
+    "old_price": "1.399,00",
+    "new_price": "1.119,20",
+    "duration_days": 1
+  },
+  {
+    "name": "UFC™ 5",
+    "edition": "Ultimate Edition",
+    "old_price": "4.000,00",
+    "new_price": "1.400,00",
+    "duration_days": 1
+  },
+  {
+    "name": "UNDERDOGS",
+    "edition": "UNDERDOGS",
+    "old_price": "1.049,00",
+    "new_price": "629,40",
+    "duration_days": 1
+  },
+  {
+    "name": "UNKNOWN 9: AWAKENING",
+    "edition": "Deluxe Edition",
+    "old_price": "2.099,00",
+    "new_price": "419,80",
+    "duration_days": 1
+  },
+  {
+    "name": "UNO®",
+    "edition": "Ultimate Edition",
+    "old_price": "1.049,00",
+    "new_price": "576,95",
+    "duration_days": 1
+  },
+  {
+    "name": "UNO®",
+    "edition": "Legacy Edition",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Ultimate Chicken Horse",
+    "edition": "Ultimate Chicken Horse",
+    "old_price": "629,00",
+    "new_price": "283,05",
+    "duration_days": 1
+  },
+  {
+    "name": "Undertale",
+    "edition": "Undertale",
+    "old_price": "346,50",
+    "new_price": "Dahil",
+    "duration_days": 0
+  },
+  {
+    "name": "Undisputed",
+    "edition": "Deluxe WBC Edition",
+    "old_price": "2.799,00",
+    "new_price": "1.679,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Unravel TWO",
+    "edition": "Unravel Yarny Paketi",
+    "old_price": "162,71",
+    "new_price": "40,67",
+    "duration_days": 1
+  },
+  {
+    "name": "Until Dawn™",
+    "edition": "Until Dawn™",
+    "old_price": "2.499,00",
+    "new_price": "1.649,34",
+    "duration_days": 1
+  },
+  {
+    "name": "Until Dawn™",
+    "edition": "Until Dawn™ 2015",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "V Rising",
+    "edition": "Legacy of Castlevania",
+    "old_price": "1.925,00",
+    "new_price": "1.347,50",
+    "duration_days": 1
+  },
+  {
+    "name": "WRC 10 FIA World Rally Championship",
+    "edition": "Standard Edition",
+    "old_price": "1.749,00",
+    "new_price": "262,35",
+    "duration_days": 1
+  },
+  {
+    "name": "WRC 7 FIA World Rally Championship",
+    "edition": "WRC Collection",
+    "old_price": "1.749,00",
+    "new_price": "174,90",
+    "duration_days": 1
+  },
+  {
+    "name": "WWE 2K25",
+    "edition": "Standard Edition",
+    "old_price": "2.599,00",
+    "new_price": "1.299,50",
+    "duration_days": 1
+  },
+  {
+    "name": "WWE 2K25",
+    "edition": "The Bloodline Edition",
+    "old_price": "4.599,00",
+    "new_price": "2.759,40",
+    "duration_days": 1
+  },
+  {
+    "name": "War Hospital",
+    "edition": "Supporter Edition",
+    "old_price": "1.749,00",
+    "new_price": "437,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Warhammer 40,000: Space Marine 2",
+    "edition": "Gold Edition",
+    "old_price": "3.499,00",
+    "new_price": "1.924,45",
+    "duration_days": 1
+  },
+  {
+    "name": "Watch Dogs: Legion",
+    "edition": "Standard Edition",
+    "old_price": "470,00",
+    "new_price": "70,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Watch Dogs: Legion",
+    "edition": "Ultimate Edition",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Way of the Hunter",
+    "edition": "Elite Edition",
+    "old_price": "1.575,00",
+    "new_price": "708,75",
+    "duration_days": 1
+  },
+  {
+    "name": "We Were Here Expeditions: The FriendShip",
+    "edition": "We Were Here Series Bundle",
+    "old_price": "1.229,00",
+    "new_price": "614,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Worms W.M.D",
+    "edition": "Worms Battlegrounds + Worms W.M.D",
+    "old_price": "1.199,00",
+    "new_price": "239,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Wreckfest",
+    "edition": "Wreckfest: Drive Hard. Die Last.",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "XCOM 2",
+    "edition": "XCOM® 2 Digital Deluxe Edition",
+    "old_price": "3.149,00",
+    "new_price": "314,90",
+    "duration_days": 1
+  },
+  {
+    "name": "XCOM 2",
+    "edition": "XCOM® 2",
+    "old_price": "1.599,00",
+    "new_price": "399,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Yakuza: Like A Dragon",
+    "edition": "Hero Edition",
+    "old_price": "1.049,00",
+    "new_price": "524,50",
+    "duration_days": 1
+  },
+  {
+    "name": "theHunter: Call of the Wild™",
+    "edition": "theHunter: Call of the Wild™ - Ultimate Hunting Bundle",
+    "old_price": "2.999,00",
+    "new_price": "1.499,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Şirinler - Dreams",
+    "edition": "Şirinler - Dreams PS4 & PS5",
+    "old_price": "1.399,00",
+    "new_price": "979,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Dead by Daylight",
+    "edition": "Tokyo Ghoul Edition",
+    "old_price": "1.399,00",
+    "new_price": "979,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Dead by Daylight",
+    "edition": "Gold Edition",
+    "old_price": "2.499,00",
+    "new_price": "1.249,50",
+    "duration_days": 1
+  },
+  {
+    "name": "EA SPORTS™ PGA TOUR™",
+    "edition": "Deluxe Edition",
+    "old_price": "3.500,00",
+    "new_price": "525,00",
+    "duration_days": 1
+  },
+  {
+    "name": "The Elder Scrolls V: Skyrim VR",
+    "edition": "The Elder Scrolls V: Skyrim VR",
+    "old_price": "2.499,00",
+    "new_price": "624,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Cat Quest III",
+    "edition": "Cat Quest: The Fur-tastic Trilogy",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "FINAL FANTASY VI",
+    "edition": "FINAL FANTASY VI",
+    "old_price": "629,00",
+    "new_price": "408,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Monster Hunter Stories 2: Wings of Ruin",
+    "edition": "Deluxe Collection",
+    "old_price": "2.499,00",
+    "new_price": "1.249,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Company of Heroes 3",
+    "edition": "Premium Edition",
+    "old_price": "3.899,00",
+    "new_price": "1.949,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Isonzo",
+    "edition": "Standard Edition",
+    "old_price": "1.049,00",
+    "new_price": "262,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Isonzo",
+    "edition": "First Wave Edition",
+    "old_price": "1.575,00",
+    "new_price": "519,75",
+    "duration_days": 1
+  },
+  {
+    "name": "FATAL FURY: City of the Wolves",
+    "edition": "FATAL FURY: City of the Wolves - Special Edition",
+    "old_price": "2.099,00",
+    "new_price": "1.259,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Harry Potter: Quidditch Champions",
+    "edition": "Deluxe Edition",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Arizona Sunshine® 2",
+    "edition": "Standart Sürüm",
+    "old_price": "1.399,00",
+    "new_price": "769,45",
+    "duration_days": 1
+  },
+  {
+    "name": "Arizona Sunshine® 2",
+    "edition": "Arizona Sunshine® - Freddy's Bundle",
+    "old_price": "2.099,00",
+    "new_price": "1.154,45",
+    "duration_days": 1
+  },
+  {
+    "name": "The Legend of Heroes: Trails of Cold Steel III",
+    "edition": "Trails of Cold Steel III Digital Deluxe Edition",
+    "old_price": "2.799,00",
+    "new_price": "979,65",
+    "duration_days": 1
+  },
+  {
+    "name": "OCTOPATH TRAVELER PS4＆PS5",
+    "edition": "OCTOPATH TRAVELER PS4＆PS5",
+    "old_price": "2.099,00",
+    "new_price": "839,60",
+    "duration_days": 1
+  },
+  {
+    "name": "VR Skater",
+    "edition": "VR Skater",
+    "old_price": "1.199,00",
+    "new_price": "359,70",
+    "duration_days": 1
+  },
+  {
+    "name": "VR Skater",
+    "edition": "Pro Bundle",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "DRAGON BALL FighterZ",
+    "edition": "FighterZ Edition",
+    "old_price": "3.499,00",
+    "new_price": "524,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Let's Sing 2022",
+    "edition": "Let's Sing 2022",
+    "old_price": "1.399,00",
+    "new_price": "839,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Atomfall",
+    "edition": "Standard",
+    "old_price": "2.099,00",
+    "new_price": "1.679,20",
+    "duration_days": 1
+  },
+  {
+    "name": "DreamWorks All-Star Kart Racing",
+    "edition": "Rally Edition",
+    "old_price": "1.749,00",
+    "new_price": "349,80",
+    "duration_days": 1
+  },
+  {
+    "name": "The Karate Kid: Street Rumble",
+    "edition": "The Karate Kid: Street Rumble",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Evil Nun: The Broken Mask",
+    "edition": "Evil Nun: The Broken Mask",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Ghostrunner 2",
+    "edition": "Ghostrunner Oyun Paketi",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Ghostrunner 2",
+    "edition": "Deluxe Edition",
+    "old_price": "1.749,00",
+    "new_price": "437,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Shadow Gambit: The Cursed Crew",
+    "edition": "Tam Sürüm",
+    "old_price": "2.499,00",
+    "new_price": "1.249,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Empire of Sin",
+    "edition": "Deluxe Edition",
+    "old_price": "1.749,00",
+    "new_price": "437,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Şirinler - Vileaf Görevi",
+    "edition": "Childhood Heroes - 3 in 1",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "We Were Here Forever",
+    "edition": "We Were Here Forever",
+    "old_price": "629,00",
+    "new_price": "314,50",
+    "duration_days": 1
+  },
+  {
+    "name": "After the Fall® - Complete Edition",
+    "edition": "Lüks Sürüm",
+    "old_price": "875,00",
+    "new_price": "315,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Big Rumble Boxing: Creed Champions",
+    "edition": "Big Rumble Boxing: Creed Champions",
+    "old_price": "1.199,00",
+    "new_price": "239,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Pneumata",
+    "edition": "Pneumata",
+    "old_price": "1.199,00",
+    "new_price": "383,68",
+    "duration_days": 1
+  },
+  {
+    "name": "TRUCK SIMULATOR 25 VR - AMERICAN DRIVER",
+    "edition": "TRUCK SIMULATOR 25 VR - AMERICAN DRIVER",
+    "old_price": "699,00",
+    "new_price": "489,30",
+    "duration_days": 1
+  },
+  {
+    "name": "SYNDUALITY: Echo of Ada",
+    "edition": "Deluxe Edition",
+    "old_price": "2.499,00",
+    "new_price": "1.249,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Boomerang Fu",
+    "edition": "Boomerang Fu",
+    "old_price": "525,00",
+    "new_price": "367,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Boomerang Fu",
+    "edition": "Deluxe Edition",
+    "old_price": "699,00",
+    "new_price": "559,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Ambulance Life: A Paramedic Simulator",
+    "edition": "Deluxe Edition",
+    "old_price": "1.949,00",
+    "new_price": "1.266,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Catch: Carp & Coarse Fishing",
+    "edition": "The Catch: Carp & Coarse - Deluxe Edition",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Eiyuden Chronicle: Rising",
+    "edition": "Eiyuden Chronicle: Rising",
+    "old_price": "525,00",
+    "new_price": "131,25",
+    "duration_days": 1
+  },
+  {
+    "name": "SCARLET NEXUS",
+    "edition": "Standard Edition",
+    "old_price": "2.499,00",
+    "new_price": "349,86",
+    "duration_days": 1
+  },
+  {
+    "name": "Hellsweeper VR",
+    "edition": "Standard Edition",
+    "old_price": "1.049,00",
+    "new_price": "524,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Journey To The Savage Planet: Employee Of The Month",
+    "edition": "Journey To The Savage Planet: Employee Of The Month",
+    "old_price": "1.049,00",
+    "new_price": "262,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Jumanji: The Video Game",
+    "edition": "JUMANJI: Video oyunu",
+    "old_price": "1.049,00",
+    "new_price": "Dahil",
+    "duration_days": 0
+  },
+  {
+    "name": "Katamari Damacy REROLL",
+    "edition": "Katamari Damacy REROLL",
+    "old_price": "1.049,00",
+    "new_price": "262,25",
+    "duration_days": 1
+  },
+  {
+    "name": "MX vs. ATV All Out",
+    "edition": "MX vs ATV All Out",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Tomb Raider IV-VI Remastered",
+    "edition": "Tomb Raider IV-VI Remastered PS4 & PS5",
+    "old_price": "1.049,00",
+    "new_price": "681,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Titan Quest",
+    "edition": "Titan Quest",
+    "old_price": "1.049,00",
+    "new_price": "262,25",
+    "duration_days": 1
+  },
+  {
+    "name": "ASTRONEER",
+    "edition": "Evolution Edition",
+    "old_price": "1.299,00",
+    "new_price": "389,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Generation Zero",
+    "edition": "Generation Zero® - Story Bundle",
+    "old_price": "1.229,00",
+    "new_price": "614,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Electrician Simulator VR",
+    "edition": "Electrician Simulator VR",
+    "old_price": "629,00",
+    "new_price": "345,95",
+    "duration_days": 1
+  },
+  {
+    "name": "Nickelodeon All-Star Brawl 2",
+    "edition": "Deluxe Edition",
+    "old_price": "2.499,00",
+    "new_price": "499,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Angry Birds VR: Isle of Pigs",
+    "edition": "Angry Birds VR: Isle of Pigs",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Agatha Christie - Hercule Poirot: The First Cases",
+    "edition": "Agatha Christie Collection: The ABC Murders & Hercule Poirot: The First Cases Bundle",
+    "old_price": "1.049,00",
+    "new_price": "398,62",
+    "duration_days": 1
+  },
+  {
+    "name": "Agatha Christie - Hercule Poirot: The First Cases",
+    "edition": "Agatha Christie - Hercule Poirot: The First Cases",
+    "old_price": "879,00",
+    "new_price": "131,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Slay the Spire",
+    "edition": "Slay the Spire",
+    "old_price": "879,00",
+    "new_price": "298,86",
+    "duration_days": 1
+  },
+  {
+    "name": "Citizen Sleeper 2: Starward Vector",
+    "edition": "Standard Edition",
+    "old_price": "875,00",
+    "new_price": "656,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Sugar Mess - Let's Play Jolly Battle",
+    "edition": "Sugar Mess - Let's Play Jolly Battle",
+    "old_price": "875,00",
+    "new_price": "700,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Ultimate Marvel vs. Capcom 3",
+    "edition": "ULTIMATE MARVEL VS. CAPCOM 3",
+    "old_price": "875,00",
+    "new_price": "262,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Quake II",
+    "edition": "Quake II",
+    "old_price": "174,91",
+    "new_price": "87,45",
+    "duration_days": 1
+  },
+  {
+    "name": "STAR WARS™ Jedi Knight: Jedi Academy",
+    "edition": "STAR WARS™ Jedi Knight: Jedi Academy",
+    "old_price": "839,00",
+    "new_price": "293,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Plants vs Zombies Garden Warfare",
+    "edition": "Plants vs. Zombies™ Garden Warfare",
+    "old_price": "699,00",
+    "new_price": "209,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Ghostrunner",
+    "edition": "Ghostrunner: Complete Edition",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "The Complex",
+    "edition": "The Interactive Movie Bundle",
+    "old_price": "769,00",
+    "new_price": "538,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Guilty Gear Xrd -Revelator-",
+    "edition": "GUILTY GEAR Xrd -REVELATOR-",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Dishonored®: Death of the Outsider™",
+    "edition": "Standard Edition",
+    "old_price": "879,00",
+    "new_price": "175,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Miraculous: Rise of the Sphinx",
+    "edition": "Ultimate Edition",
+    "old_price": "2.099,00",
+    "new_price": "209,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Minoria",
+    "edition": "Minoria",
+    "old_price": "735,00",
+    "new_price": "294,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Late Shift",
+    "edition": "The FMV Collection 2",
+    "old_price": "1.399,00",
+    "new_price": "979,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Don't Starve: Console Edition",
+    "edition": "Don't Starve Mega Pack 2020",
+    "old_price": "1.149,00",
+    "new_price": "517,05",
+    "duration_days": 1
+  },
+  {
+    "name": "3D Billiards - Pool & Snooker",
+    "edition": "3D Billiards & 3D MiniGolf Bundle",
+    "old_price": "1.049,00",
+    "new_price": "839,20",
+    "duration_days": 1
+  },
+  {
+    "name": "ABZU",
+    "edition": "ABZÛ",
+    "old_price": "699,00",
+    "new_price": "244,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Asterix & Obelix XXL2",
+    "edition": "Asterix & Obelix XXL 2",
+    "old_price": "699,00",
+    "new_price": "104,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Bō: Path of the Teal Lotus",
+    "edition": "Bō: Path of the Teal Lotus",
+    "old_price": "699,00",
+    "new_price": "489,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Finding Frankie",
+    "edition": "Finding Frankie",
+    "old_price": "699,00",
+    "new_price": "419,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Hotline Miami 2: Wrong Number",
+    "edition": "Hotline Miami Collection",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Kabuslar Projesi Dava 36: Henrietta Kedward (Project Nightmares Case 36: Henrietta Kedward)",
+    "edition": "Survival Horror Bundle",
+    "old_price": "1.049,00",
+    "new_price": "524,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Kabuslar Projesi Dava 36: Henrietta Kedward (Project Nightmares Case 36: Henrietta Kedward)",
+    "edition": "Kabuslar Projesi Dava 36: Henrietta Kedward (Project Nightmares Case 36: Henrietta Kedward)",
+    "old_price": "699,00",
+    "new_price": "279,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Mark of the Ninja: Remastered",
+    "edition": "Mark of the Ninja: Remastered",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Mia ve ben – Sihirli Arkadaşlar",
+    "edition": "Mia ve ben – Sihirli Arkadaşlar",
+    "old_price": "699,00",
+    "new_price": "559,20",
+    "duration_days": 1
+  },
+  {
+    "name": "NanoApostle",
+    "edition": "NanoApostle",
+    "old_price": "699,00",
+    "new_price": "559,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Pentiment",
+    "edition": "Pentiment",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "STAR WARS™: Bounty Hunter™",
+    "edition": "STAR WARS™: Bounty Hunter™",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Storage Hunter Bid War Simulator",
+    "edition": "Storage Hunter Bid War Simulator",
+    "old_price": "699,00",
+    "new_price": "489,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Tarzan VR™",
+    "edition": "Tarzan VR™",
+    "old_price": "699,00",
+    "new_price": "419,40",
+    "duration_days": 1
+  },
+  {
+    "name": "The Reward of Cherishment and Eternity。",
+    "edition": "The Reward of Cherishment and Eternity。",
+    "old_price": "699,00",
+    "new_price": "419,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Thief Simulator",
+    "edition": "Thief Simulator",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Ghostwire: Tokyo",
+    "edition": "Deluxe Edition",
+    "old_price": "3.149,00",
+    "new_price": "1.039,17",
+    "duration_days": 1
+  },
+  {
+    "name": "VALKYRIE ELYSIUM",
+    "edition": "Digital Standard Edition",
+    "old_price": "2.099,00",
+    "new_price": "839,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Street Outlaws 2: Winner Takes All",
+    "edition": "Standard",
+    "old_price": "1.749,00",
+    "new_price": "174,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Rookie Basketball Shoots",
+    "edition": "Rookie Basketball Shoots",
+    "old_price": "343,00",
+    "new_price": "300,00",
+    "duration_days": 0
+  },
+  {
+    "name": "Classified: France '44",
+    "edition": "Overlord Edition",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Hole io",
+    "edition": "Hole io & Paper io 2",
+    "old_price": "279,00",
+    "new_price": "111,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Hole io",
+    "edition": "Hole io & Mob Control",
+    "old_price": "315,00",
+    "new_price": "110,25",
+    "duration_days": 1
+  },
+  {
+    "name": "TRANSFORMERS: BATTLEGROUNDS",
+    "edition": "Tam Sürüm",
+    "old_price": "1.049,00",
+    "new_price": "367,15",
+    "duration_days": 1
+  },
+  {
+    "name": "Gungrave G.O.R.E",
+    "edition": "Standard",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Car Mechanic Simulator",
+    "edition": "Car Mechanic Simulator",
+    "old_price": "529,00",
+    "new_price": "185,15",
+    "duration_days": 1
+  },
+  {
+    "name": "Legend of Keepers: Career of a Dungeon Manager",
+    "edition": "Complete Edition",
+    "old_price": "630,00",
+    "new_price": "553,05",
+    "duration_days": 0
+  },
+  {
+    "name": "Legend of Keepers: Career of a Dungeon Manager",
+    "edition": "Legend of Keepers: Career of a Dungeon Manager",
+    "old_price": "699,00",
+    "new_price": "314,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Legend of Keepers: Career of a Dungeon Manager",
+    "edition": "Overlord Bundle",
+    "old_price": "1.749,00",
+    "new_price": "787,05",
+    "duration_days": 1
+  },
+  {
+    "name": "Deadlight Director's Cut",
+    "edition": "Deadlight: Director's Cut",
+    "old_price": "529,00",
+    "new_price": "79,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Max: The Curse of Brotherhood",
+    "edition": "Max: The Curse of Brotherhood",
+    "old_price": "529,00",
+    "new_price": "132,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Car Street",
+    "edition": "Car Street",
+    "old_price": "525,00",
+    "new_price": "367,50",
+    "duration_days": 1
+  },
+  {
+    "name": "BMX CITY RUN",
+    "edition": "BMX CITY RUN",
+    "old_price": "525,00",
+    "new_price": "367,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Border Police: Contraband Simulator 2024",
+    "edition": "Border Police: Contraband Simulator 2024",
+    "old_price": "525,00",
+    "new_price": "341,25",
+    "duration_days": 0
+  },
+  {
+    "name": "Dating Stories",
+    "edition": "Dating Stories Premium Edition",
+    "old_price": "105,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "How To Survive 2",
+    "edition": "How to Survive 2",
+    "old_price": "525,00",
+    "new_price": "105,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Nidhogg 2",
+    "edition": "Nidhogg 2",
+    "old_price": "525,00",
+    "new_price": "210,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Nidhogg",
+    "edition": "Nidhogg",
+    "old_price": "525,00",
+    "new_price": "210,00",
+    "duration_days": 1
+  },
+  {
+    "name": "OneShot: World Machine Edition",
+    "edition": "OneShot: World Machine Edition",
+    "old_price": "525,00",
+    "new_price": "367,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Pacify",
+    "edition": "Pacify",
+    "old_price": "175,00",
+    "new_price": "105,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Red Dead Revolver",
+    "edition": "Red Dead Revolver",
+    "old_price": "525,00",
+    "new_price": "315,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Sex Shop Supermarket Simulator",
+    "edition": "Sex Shop Supermarket Simulator",
+    "old_price": "525,00",
+    "new_price": "367,50",
+    "duration_days": 1
+  },
+  {
+    "name": "STAR WARS™ REPUBLIC COMMANDO™",
+    "edition": "STAR WARS™ Republic Commando™",
+    "old_price": "525,00",
+    "new_price": "183,75",
+    "duration_days": 1
+  },
+  {
+    "name": "The Warriors",
+    "edition": "The Warriors",
+    "old_price": "525,00",
+    "new_price": "315,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Warhammer 40,000: Chaos Gate - Daemonhunters",
+    "edition": "Warhammer 40,000: Chaos Gate - Daemonhunters PS4 & PS5",
+    "old_price": "1.575,00",
+    "new_price": "393,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Warhammer 40,000: Chaos Gate - Daemonhunters",
+    "edition": "Arındırıcı Sürümü",
+    "old_price": "1.749,00",
+    "new_price": "437,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Warhammer 40,000: Chaos Gate - Daemonhunters",
+    "edition": "Chaos Gate & Realms of Ruin",
+    "old_price": "2.619,00",
+    "new_price": "654,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Tchia",
+    "edition": "Oléti Edition",
+    "old_price": "1.229,00",
+    "new_price": "405,57",
+    "duration_days": 1
+  },
+  {
+    "name": "Mega Man 11",
+    "edition": "Mega Man 30th Anniversary Bundle",
+    "old_price": "2.099,00",
+    "new_price": "1.049,50",
+    "duration_days": 1
+  },
+  {
+    "name": "RAGE 2",
+    "edition": "Standard Edition",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Tactics Ogre: Reborn",
+    "edition": "Digital Premium Edition",
+    "old_price": "529,00",
+    "new_price": "211,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Evil West",
+    "edition": "Evil West",
+    "old_price": "2.799,00",
+    "new_price": "839,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Warhammer 40,000: Inquisitor - Martyr",
+    "edition": "Warhammer 40,000: Inquisitor - Martyr Complete Upgrade Pack",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Only Up Rush",
+    "edition": "Only Up Rush",
+    "old_price": "455,00",
+    "new_price": "227,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Only Up Rush",
+    "edition": "Only Up Rush - Avatar Bundle",
+    "old_price": "525,00",
+    "new_price": "262,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Piece Out",
+    "edition": "Piece Out",
+    "old_price": "69,00",
+    "new_price": "55,20",
+    "duration_days": 1
+  },
+  {
+    "name": "Capcom Arcade 2nd Stadium",
+    "edition": "Capcom Arcade 2nd Stadium Bundle",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Chess Club",
+    "edition": "Chess Club",
+    "old_price": "429,00",
+    "new_price": "N/A",
+    "duration_days": 2
+  },
+  {
+    "name": "Capcom Arcade Stadium",
+    "edition": "Capcom Arcade Stadium Bundle",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Monster Jam Steel Titans 2",
+    "edition": "Monster Jam Steel Titans 2",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Bowling",
+    "edition": "Bowling",
+    "old_price": "419,00",
+    "new_price": "83,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Valiant Hearts: Coming Home",
+    "edition": "Valiant Hearts: Coming Home",
+    "old_price": "369,00",
+    "new_price": "184,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Journey",
+    "edition": "Journey™",
+    "old_price": "525,00",
+    "new_price": "262,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Ultra Foodmess 2",
+    "edition": "Ultra Foodmess 2",
+    "old_price": "175,00",
+    "new_price": "70,00",
+    "duration_days": 1
+  },
+  {
+    "name": "The Surge 2",
+    "edition": "The Surge 2",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "My Friend Pedro - Blood Bullets Bananas",
+    "edition": "My Friend Pedro",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Sam ve Max: Zaman ve Mekanın Ötesinde",
+    "edition": "Sam & Max: Tam Üçleme",
+    "old_price": "1.749,00",
+    "new_price": "1.049,40",
+    "duration_days": 1
+  },
+  {
+    "name": "BRAINROT: FIGHTING",
+    "edition": "BRAINROT: FIGHTING",
+    "old_price": "349,00",
+    "new_price": "174,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Don't Be Afraid",
+    "edition": "Don't Be Afraid",
+    "old_price": "349,00",
+    "new_price": "174,50",
+    "duration_days": 1
+  },
+  {
+    "name": "DOOM + DOOM II",
+    "edition": "DOOM + DOOM II",
+    "old_price": "349,00",
+    "new_price": "209,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Extreme Offroad Racing VR",
+    "edition": "Extreme Offroad Racing VR",
+    "old_price": "349,00",
+    "new_price": "52,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Extreme Offroad Racing VR",
+    "edition": "Extreme Offroad Racing",
+    "old_price": "349,00",
+    "new_price": "52,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Marooners",
+    "edition": "Marooners",
+    "old_price": "349,00",
+    "new_price": "104,70",
+    "duration_days": 1
+  },
+  {
+    "name": "POSTAL Redux",
+    "edition": "POSTAL Redux",
+    "old_price": "349,00",
+    "new_price": "139,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Sakura Bunny Girls",
+    "edition": "Sakura Bunny Girls PS4® & PS5®",
+    "old_price": "349,00",
+    "new_price": "233,83",
+    "duration_days": 1
+  },
+  {
+    "name": "Tanky Tanks 2",
+    "edition": "Tanky Tanks 2",
+    "old_price": "349,00",
+    "new_price": "191,95",
+    "duration_days": 1
+  },
+  {
+    "name": "STAR WARS™ Jedi Knight II: Jedi Outcast",
+    "edition": "STAR WARS™ Jedi Knight II: Jedi Outcast™",
+    "old_price": "349,00",
+    "new_price": "122,15",
+    "duration_days": 1
+  },
+  {
+    "name": "The Backrooms 1998",
+    "edition": "The Backrooms 1998",
+    "old_price": "349,00",
+    "new_price": "209,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure",
+    "edition": "Tiny Tina's Assault on Dragon Keep: A Wonderlands One-shot Adventure",
+    "old_price": "349,00",
+    "new_price": "174,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Treasure Hunter Simulator",
+    "edition": "Treasure Hunter Simulator",
+    "old_price": "349,00",
+    "new_price": "157,05",
+    "duration_days": 1
+  },
+  {
+    "name": "WRC 5 FIA World Rally Championship",
+    "edition": "WRC 5 eSports Edition",
+    "old_price": "349,00",
+    "new_price": "174,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Virtua Fighter 5 Ultimate Showdown",
+    "edition": "Main Game ＆ DLC Yakuza Pack",
+    "old_price": "1.049,00",
+    "new_price": "786,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Virtua Fighter 5 Ultimate Showdown",
+    "edition": "Main Game & TEKKEN 7 DLC",
+    "old_price": "1.049,00",
+    "new_price": "786,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Virtua Fighter 5 Ultimate Showdown",
+    "edition": "Ana Oyun + Legendary Pack",
+    "old_price": "1.049,00",
+    "new_price": "786,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Demon Turf",
+    "edition": "Demon Turf",
+    "old_price": "769,00",
+    "new_price": "422,95",
+    "duration_days": 0
+  },
+  {
+    "name": "Alien Shooter",
+    "edition": "Alien Shooter",
+    "old_price": "343,00",
+    "new_price": "36,00",
+    "duration_days": 2
+  },
+  {
+    "name": "Fahrenheit™",
+    "edition": "FAHRENHEIT",
+    "old_price": "339,00",
+    "new_price": "67,80",
+    "duration_days": 1
+  },
+  {
+    "name": "WWE 2K Battlegrounds",
+    "edition": "Digital Deluxe Edition",
+    "old_price": "1.949,00",
+    "new_price": "389,80",
+    "duration_days": 1
+  },
+  {
+    "name": "WWE 2K Battlegrounds",
+    "edition": "2K Ball N’ Brawl Bundle",
+    "old_price": "2.299,00",
+    "new_price": "574,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Surviving Mars",
+    "edition": "Surviving Mars - Digital Deluxe Edition",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Snooker Nation Championship",
+    "edition": "Snooker Nation Championship",
+    "old_price": "322,00",
+    "new_price": "182,00",
+    "duration_days": 0
+  },
+  {
+    "name": "ABYSS: BACKROOMS POOLS HORROR",
+    "edition": "ABYSS: BACKROOMS POOLS HORROR",
+    "old_price": "315,00",
+    "new_price": "63,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Bio Inc. Redemption",
+    "edition": "Medical Herbs Bundle",
+    "old_price": "1.149,00",
+    "new_price": "689,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Chess",
+    "edition": "Chess",
+    "old_price": "315,00",
+    "new_price": "63,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Insomnis",
+    "edition": "Standard Edition",
+    "old_price": "525,00",
+    "new_price": "236,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Insomnis",
+    "edition": "All in 1 Pack",
+    "old_price": "879,00",
+    "new_price": "351,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Golf With Your Friends",
+    "edition": "Ultimate Edition",
+    "old_price": "1.349,00",
+    "new_price": "404,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Golf With Your Friends",
+    "edition": "Starter Edition",
+    "old_price": "799,00",
+    "new_price": "239,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Game & Console Supermarket: Business Simulator",
+    "edition": "Game & Console Supermarket: Business Simulator",
+    "old_price": "245,00",
+    "new_price": "98,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Another Crab’s Treasure",
+    "edition": "Another Crab’s Treasure",
+    "old_price": "1.049,00",
+    "new_price": "629,40",
+    "duration_days": 1
+  },
+  {
+    "name": "XIII",
+    "edition": "XIII",
+    "old_price": "139,80",
+    "new_price": "99,80",
+    "duration_days": 0
+  },
+  {
+    "name": "XIII",
+    "edition": "Comic Book Legends - Blacksad: Under the Skin, The Bluecoats: North & South, XIII Bundle",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Deliver Us Mars",
+    "edition": "Deliver Us Mars PS4 & PS5",
+    "old_price": "285,01",
+    "new_price": "71,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Cook, Serve, Delicious! 3?!",
+    "edition": "Cook, Serve, Delicious! 2/3 Bundle!!",
+    "old_price": "875,00",
+    "new_price": "262,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Anime Waifu Simulator: Sakura Garden",
+    "edition": "Anime Waifu Simulator: Sakura Garden",
+    "old_price": "279,00",
+    "new_price": "111,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Quiztopia : The Ultimate Trivia",
+    "edition": "Quiztopia : The Ultimate Trivia",
+    "old_price": "279,00",
+    "new_price": "41,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Vera Blanc: Ghost In The Castle",
+    "edition": "Vera Blanc: Supernatural Mysteries",
+    "old_price": "279,00",
+    "new_price": "167,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Vera Blanc: Ghost In The Castle",
+    "edition": "Vera Blanc: Ghost In The Castle",
+    "old_price": "175,00",
+    "new_price": "35,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Uboat Attack",
+    "edition": "Altın Sürüm",
+    "old_price": "315,00",
+    "new_price": "220,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Infantry Attack",
+    "edition": "Altın Sürüm",
+    "old_price": "315,00",
+    "new_price": "189,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Ben 10",
+    "edition": "Ben 10",
+    "old_price": "879,00",
+    "new_price": "395,55",
+    "duration_days": 1
+  },
+  {
+    "name": "TUNG SAHUR Supermarket Simulator",
+    "edition": "TUNG SAHUR Supermarket Simulator",
+    "old_price": "279,00",
+    "new_price": "139,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Keeper's Toll",
+    "edition": "Keeper's Toll PS4 & PS5",
+    "old_price": "245,00",
+    "new_price": "196,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Garfield Kart Furious Racing",
+    "edition": "Garfield Collection - 2 in 1",
+    "old_price": "1.399,00",
+    "new_price": "559,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Süper Balçık Çocuk",
+    "edition": "Süper Balçık Çocuk",
+    "old_price": "279,00",
+    "new_price": "229,00",
+    "duration_days": 0
+  },
+  {
+    "name": "AEW: Fight Forever",
+    "edition": "Standard",
+    "old_price": "1.399,00",
+    "new_price": "629,55",
+    "duration_days": 1
+  },
+  {
+    "name": "MediEvil",
+    "edition": "MediEvil Dijital Deluxe Sürüm",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Killer Klowns from Outer Space: The Game",
+    "edition": "Killer Klowns From Outer Space: The Game",
+    "old_price": "1.399,00",
+    "new_price": "699,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Killer Klowns from Outer Space: The Game",
+    "edition": "Dijital Lüks Sürüm",
+    "old_price": "2.099,00",
+    "new_price": "1.049,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Revhead",
+    "edition": "Revhead",
+    "old_price": "849,00",
+    "new_price": "699,00",
+    "duration_days": 0
+  },
+  {
+    "name": "CrimeBound Chronicles",
+    "edition": "CrimeBound Chronicles",
+    "old_price": "105,00",
+    "new_price": "73,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Bulletstorm: Full Clip Edition",
+    "edition": "Bulletstorm: Full Clip Edition Duke Nukem Bundle",
+    "old_price": "1.575,00",
+    "new_price": "315,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Train Life: A Railway Simulator",
+    "edition": "Train Life: A Railway Simulator - Orient-Express Train Edition",
+    "old_price": "1.399,00",
+    "new_price": "209,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Pyramid Quest",
+    "edition": "Pyramid Quest",
+    "old_price": "349,00",
+    "new_price": "244,30",
+    "duration_days": 1
+  },
+  {
+    "name": "PJ MASKS: GECENİN KAHRAMANLARI",
+    "edition": "TAM SÜRÜM",
+    "old_price": "1.599,00",
+    "new_price": "639,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Dreams™",
+    "edition": "Standart Sürüm",
+    "old_price": "1.399,00",
+    "new_price": "559,60",
+    "duration_days": 1
+  },
+  {
+    "name": "LEGO® The Hobbit™",
+    "edition": "LEGO® The Hobbit",
+    "old_price": "1.399,00",
+    "new_price": "181,87",
+    "duration_days": 1
+  },
+  {
+    "name": "Valkyria Chronicles 4",
+    "edition": "Valkyria Chronicles Remastered + Valkyria Chronicles 4 Bundle",
+    "old_price": "2.499,00",
+    "new_price": "499,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Toy Stunt Bike: Tiptop's Trials",
+    "edition": "Toy Stunt Bike: Tiptop's Trials",
+    "old_price": "192,00",
+    "new_price": "96,00",
+    "duration_days": 1
+  },
+  {
+    "name": "GRIS",
+    "edition": "GRIS + Neva Bundle",
+    "old_price": "1.049,00",
+    "new_price": "786,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Tribes of Midgard",
+    "edition": "Tribes of Midgard PS4 & PS5",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Acrylic Nails!",
+    "edition": "Standart Sürüm",
+    "old_price": "175,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Acrylic Nails!",
+    "edition": "Eksiksiz Baskı",
+    "old_price": "245,00",
+    "new_price": "122,50",
+    "duration_days": 1
+  },
+  {
+    "name": "JIGSAW CHRONICLES: Haunting Tales",
+    "edition": "JIGSAW CHRONICLES: Haunting Tales",
+    "old_price": "175,00",
+    "new_price": "140,00",
+    "duration_days": 1
+  },
+  {
+    "name": "JIGSAW CHRONICLES: Heroes of Legend",
+    "edition": "JIGSAW CHRONICLES: Heroes of Legend I Avatar Pack",
+    "old_price": "175,00",
+    "new_price": "140,00",
+    "duration_days": 1
+  },
+  {
+    "name": "JIGSAW CHRONICLES: Heroes of Legend",
+    "edition": "JIGSAW CHRONICLES: Heroes of Legend",
+    "old_price": "34,50",
+    "new_price": "27,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Super Box Delivery: Beyond the Horizon",
+    "edition": "Super Box Delivery: Beyond the Horizon",
+    "old_price": "175,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Super Jumpy Ball",
+    "edition": "Super Jumpy Ball",
+    "old_price": "175,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Zombie Survivors",
+    "edition": "Zombie Survivors",
+    "old_price": "175,00",
+    "new_price": "140,00",
+    "duration_days": 1
+  },
+  {
+    "name": "The Stone of Madness",
+    "edition": "The Stone of Madness",
+    "old_price": "1.049,00",
+    "new_price": "692,34",
+    "duration_days": 1
+  },
+  {
+    "name": "The Stone of Madness",
+    "edition": "Special Edition",
+    "old_price": "1.229,00",
+    "new_price": "811,14",
+    "duration_days": 1
+  },
+  {
+    "name": "The Jackbox Party Pack 9",
+    "edition": "The Jackbox Party Pack 9",
+    "old_price": "1.049,00",
+    "new_price": "629,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Outbreak: Endless Nightmares",
+    "edition": "Outbreak: Endless Nightmares Definitive Collection",
+    "old_price": "1.229,00",
+    "new_price": "307,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Tennis World Tour",
+    "edition": "Tennis World Tour - Roland-Garros Edition",
+    "old_price": "1.049,00",
+    "new_price": "209,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Tennis World Tour",
+    "edition": "Tennis World Tour",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Aces of the Luftwaffe Squadron",
+    "edition": "Aces of the Luftwaffe - Squadron Extended Edition",
+    "old_price": "875,00",
+    "new_price": "350,00",
+    "duration_days": 1
+  },
+  {
+    "name": "The Last Guardian™ SON MUHAFIZ",
+    "edition": "The Last Guardian™",
+    "old_price": "1.199,00",
+    "new_price": "479,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Plumbers Don't Wear Ties: Definitive Edition",
+    "edition": "Plumbers Don't Wear Ties: Definitive Edition",
+    "old_price": "111,29",
+    "new_price": "108,19",
+    "duration_days": 0
+  },
+  {
+    "name": "BodyCam GangZone",
+    "edition": "BodyCam GangZone",
+    "old_price": "105,00",
+    "new_price": "73,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Defend the Rook",
+    "edition": "Defend the Rook - Supporter Edition",
+    "old_price": "699,00",
+    "new_price": "244,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Strayed Lights",
+    "edition": "Strayed Lights",
+    "old_price": "306,25",
+    "new_price": "157,15",
+    "duration_days": 0
+  },
+  {
+    "name": "The Perplexing Orb: Bounce Challenge",
+    "edition": "The Perplexing Orb: Bounce Challenge",
+    "old_price": "157,00",
+    "new_price": "54,95",
+    "duration_days": 1
+  },
+  {
+    "name": "The Escapists",
+    "edition": "The Escapists",
+    "old_price": "629,00",
+    "new_price": "125,80",
+    "duration_days": 1
+  },
+  {
+    "name": "ESCAPE TUNG SAHUR BACKROOMS",
+    "edition": "ESCAPE TUNG SAHUR BACKROOMS",
+    "old_price": "315,00",
+    "new_price": "157,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Cursed Feed",
+    "edition": "Cursed Feed",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 0
+  },
+  {
+    "name": "Rez Infinite",
+    "edition": "Rez Infinite",
+    "old_price": "314,70",
+    "new_price": "142,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Thunder Ray",
+    "edition": "Standard Edition",
+    "old_price": "183,75",
+    "new_price": "131,25",
+    "duration_days": 0
+  },
+  {
+    "name": "Dark Receipt",
+    "edition": "Dark Receipt",
+    "old_price": "125,00",
+    "new_price": "87,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Pizza Fun",
+    "edition": "Pizza Fun",
+    "old_price": "125,00",
+    "new_price": "87,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Sushi Fun",
+    "edition": "Sushi Fun Mini Game Bundle",
+    "old_price": "525,00",
+    "new_price": "367,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Sushi Fun",
+    "edition": "Sushi Fun",
+    "old_price": "125,00",
+    "new_price": "87,50",
+    "duration_days": 1
+  },
+  {
+    "name": "BOMBARDINO CROCODILO vs TUNG TUNG SAHUR",
+    "edition": "BOMBARDINO CROCODILO vs TUNG TUNG SAHUR",
+    "old_price": "175,00",
+    "new_price": "87,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Wolfenstein: Cyberpilot",
+    "edition": "Wolfenstein: Cyberpilot",
+    "old_price": "119,00",
+    "new_price": "29,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Cazzarion: Drone Attack",
+    "edition": "Cazzarion: Drone Attack",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 1
+  },
+  {
+    "name": "SENRAN KAGURA ESTIVAL VERSUS",
+    "edition": "SENRAN KAGURA ESTIVAL VERSUS",
+    "old_price": "549,00",
+    "new_price": "82,35",
+    "duration_days": 1
+  },
+  {
+    "name": "Death Motel",
+    "edition": "Death Motel",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 0
+  },
+  {
+    "name": "Death Motel",
+    "edition": "CTRL+FEAR",
+    "old_price": "105,00",
+    "new_price": "73,50",
+    "duration_days": 1
+  },
+  {
+    "name": "NIGHTGHAST",
+    "edition": "NIGHTGHAST",
+    "old_price": "105,00",
+    "new_price": "31,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Platformer Saga",
+    "edition": "Platformer Saga",
+    "old_price": "105,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Elite Dangerous",
+    "edition": "Elite Dangerous",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Mirror's Edge™ Catalyst",
+    "edition": "Mirror's Edge™ Catalyst",
+    "old_price": "699,00",
+    "new_price": "244,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Moonlighter",
+    "edition": "Complete Edition",
+    "old_price": "839,00",
+    "new_price": "125,85",
+    "duration_days": 1
+  },
+  {
+    "name": "10 Seconds to Win!",
+    "edition": "10 Seconds to Win! PS4 & PS5",
+    "old_price": "90,00",
+    "new_price": "36,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Forest Cafe Simulator",
+    "edition": "Forest Cafe Simulator",
+    "old_price": "87,00",
+    "new_price": "34,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Toy's Brawl",
+    "edition": "Toy's Brawl",
+    "old_price": "87,00",
+    "new_price": "69,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Dreaming Canvas",
+    "edition": "Dreaming Canvas",
+    "old_price": "69,00",
+    "new_price": "37,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Spectrewoods",
+    "edition": "The Voices Games Mega Bundle",
+    "old_price": "69,00",
+    "new_price": "34,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Cazzarion: Drone Flight",
+    "edition": "Cazzarion: Drone Flight",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Johnny Trigger",
+    "edition": "Altın Sürüm",
+    "old_price": "629,00",
+    "new_price": "314,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Cat Quest II",
+    "edition": "Cat Quest II",
+    "old_price": "525,00",
+    "new_price": "131,25",
+    "duration_days": 1
+  },
+  {
+    "name": "EARTH DEFENSE FORCE 5",
+    "edition": "EARTH DEFENSE FORCE 5 Deluxe Edition",
+    "old_price": "2.619,00",
+    "new_price": "785,70",
+    "duration_days": 1
+  },
+  {
+    "name": "The Mooseman",
+    "edition": "The Mooseman",
+    "old_price": "83,70",
+    "new_price": "73,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Burger Fun",
+    "edition": "Burger Fun",
+    "old_price": "87,50",
+    "new_price": "85,40",
+    "duration_days": 0
+  },
+  {
+    "name": "The Survivalists",
+    "edition": "The Survivalists",
+    "old_price": "879,00",
+    "new_price": "87,90",
+    "duration_days": 1
+  },
+  {
+    "name": "X-Morph: Defense",
+    "edition": "X-Morph: Defense Complete Edition",
+    "old_price": "1.049,00",
+    "new_price": "576,95",
+    "duration_days": 1
+  },
+  {
+    "name": "Astro Rangers",
+    "edition": "Astro Rangers",
+    "old_price": "69,00",
+    "new_price": "20,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Cazzarion: Kutululu",
+    "edition": "Cazzarion: Kutululu",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Cazzarion: Car Chase",
+    "edition": "Cazzarion: Car Chase",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Cazzarion: Little Dragon",
+    "edition": "Cazzarion: Little Dragon",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Ramp Car Racing",
+    "edition": "Ramp Car Racing",
+    "old_price": "69,00",
+    "new_price": "20,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Pig Escape",
+    "edition": "Pig Escape",
+    "old_price": "59,00",
+    "new_price": "47,20",
+    "duration_days": 1
+  },
+  {
+    "name": "We Love Katamari REROLL+ Royal Reverie",
+    "edition": "Özel Sürüm",
+    "old_price": "2.099,00",
+    "new_price": "524,75",
+    "duration_days": 1
+  },
+  {
+    "name": "BLAZBLUE CHRONOPHANTASMA EXTEND",
+    "edition": "BlazBlue Chronophantasma Extend",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Black Death : A Tragic Dirge",
+    "edition": "Black Death :A Tragic Dirge",
+    "old_price": "52,00",
+    "new_price": "36,40",
+    "duration_days": 0
+  },
+  {
+    "name": "Bulwark: Falconeer Chronicles",
+    "edition": "Mad Lector Edition",
+    "old_price": "735,00",
+    "new_price": "257,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Bulwark: Falconeer Chronicles",
+    "edition": "Mongres Trader Edition",
+    "old_price": "735,00",
+    "new_price": "257,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Paper io 2",
+    "edition": "Altın Sürüm",
+    "old_price": "209,00",
+    "new_price": "104,50",
+    "duration_days": 1
+  },
+  {
+    "name": "L.A. Noire: The VR Case Files",
+    "edition": "L.A. Noire: The VR Case Files",
+    "old_price": "1.049,00",
+    "new_price": "524,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Color Recreator",
+    "edition": "Color Recreator",
+    "old_price": "85,00",
+    "new_price": "42,00",
+    "duration_days": 0
+  },
+  {
+    "name": "Odd Color Out",
+    "edition": "Odd Color Out",
+    "old_price": "59,00",
+    "new_price": "42,00",
+    "duration_days": 0
+  },
+  {
+    "name": "Corridor Z",
+    "edition": "Corridor Z - Disturbed Dynamic Theme Bundle",
+    "old_price": "349,00",
+    "new_price": "261,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Tetrack",
+    "edition": "Tetrack",
+    "old_price": "20,80",
+    "new_price": "14,80",
+    "duration_days": 0
+  },
+  {
+    "name": "AMAZE!",
+    "edition": "AMAZE! & Light-it Up",
+    "old_price": "279,00",
+    "new_price": "167,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Shing!",
+    "edition": "Deluxe Edition",
+    "old_price": "875,00",
+    "new_price": "262,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Blues of War",
+    "edition": "Blues of War",
+    "old_price": "34,50",
+    "new_price": "24,15",
+    "duration_days": 0
+  },
+  {
+    "name": "Angry Bunnies",
+    "edition": "Angry Bunnies",
+    "old_price": "34,50",
+    "new_price": "24,15",
+    "duration_days": 0
+  },
+  {
+    "name": "Cazzarion: Bomber Attack",
+    "edition": "Cazzarion: Bomber Attack",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Hyper Rider",
+    "edition": "Hyper Rider",
+    "old_price": "34,50",
+    "new_price": "27,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Spin Around",
+    "edition": "Spin Around",
+    "old_price": "34,50",
+    "new_price": "24,15",
+    "duration_days": 1
+  },
+  {
+    "name": "Harmony's Odyssey",
+    "edition": "Puzzle Paradise Bundle PS4 & PS5",
+    "old_price": "479,00",
+    "new_price": "143,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Harmony's Odyssey",
+    "edition": "Harmony's Odyssey Deluxe Edition Bundle",
+    "old_price": "699,00",
+    "new_price": "209,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Cubic Riders",
+    "edition": "Cubic Riders",
+    "old_price": "13,80",
+    "new_price": "10,00",
+    "duration_days": 0
+  },
+  {
+    "name": "Sqwrk",
+    "edition": "Sqwrk",
+    "old_price": "17,00",
+    "new_price": "8,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Flaskoman",
+    "edition": "Flaskoman",
+    "old_price": "34,75",
+    "new_price": "27,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Planet Divers",
+    "edition": "Planet Divers",
+    "old_price": "26,10",
+    "new_price": "20,70",
+    "duration_days": 0
+  },
+  {
+    "name": "Dragons in Space",
+    "edition": "Dragons in Space and Dragon Avatar bundle",
+    "old_price": "17,00",
+    "new_price": "8,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Fantasy Beauties",
+    "edition": "Premium Edition",
+    "old_price": "105,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "A Frog Game",
+    "edition": "A Frog Game",
+    "old_price": "8,50",
+    "new_price": "5,95",
+    "duration_days": 1
+  },
+  {
+    "name": "Multigun",
+    "edition": "Multigun",
+    "old_price": "8,50",
+    "new_price": "N/A",
+    "duration_days": 0
+  },
+  {
+    "name": "Bubbelsche Deluxe",
+    "edition": "Bubbelsche Deluxe",
+    "old_price": "8,50",
+    "new_price": "5,95",
+    "duration_days": 1
+  },
+  {
+    "name": "UNDER NIGHT IN-BIRTH Exe:Late[st]",
+    "edition": "UNDER NIGHT IN-BIRTH Exe:Late[st]",
+    "old_price": "879,00",
+    "new_price": "219,75",
+    "duration_days": 1
+  },
+  {
+    "name": "11-11: Memories Retold",
+    "edition": "11-11 Memories Retold",
+    "old_price": "879,00",
+    "new_price": "131,85",
+    "duration_days": 1
+  },
+  {
+    "name": "3D Color Labyrinth",
+    "edition": "3D Color Labyrinth",
+    "old_price": "175,00",
+    "new_price": "35,00",
+    "duration_days": 1
+  },
+  {
+    "name": "3D Don't Die Mr. Robot",
+    "edition": "3D Don't Die Mr. Robot PS4 & PS5",
+    "old_price": "349,00",
+    "new_price": "209,40",
+    "duration_days": 1
+  },
+  {
+    "name": "5-in-1 Best Multiplayer & Couch Co-op Bundle",
+    "edition": "5-in-1 Best Multiplayer & Couch Co-op Bundle",
+    "old_price": "1.749,00",
+    "new_price": "1.311,75",
+    "duration_days": 1
+  },
+  {
+    "name": "6Souls",
+    "edition": "6Souls PS4 & PS5",
+    "old_price": "279,00",
+    "new_price": "83,70",
+    "duration_days": 1
+  },
+  {
+    "name": "8-Bit Adventures 2",
+    "edition": "8-Bit Adventures 2",
+    "old_price": "595,00",
+    "new_price": "446,25",
+    "duration_days": 1
+  },
+  {
+    "name": "99 Seconds",
+    "edition": "99 Seconds",
+    "old_price": "105,00",
+    "new_price": "63,00",
+    "duration_days": 1
+  },
+  {
+    "name": "A Building Full of Cats",
+    "edition": "A Building Full of Cats",
+    "old_price": "105,00",
+    "new_price": "42,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Accel World vs. Sword Art Online",
+    "edition": "Accel World VS. Sword Art Online",
+    "old_price": "2.099,00",
+    "new_price": "314,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Access Denied",
+    "edition": "Access Denied",
+    "old_price": "175,00",
+    "new_price": "17,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Adam's Venture: Origins",
+    "edition": "Adam's Venture: Origins",
+    "old_price": "529,00",
+    "new_price": "52,90",
+    "duration_days": 1
+  },
+  {
+    "name": "ADR1FT",
+    "edition": "ADR1FT",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Adventure Academia: The Fractured Continent",
+    "edition": "Adventure Academia: The Fractured Continent",
+    "old_price": "1.399,00",
+    "new_price": "349,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Adrian's Tale",
+    "edition": "Adrian's Tale",
+    "old_price": "649,00",
+    "new_price": "429,00",
+    "duration_days": 0
+  },
+  {
+    "name": "Adventure Bar Story",
+    "edition": "Adventure Bar Story",
+    "old_price": "629,00",
+    "new_price": "440,30",
+    "duration_days": 1
+  },
+  {
+    "name": "Aegis of Earth: Protonovus Assault",
+    "edition": "Aegis of Earth: Protonovus Assault",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "AereA",
+    "edition": "AereA",
+    "old_price": "349,00",
+    "new_price": "69,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Aero Cosmos",
+    "edition": "Aero Cosmos",
+    "old_price": "69,00",
+    "new_price": "34,50",
+    "duration_days": 1
+  },
+  {
+    "name": "AeternoBlade II Infinity",
+    "edition": "AeternoBlade II Infinity",
+    "old_price": "529,00",
+    "new_price": "525,00",
+    "duration_days": 0
+  },
+  {
+    "name": "A Fisherman's Tale",
+    "edition": "The Fisherman's Tales Bundle",
+    "old_price": "539,00",
+    "new_price": "177,87",
+    "duration_days": 1
+  },
+  {
+    "name": "A Fisherman's Tale",
+    "edition": "PS5 Edition",
+    "old_price": "525,00",
+    "new_price": "173,25",
+    "duration_days": 1
+  },
+  {
+    "name": "A Frog's Job",
+    "edition": "A Frog's Job PS4 & PS5",
+    "old_price": "175,00",
+    "new_price": "70,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Afterdream",
+    "edition": "Psychological Horror Bundle",
+    "old_price": "875,00",
+    "new_price": "437,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Afterdream",
+    "edition": "Afterdream",
+    "old_price": "389,00",
+    "new_price": "194,50",
+    "duration_days": 1
+  },
+  {
+    "name": "AFTERLIFE VR",
+    "edition": "AFTERLIFE VR",
+    "old_price": "529,00",
+    "new_price": "211,60",
+    "duration_days": 1
+  },
+  {
+    "name": "After Us",
+    "edition": "After Us",
+    "old_price": "1.049,00",
+    "new_price": "262,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Agatha Christie - Doğu Ekspresinde Cinayet",
+    "edition": "Detective Bundle - 4 in 1",
+    "old_price": "3.149,00",
+    "new_price": "1.259,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Agatha Christie - Doğu Ekspresinde Cinayet",
+    "edition": "Agatha Christie Collection 2",
+    "old_price": "2.099,00",
+    "new_price": "734,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Agatha Christie - Hercule Poirot: The London Case",
+    "edition": "Agatha Christie - Hercule Poirot: The London Case",
+    "old_price": "1.399,00",
+    "new_price": "279,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Aggelos",
+    "edition": "Aggelos",
+    "old_price": "529,00",
+    "new_price": "132,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Age of Wonders: Planetfall",
+    "edition": "Age of Wonders: Planetfall Deluxe Edition",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Aground",
+    "edition": "Aground",
+    "old_price": "439,00",
+    "new_price": "131,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Agriculture",
+    "edition": "Agriculture PS4 & PS5",
+    "old_price": "175,00",
+    "new_price": "43,75",
+    "duration_days": 1
+  },
+  {
+    "name": "A Gummy's Life",
+    "edition": "A Gummy's Life",
+    "old_price": "699,00",
+    "new_price": "209,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Air Hockey",
+    "edition": "Air Hockey",
+    "old_price": "349,00",
+    "new_price": "69,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Air Twister",
+    "edition": "Air Twister",
+    "old_price": "879,00",
+    "new_price": "263,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Akatsuki: Lord of the Dawn",
+    "edition": "Akatsuki: Lord of the Dawn PS4 & PS5",
+    "old_price": "349,00",
+    "new_price": "209,40",
+    "duration_days": 1
+  },
+  {
+    "name": "AKIBA'S BEAT",
+    "edition": "Akiba's Beat",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "A Juggler's Tale",
+    "edition": "A Juggler's Tale",
+    "old_price": "525,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "AKIBA'S TRIP: Hellbound & Debriefed",
+    "edition": "AKIBA'S TRIP: Hellbound & Debriefed",
+    "old_price": "1.049,00",
+    "new_price": "314,70",
+    "duration_days": 1
+  },
+  {
+    "name": "AKIBA'S TRIP: Hellbound & Debriefed",
+    "edition": "AKIBA'S TRIP: Hellbound & Debriefed - Digital Deluxe Edition",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Akinakes",
+    "edition": "Akinakes",
+    "old_price": "175,00",
+    "new_price": "140,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Alacakaranlık Bölgesi ™",
+    "edition": "Alacakaranlık Bölgesi ™",
+    "old_price": "699,00",
+    "new_price": "419,40",
+    "duration_days": 1
+  },
+  {
+    "name": "AK-xolotl: Together",
+    "edition": "AK-xolotl: Together",
+    "old_price": "665,00",
+    "new_price": "266,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Albacete Warrior",
+    "edition": "Albacete Warrior PS4 & PS5",
+    "old_price": "349,00",
+    "new_price": "104,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Alchemist Adventure",
+    "edition": "Alchemist Adventure",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Alice Gear Aegis CS Concerto of Simulatrix",
+    "edition": "Alice Gear Aegis CS Concerto of Simulatrix",
+    "old_price": "1.049,00",
+    "new_price": "104,90",
+    "duration_days": 1
+  },
+  {
+    "name": "A Little to the Left",
+    "edition": "A Little to the Left",
+    "old_price": "525,00",
+    "new_price": "262,50",
+    "duration_days": 1
+  },
+  {
+    "name": "A Little to the Left",
+    "edition": "A Little to the Left Cupboards & Drawers DLC Bundle",
+    "old_price": "665,00",
+    "new_price": "399,00",
+    "duration_days": 1
+  },
+  {
+    "name": "A Little to the Left",
+    "edition": "A Little to the Left: Extra Tidy Bundle",
+    "old_price": "945,00",
+    "new_price": "661,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Alina Of The Arena",
+    "edition": "Alina Of The Arena PS4™ & PS5®",
+    "old_price": "629,00",
+    "new_price": "440,30",
+    "duration_days": 1
+  },
+  {
+    "name": "All-Star Fruit Racing",
+    "edition": "All-Star Fruit Racing",
+    "old_price": "529,00",
+    "new_price": "52,90",
+    "duration_days": 1
+  },
+  {
+    "name": "All You Need is Help",
+    "edition": "All You Need is Help",
+    "old_price": "601,00",
+    "new_price": "489,00",
+    "duration_days": 1
+  },
+  {
+    "name": "All You Need is Help",
+    "edition": "All You Need is Help Lively Friends Bundle",
+    "old_price": "595,00",
+    "new_price": "297,50",
+    "duration_days": 0
+  },
+  {
+    "name": "Alpha Particle",
+    "edition": "Alpha Particle PS4 & PS5",
+    "old_price": "349,00",
+    "new_price": "104,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Alpha Warrior",
+    "edition": "Premium Sürüm",
+    "old_price": "343,00",
+    "new_price": "300,00",
+    "duration_days": 2
+  },
+  {
+    "name": "Always Sometimes Monsters",
+    "edition": "Always Sometimes Monsters",
+    "old_price": "419,00",
+    "new_price": "104,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Amnesia Collection",
+    "edition": "Amnesia: Collection",
+    "old_price": "999,00",
+    "new_price": "149,85",
+    "duration_days": 1
+  },
+  {
+    "name": "Among Ashes",
+    "edition": "Among Ashes",
+    "old_price": "525,00",
+    "new_price": "315,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Amnesia: Rebirth",
+    "edition": "Amnesia: Rebirth",
+    "old_price": "999,00",
+    "new_price": "149,85",
+    "duration_days": 1
+  },
+  {
+    "name": "An Aisling",
+    "edition": "An Aisling",
+    "old_price": "419,00",
+    "new_price": "N/A",
+    "duration_days": 1
+  },
+  {
+    "name": "Ancient Ants Adventure",
+    "edition": "Ancient Ants Adventure",
+    "old_price": "175,00",
+    "new_price": "N/A",
+    "duration_days": 1
+  },
+  {
+    "name": "Andromeda Survivors",
+    "edition": "Andromeda Survivors",
+    "old_price": "175,00",
+    "new_price": "105,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Ancient Weapon Holly",
+    "edition": "Ancient Weapon Holly PS4 & PS5",
+    "old_price": "629,00",
+    "new_price": "314,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Anglerfish",
+    "edition": "Anglerfish",
+    "old_price": "349,00",
+    "new_price": "139,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Angry Birds VR: Isle of Pigs",
+    "edition": "Angry Birds VR: Isle of Pigs",
+    "old_price": "525,00",
+    "new_price": "262,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Anima Gate of Memories: The Nameless Chronicles",
+    "edition": "Anima: Gate of Memories - Arcane Edition",
+    "old_price": "1.049,00",
+    "new_price": "146,86",
+    "duration_days": 1
+  },
+  {
+    "name": "Annihilation",
+    "edition": "Annihilation",
+    "old_price": "179,00",
+    "new_price": "62,65",
+    "duration_days": 1
+  },
+  {
+    "name": "Anomaly Pools",
+    "edition": "Anomaly Pools",
+    "old_price": "69,00",
+    "new_price": "48,30",
+    "duration_days": 0
+  },
+  {
+    "name": "Another World Mahjong Girl",
+    "edition": "Another World Mahjong Girl PS4 & PS5",
+    "old_price": "349,00",
+    "new_price": "174,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Apex Construct",
+    "edition": "Apex Construct",
+    "old_price": "245,00",
+    "new_price": "61,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Apple Slash",
+    "edition": "Apple Slash PS4 & PS5",
+    "old_price": "175,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Apsulov: End of Gods",
+    "edition": "Apsulov: End of Gods",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Aquarium Land",
+    "edition": "Standart Sürüm",
+    "old_price": "175,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Aquarium Land",
+    "edition": "Eksiksiz Baskı",
+    "old_price": "315,00",
+    "new_price": "126,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Ara Fell: Enhanced Edition",
+    "edition": "Ara Fell: Enhanced Edition",
+    "old_price": "629,00",
+    "new_price": "188,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Arcade Classics Anniversary Collection",
+    "edition": "Arcade Classics Anniversary Collection",
+    "old_price": "699,00",
+    "new_price": "279,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Arcade Spirits",
+    "edition": "Arcade Spirits",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Arcade Spirits: The New Challengers",
+    "edition": "Arcade Spirits: The New Challengers",
+    "old_price": "699,00",
+    "new_price": "174,75",
+    "duration_days": 1
+  },
+  {
+    "name": "Archetype Arcadia",
+    "edition": "Archetype Arcadia",
+    "old_price": "1.049,00",
+    "new_price": "367,15",
+    "duration_days": 1
+  },
+  {
+    "name": "ArcRunner",
+    "edition": "ArcRunner",
+    "old_price": "699,00",
+    "new_price": "349,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Arenas Of Tanks",
+    "edition": "Arenas Of Tanks PS4 & PS5",
+    "old_price": "175,00",
+    "new_price": "70,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Arkanoid Eternal Battle",
+    "edition": "Arkanoid Eternal Battle",
+    "old_price": "699,00",
+    "new_price": "69,90",
+    "duration_days": 1
+  },
+  {
+    "name": "As Far As The Eye",
+    "edition": "As Far As The Eye",
+    "old_price": "875,00",
+    "new_price": "218,75",
+    "duration_days": 1
+  },
+  {
+    "name": "ASMR Slicing",
+    "edition": "Standart Sürüm",
+    "old_price": "175,00",
+    "new_price": "52,50",
+    "duration_days": 1
+  },
+  {
+    "name": "ASMR Slicing",
+    "edition": "Eksiksiz Baskı",
+    "old_price": "245,00",
+    "new_price": "122,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Assassin's Creed® Rogue Remastered",
+    "edition": "Assassin's Creed® Rogue Remastered",
+    "old_price": "1.399,00",
+    "new_price": "419,70",
+    "duration_days": 1
+  },
+  {
+    "name": "ASSAULT GUNNERS HD EDITION",
+    "edition": "ASSAULT GUNNERS HD EDITION COMPLETE SET",
+    "old_price": "439,00",
+    "new_price": "131,70",
+    "duration_days": 1
+  },
+  {
+    "name": "ASSAULT GUNNERS HD EDITION",
+    "edition": "ASSAULT GUNNERS HD EDITION",
+    "old_price": "349,00",
+    "new_price": "104,70",
+    "duration_days": 1
+  },
+  {
+    "name": "Astalon: Tears Of The Earth",
+    "edition": "Astalon: Tears Of The Earth",
+    "old_price": "735,00",
+    "new_price": "367,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Assault Suit Leynos 2 Saturn Tribute PS4 & PS5",
+    "edition": "Assault Suit Leynos 2 Saturn Tribute PS4 & PS5",
+    "old_price": "879,00",
+    "new_price": "527,40",
+    "duration_days": 1
+  },
+  {
+    "name": "Asterix & Obelix XXL3",
+    "edition": "Asteriks ve Oburiks XXL3: Kristal Menhir",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Asterix & Obelix XXL3",
+    "edition": "Asterix & Obelix XXL3: The Crystal Menhir",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Astrea: Six-Sided Oracles",
+    "edition": "Astrea: Six-Sided Oracles",
+    "old_price": "700,00",
+    "new_price": "671,20",
+    "duration_days": 0
+  },
+  {
+    "name": "A summer with the Shiba Inu",
+    "edition": "A Summer with the Shiba Inu",
+    "old_price": "349,00",
+    "new_price": "104,70",
+    "duration_days": 1
+  },
+  {
+    "name": "A Tale of Paper",
+    "edition": "A Tale of Paper: Unfolded Melody",
+    "old_price": "175,00",
+    "new_price": "70,00",
+    "duration_days": 1
+  },
+  {
+    "name": "A Tale of Paper",
+    "edition": "A Tale of Paper",
+    "old_price": "525,00",
+    "new_price": "131,25",
+    "duration_days": 1
+  },
+  {
+    "name": "Atlas Fallen: Reign Of Sand",
+    "edition": "Atlas Fallen: Reign of Sand",
+    "old_price": "1.249,00",
+    "new_price": "499,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Çatışma!",
+    "edition": "Çatışma!",
+    "old_price": "279,00",
+    "new_price": "111,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Attack of the Earthlings",
+    "edition": "Attack of the Earthlings",
+    "old_price": "699,00",
+    "new_price": "279,60",
+    "duration_days": 1
+  },
+  {
+    "name": "Attack of the Toy Tanks",
+    "edition": "Attack of the Toy Tanks",
+    "old_price": "175,00",
+    "new_price": "17,50",
+    "duration_days": 1
+  },
+  {
+    "name": "ATV Drift & Tricks Definitive Edition",
+    "edition": "ATV Drift & Tricks",
+    "old_price": "349,00",
+    "new_price": "34,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Aurora’s Journey and the Pitiful Lackey",
+    "edition": "Lackey Edition",
+    "old_price": "699,00",
+    "new_price": "139,80",
+    "duration_days": 1
+  },
+  {
+    "name": "AVARIS3 Offline Ver.",
+    "edition": "AVARIS3 Offline Ver.",
+    "old_price": "945,00",
+    "new_price": "756,00",
+    "duration_days": 1
+  },
+  {
+    "name": "Avatar The Last Airbender: Quest for Balance",
+    "edition": "Avatar The Last Airbender: Quest for Balance",
+    "old_price": "1.749,00",
+    "new_price": "349,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Aven Colony",
+    "edition": "Deluxe Edition",
+    "old_price": "1.049,00",
+    "new_price": "104,90",
+    "duration_days": 1
+  },
+  {
+    "name": "Avenging Spirit",
+    "edition": "Avenging Spirit PS4 & PS5",
+    "old_price": "209,00",
+    "new_price": "104,50",
+    "duration_days": 1
+  },
+  {
+    "name": "Axe Ace",
+    "edition": "Axe Ace",
+    "old_price": "34,50",
+    "new_price": "13,80",
+    "duration_days": 1
+  },
+  {
+    "name": "Azure Striker GUNVOLT: STRIKER PACK",
+    "edition": "Azure Striker Gunvolt: Striker Pack",
+    "old_price": "1.199,00",
+    "new_price": "539,55",
+    "duration_days": 1
+  },
+  {
+    "name": "Azure Striker GUNVOLT 3",
+    "edition": "Azure Striker GUNVOLT 3",
+    "old_price": "945,00",
+    "new_price": "425,25",
+    "duration_days": 1
+  }
+]
