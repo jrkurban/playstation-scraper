@@ -1,6 +1,7 @@
 # scripts/generate_discount_report.py
 
 import os
+import json # YENİ: JSON dosyası için import
 from datetime import datetime, timedelta, timezone
 from pymongo import MongoClient
 from pymongo.database import Database
@@ -9,16 +10,21 @@ from typing import Dict, Any, List, Optional, Tuple
 # --- AYARLAR ---
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUTPUT_MD_FILE = os.path.join(PROJECT_ROOT, 'DISCOUNTS.md')
+# YENİ: JSON çıktısının yolu
+OUTPUT_JSON_FILE = os.path.join(PROJECT_ROOT, 'discounts.json')
+
+# GÜVENLİK DÜZELTMESİ: MONGO_URI'yi her zaman ortam değişkenlerinden al
 MONGO_URI = os.getenv('MONGO_URI')
 MONGO_DB_NAME = "GamesDB"
 # Kaç günlük geçmişe bakılacağını belirle
 LOOKBACK_DAYS = 7
 
-# --- VERİTABANI VE YARDIMCI FONKSİYONLAR (DEĞİŞİKLİK YOK) ---
+
+# --- VERİTABANI VE YARDIMCI FONKSİYONLAR ---
 
 def setup_mongodb_connection() -> Tuple[Optional[MongoClient], Optional[Database]]:
     if not MONGO_URI:
-        print("HATA: MONGO_URI ortam değişkeni ayarlanmamış!")
+        print("HATA: MONGO_URI ortam değişkeni ayarlanmamış! Lütfen GitHub Secrets'ı kontrol edin.")
         return None, None
     try:
         client = MongoClient(MONGO_URI)
@@ -29,6 +35,7 @@ def setup_mongodb_connection() -> Tuple[Optional[MongoClient], Optional[Database
     except Exception as e:
         print(f"MongoDB bağlantı hatası: {e}")
         return None, None
+
 
 def parse_price(price_str: Optional[str]) -> Optional[float]:
     if price_str is None: return None
@@ -41,17 +48,20 @@ def parse_price(price_str: Optional[str]) -> Optional[float]:
     except (ValueError, TypeError):
         return None
 
-# --- YENİ VE GÜNCELLENMİŞ FONKSİYONLAR ---
+
+# --- ANA İŞLEM FONKSİYONLARI ---
 
 def get_latest_snapshot_date(db: Database) -> Optional[str]:
     """Veritabanındaki en son anlık görüntü tarihini döndürür."""
     latest_doc = db['price_history'].find_one(sort=[("snapshotDate", -1)])
     return latest_doc['snapshotDate'] if latest_doc else None
 
+
 def fetch_data_by_snapshot_date(db: Database, snapshot_date_iso: str) -> Dict[str, Dict[str, Any]]:
     """Belirtilen ISO tarihine sahip tüm fiyat verilerini çeker."""
     price_documents = db['price_history'].find({"snapshotDate": snapshot_date_iso})
     return {doc['gameId']: doc for doc in price_documents}
+
 
 def fetch_price_history_for_game(db: Database, game_id: str, start_date: datetime) -> List[Dict[str, Any]]:
     """Belirli bir oyun için verilen tarihten bugüne kadarki fiyat geçmişini getirir."""
@@ -59,8 +69,30 @@ def fetch_price_history_for_game(db: Database, game_id: str, start_date: datetim
         "gameId": game_id,
         "snapshotDate": {"$gte": start_date.isoformat() + "Z"}
     }
-    # En yeniden eskiye doğru sıralı
     return list(db['price_history'].find(query).sort("snapshotDate", -1))
+
+
+def get_all_histories_in_range(db: Database, start_date: datetime) -> Dict[str, List[Dict[str, Any]]]:
+    """
+    Belirtilen tarihten itibaren tüm fiyat geçmişini çeker ve oyun ID'sine göre gruplar.
+    """
+    print(f"Veritabanından {start_date.strftime('%Y-%m-%d')} tarihinden itibaren tüm veriler çekiliyor...")
+    query = {"snapshotDate": {"$gte": start_date.isoformat() + "Z"}}
+    all_docs = list(db['price_history'].find(query))
+
+    game_histories = {}
+    for doc in all_docs:
+        game_id = doc['gameId']
+        if game_id not in game_histories:
+            game_histories[game_id] = []
+        game_histories[game_id].append(doc)
+
+    # Her oyunun geçmişini tarihe göre sırala (en eskiden en yeniye)
+    for game_id in game_histories:
+        game_histories[game_id].sort(key=lambda x: x['snapshotDate'])
+
+    print(f"{len(game_histories)} oyun için fiyat geçmişi gruplandı.")
+    return game_histories
 
 
 def generate_report():
@@ -68,103 +100,105 @@ def generate_report():
     if client is None or db is None:
         return
 
-    # 1. En son veri setini (bugünün verisi) bul ve çek
-    latest_date_iso = get_latest_snapshot_date(db)
-    if not latest_date_iso:
-        print("Veritabanında hiç veri bulunamadı.")
+    # 1. Geriye dönük karşılaştırma için başlangıç tarihini belirle.
+    # 7 günlük düşüşleri bulmak için 8 gün öncesine ait veri gerekebilir.
+    reference_start_date = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS + 1)
+
+    # 2. İlgili aralıktaki tüm veriyi çek ve oyunlara göre grupla
+    all_game_histories = get_all_histories_in_range(db, reference_start_date)
+
+    if not all_game_histories:
+        print("Veritabanında analiz edilecek veri bulunamadı.")
         client.close()
         return
-    
-    # Tarih kontrolü: Eğer en son veri bugüne ait değilse bilgi ver
-    latest_date_obj = datetime.fromisoformat(latest_date_iso.replace('Z', '+00:00'))
-    if latest_date_obj.date() < datetime.now(timezone.utc).date():
-        print(f"UYARI: En son veri {latest_date_obj.strftime('%d.%m.%Y')} tarihine ait. Rapor bu veriye göre oluşturulacak.")
-    else:
-        print(f"En son veri tarihi: {latest_date_iso}")
-
-    current_data = fetch_data_by_snapshot_date(db, latest_date_iso)
-    
-    # 2. Karşılaştırma için başlangıç tarihini belirle
-    lookback_start_date = datetime.now(timezone.utc) - timedelta(days=LOOKBACK_DAYS)
 
     # 3. Oyun isimlerini tek seferde çekmek için bir harita oluştur
     game_info_map = {game['_id']: game for game in db['games'].find({}, {'name': 1})}
-    price_drops = []
 
-    # 4. Bugünkü her oyun için geçmişi kontrol et
-    for game_id, current_game_doc in current_data.items():
-        game_name = game_info_map.get(game_id, {}).get('name', 'Bilinmeyen Oyun')
-        
-        # Bu oyunun son 7 günlük fiyat geçmişini çek
-        history = fetch_price_history_for_game(db, game_id, lookback_start_date)
+    # Son 7 gün içinde fiyatı düşenleri saklamak için
+    recent_price_drops = {}
 
-        for current_edition in current_game_doc.get('editions', []):
-            current_price_val = parse_price(current_edition.get('price'))
-            if current_price_val is None:
+    # 4. Her oyunun geçmişini analiz et
+    for game_id, history in all_game_histories.items():
+        if len(history) < 2:
+            continue  # Karşılaştırma için en az 2 kayıt gerekir.
+
+        # Geçmişi eskiden yeniye doğru tara
+        for i in range(1, len(history)):
+            previous_doc = history[i - 1]
+            current_doc = history[i]
+
+            # Fiyat düşüşü olayının tarihini kontrol et
+            drop_date = datetime.fromisoformat(current_doc['snapshotDate'].replace('Z', '+00:00'))
+
+            # Eğer düşüş son 7 gün içinde değilse, bu oyunu daha fazla analiz etmeye gerek yok
+            if (datetime.now(timezone.utc) - drop_date).days > LOOKBACK_DAYS:
                 continue
 
-            reference_price = None
-            reference_price_str = ""
-            sale_start_date = latest_date_obj # Varsayılan olarak bugünün tarihi
-            
-            # Geçmişi (en yeniden eskiye) tara
-            for historical_doc in history:
-                for historical_edition in historical_doc.get('editions', []):
-                    if historical_edition['name'] == current_edition['name']:
-                        historical_price_val = parse_price(historical_edition.get('price'))
-                        
-                        if historical_price_val is not None and historical_price_val > current_price_val:
-                            # İndirimsiz (daha yüksek) bir fiyat bulduk!
-                            reference_price = historical_price_val
-                            reference_price_str = historical_edition.get('price')
-                            # İndirim, bu kayıttan sonraki kayıtta başlamıştır.
-                            # `history` listesi tersten sıralı olduğu için, döngüdeki bir sonraki eleman
-                            # aslında zamandaki bir önceki elemandır. Bu yüzden bu tarih doğru.
-                            sale_start_date = datetime.fromisoformat(historical_doc['snapshotDate'].replace('Z', '+00:00'))
-                        
-                        # Referans fiyatı bulduysak, daha fazla geriye gitmeye gerek yok.
-                        if reference_price is not None:
-                            break
-                if reference_price is not None:
-                    break
-            
-            # Eğer bir referans fiyatı bulduysak (yani bir indirim varsa)
-            if reference_price is not None:
-                duration = (datetime.now(timezone.utc) - sale_start_date).days
-                
-                price_drops.append({
-                    'name': game_name,
-                    'edition': current_edition['name'],
-                    'old_price': reference_price_str,
-                    'new_price': current_edition.get('price'),
-                    'duration_days': duration
-                })
+            prev_editions = {e['name']: e for e in previous_doc.get('editions', [])}
 
-    # 5. Sonuçları Markdown dosyasına yazdır
+            for current_edition in current_doc.get('editions', []):
+                if current_edition['name'] in prev_editions:
+                    prev_edition = prev_editions[current_edition['name']]
+
+                    prev_price_val = parse_price(prev_edition.get('price'))
+                    current_price_val = parse_price(current_edition.get('price'))
+
+                    if prev_price_val is not None and current_price_val is not None and current_price_val < prev_price_val:
+                        # BİR İNDİRİM OLAYI TESPİT EDİLDİ!
+                        game_name = game_info_map.get(game_id, {}).get('name', 'Bilinmeyen Oyun')
+
+                        # Aynı oyun/sürüm için birden fazla düşüş varsa en sonuncusunu tut
+                        drop_key = f"{game_id}-{current_edition['name']}"
+                        recent_price_drops[drop_key] = {
+                            'name': game_name,
+                            'edition': current_edition['name'],
+                            'old_price': prev_edition.get('price'),
+                            'new_price': current_edition.get('price'),
+                            'drop_date': drop_date  # İndirimin olduğu günün tarihi
+                        }
+
+    # 5. Rapor için son listeyi oluştur
+    final_drops_list = []
+    for drop in recent_price_drops.values():
+        duration = (datetime.now(timezone.utc).date() - drop['drop_date'].date()).days
+        drop['duration_days'] = duration
+        del drop['drop_date']  # Raporda bu alana gerek yok
+        final_drops_list.append(drop)
+
+    # 6A. Sonuçları JSON dosyasına yazdır (iOS Uygulaması için)
+    with open(OUTPUT_JSON_FILE, 'w', encoding='utf-8') as f:
+        json.dump(final_drops_list, f, ensure_ascii=False, indent=2)
+    print(f"JSON raporu başarıyla '{OUTPUT_JSON_FILE}' dosyasına yazıldı.")
+
+    # 6B. Sonuçları Markdown dosyasına yazdır
     with open(OUTPUT_MD_FILE, 'w', encoding='utf-8') as f:
         report_time = datetime.now().strftime('%d.%m.%Y %H:%M')
         f.write("# PlayStation İndirim Raporu\n\n")
         f.write(f"**Rapor Tarihi:** {report_time}\n")
-        f.write(f"**Not:** Fiyatlar son **{LOOKBACK_DAYS} gün** içindeki en yüksek fiyatlarla karşılaştırılmıştır.\n\n")
+        f.write(f"**Not:** Son **{LOOKBACK_DAYS} gün** içinde fiyatı yeni düşen ürünler listelenmiştir.\n\n")
 
-        if price_drops:
-            price_drops.sort(key=lambda x: x['name'])
-            f.write(f"### Fiyatı Düşen Toplam {len(price_drops)} Ürün Bulundu!\n\n")
-            f.write("| Oyun Adı | Sürüm | Eski Fiyat | Yeni Fiyat | İndirim Süresi |\n")
+        if final_drops_list:
+            final_drops_list.sort(key=lambda x: x['name'])
+            f.write(f"### Yeni İndirime Giren Toplam {len(final_drops_list)} Ürün Bulundu!\n\n")
+            f.write("| Oyun Adı | Sürüm | Eski Fiyat | Yeni Fiyat | Ne Kadar Süredir İndirimde? |\n")
             f.write("|---|---|---|---|---|\n")
-            for game in price_drops:
-                duration_text = f"~{game['duration_days']} gündür"
-                if game['duration_days'] == 0:
+            for game in final_drops_list:
+                days = game['duration_days']
+                duration_text = f"{days} gündür"
+                if days == 0:
                     duration_text = "**Bugün!**"
-                elif game['duration_days'] == 1:
+                elif days == 1:
                     duration_text = "1 gündür"
-                
-                f.write(f"| {game['name']} | {game['edition']} | ~{game['old_price']}~ | **{game['new_price']}** | {duration_text} |\n")
+
+                f.write(
+                    f"| {game['name']} | {game['edition']} | ~{game['old_price']}~ | **{game['new_price']}** | {duration_text} |\n")
         else:
-            f.write("### Son 7 Gün İçinde Yeni Bir İndirim Tespit Edilmedi.\n")
+            f.write(f"### Son {LOOKBACK_DAYS} Gün İçinde Yeni Bir İndirim Tespit Edilmedi.\n")
 
     print(f"Rapor başarıyla '{OUTPUT_MD_FILE}' dosyasına yazıldı.")
     client.close()
+
 
 if __name__ == "__main__":
     generate_report()
