@@ -1,6 +1,6 @@
 # PlayStation İndirim Raporu
 
-**Rapor Tarihi:** 29.07.2025 08:36 +03
+**Rapor Tarihi:** 30.07.2025 08:37 +03
 **Karşılaştırılan Veriler:** `games_27_07_2025_07_36` ve `games_28_07_2025_05_24`
 
 ### Fiyatı Düşen Toplam 1 Ürün Bulundu!
