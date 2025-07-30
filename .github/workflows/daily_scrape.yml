@@ -38,7 +38,7 @@ jobs:
         run: |
           git config --global user.name 'GitHub Actions Bot'
           git config --global user.email 'github-actions-bot@github.com'
-          git add playstation_games.db DISCOUNTS.md
+          git add playstation_games.db DISCOUNTS.md discounts.json
           # Değişiklik varsa commit at
           git diff --staged --quiet || git commit -m "Update: Daily prices and discount report for $(date -u +'%d-%m-%Y')"
           git push
